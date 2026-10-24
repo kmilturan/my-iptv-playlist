@@ -1,40 +1,40 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="BeyazTV.tr" group-title="🇹🇷 Türkiyə - Əsas",Beyaz TV
-https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
+#EXTINF:-1 tvg-id="TRT1.tr" group-title="Turkiye - Esas",TRT 1
+https://tv-trt1.medya.trt.com.tr/master_480.m3u8
 #EXTINF:-1 group-title="Ulusal",TR: Now HD
 http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 tvg-id="TRT1.tr" group-title="🇹🇷 Türkiyə - Əsas",TRT 1
-https://tv-trt1.medya.trt.com.tr/master_480.m3u8
-#EXTINF:-1 tvg-id="Kanal7.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal 7
+#EXTINF:-1 tvg-id="Kanal7.tr" group-title="Turkiye - Esas",Kanal 7
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
+#EXTINF:-1 tvg-id="BeyazTV.tr" group-title="Turkiye - Esas",Beyaz TV
+https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
 #EXTINF:-1 group-title="Ulusal",TR: Show HD
 http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
 #EXTINF:-1 group-title="Ulusal",TR: TV 4 HD
 http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8
-#EXTINF:-1 tvg-id="StarTV.tr" group-title="🇹🇷 Türkiyə - Əsas",Star TV
-https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
-#EXTINF:-1 tvg-id="KanalD.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal D
+#EXTINF:-1 tvg-id="KanalD.tr" group-title="Turkiye - Esas",Kanal D
 https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
-#EXTINF:-1 group-title="Ulusal",TR: TRT Turk HD
-https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="ATV.tr" group-title="🇹🇷 Türkiyə - Əsas",ATV
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
+#EXTINF:-1 tvg-id="StarTV.tr" group-title="Turkiye - Esas",Star TV
+https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
 #EXTINF:-1 group-title="Haber",TR: Tgrt Haber HD
 https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-id="Haberturk.tr" group-title="📰 Xəbər",Habertürk
-https://tv.ensonhaber.com/haberturk/haberturk.m3u8
+#EXTINF:-1 tvg-id="ATV.tr" group-title="Turkiye - Esas",ATV
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
+#EXTINF:-1 tvg-id="TRTHaber.tr" group-title="Xeber",TRT Haber
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="Haber",TR: Haber Global HD
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
+#EXTINF:-1 tvg-id="Haberturk.tr" group-title="Xeber",Habertürk
+https://tv.ensonhaber.com/haberturk/haberturk.m3u8
 #EXTINF:-1 group-title="Haber",TR: Halk TV
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 tvg-id="TRTHaber.tr" group-title="📰 Xəbər",TRT Haber
-https://tv-trthaber.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="Teve2.tr" group-title="🇹🇷 Türkiyə - Əsas",Teve2
+#EXTINF:-1 tvg-id="Teve2.tr" group-title="Turkiye - Esas",Teve2
 http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 group-title="Haber",TR: NTV HD
-http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
 #EXTINF:-1 group-title="Eglence",TR: A2 TV HD
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
+#EXTINF:-1 group-title="Haber",TR: NTV HD
+http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
+#EXTINF:-1 group-title="Ulusal",TR: TRT Turk HD
+https://tv-trtturk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="Turk",TR: Cine5
 https://host.onlineradyotv.net:8081/cine5tv/index.m3u8
 #EXTINF:-1 group-title="Turk",TR: 360 HD
@@ -43,65 +43,67 @@ https://turkmedya-live.ercdn.net/tv360/tv360.m3u8?hash=bb504e08aafa6f1802409bdd7
 https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
 #EXTINF:-1 group-title="Azeri",Baku.TV
 https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 group-title="Azerbaijan",AzStarTV
-http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8
-#EXTINF:-1 group-title="Rus",Ostrosyuzhetnoye HD (1080p)
-http://stream.mcquack.net/214/index.m3u8
-#EXTINF:-1 group-title="Rus",Kinopokaz (576p)
-http://stream.mcquack.net/64/index.m3u8
-#EXTINF:-1 group-title="Azeri",Kapaz TV
-http://85.132.78.122:8050/hls/stream/index.m3u8
-#EXTINF:-1 group-title="Azerbaijan",MTV Azerbaijan Ⓢ Ⓨ
-https://www.youtube.com/@MTVAzerbaijan/live
-#EXTINF:-1 group-title="Rus",Travel Channel (1080p)
-http://stream.mcquack.net/231/index.m3u8
-#EXTINF:-1 tvg-id="BakuTV.az" group-title="🇦🇿 Azərbaycan",Baku TV
-https://rtmp.baku.tv/hls/bakutv.m3u8
 #EXTINF:-1 group-title="Turk",TR: Tivi6 HD
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Azstar TV HD (1080p)
+#EXTINF:-1 group-title="Azerbaijan",AzStarTV
+http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8
+#EXTINF:-1 group-title="Azeri",Kapaz TV
+http://85.132.78.122:8050/hls/stream/index.m3u8
+#EXTINF:-1 group-title="Rus",Kinopokaz (576p)
+http://stream.mcquack.net/64/index.m3u8
+#EXTINF:-1 group-title="Rus",Ostrosyuzhetnoye HD (1080p)
+http://stream.mcquack.net/214/index.m3u8
+#EXTINF:-1 group-title="Turk",TR: Tele1 HD
+https://tele1-live.ercdn.net/tele1/tele1.m3u8
+#EXTINF:-1 group-title="Rus",Travel Channel (1080p)
+http://stream.mcquack.net/231/index.m3u8
+#EXTINF:-1 group-title="Azerbaijan",MTV Azerbaijan Ⓢ Ⓨ
+https://www.youtube.com/@MTVAzerbaijan/live
+#EXTINF:-1 tvg-id="BakuTV.az" group-title="Azerbaycan",Baku TV
+https://rtmp.baku.tv/hls/bakutv.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",Azstar TV HD (1080p)
 https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
-#EXTINF:-1 tvg-id="AzTV.az" group-title="🇦🇿 Azərbaycan",AzTV
-https://stream8.cinerama.uz/1455/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="AHaber.tr" group-title="📰 Xəbər",A Haber
+#EXTINF:-1 tvg-id="AHaber.tr" group-title="Xeber",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Satranç TV (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="AzTV.az" group-title="Azerbaycan",AzTV
+https://stream8.cinerama.uz/1455/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",Satranç TV (480p) [Not 24/7]
 http://139.162.182.79/live/test/index.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TR24 TV (720p) [Not 24/7]
+#EXTINF:-1 group-title="Diger Kanallar",TR24 TV (720p) [Not 24/7]
 https://tv.ensonhaber.com/tv24/tv24.m3u8
-#EXTINF:-1 tvg-id="NowTV.tr" group-title="🇹🇷 Türkiyə - Əsas",NOW TV
+#EXTINF:-1 tvg-id="NowTV.tr" group-title="Turkiye - Esas",NOW TV
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Arabi (1080p) [Not 24/7]
+#EXTINF:-1 group-title="Diger Kanallar",TRT Arabi (1080p) [Not 24/7]
 https://tv-trtarabi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Türk Taptaze (1080p)
-https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT 3 (720p)
-https://tv-trt3.live.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Avaz (720p)
-https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Diyanet Çocuk (720p)
-https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Cocuk (1440p)
+#EXTINF:-1 group-title="Diger Kanallar",TRT Cocuk (1440p)
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT EBA Lise (720p)
-https://tv-e-okul02.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT EBA Ilkokul (720p)
+#EXTINF:-1 group-title="Diger Kanallar",TRT 3 (720p)
+https://tv-trt3.live.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT Avaz (720p)
+https://tv-trtavaz.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT EBA Ilkokul (720p)
 https://tv-e-okul00.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT EBA Ortaokul (720p)
+#EXTINF:-1 group-title="Diger Kanallar",Power Türk Taptaze (1080p)
+https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT Diyanet Çocuk (720p)
+https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT EBA Lise (720p)
+https://tv-e-okul02.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT EBA Ortaokul (720p)
 https://tv-e-okul01.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TRTSpor.tr" group-title="⚽ İdman",TRT Spor
+#EXTINF:-1 tvg-id="TRTSpor.tr" group-title="Idman",TRT Spor
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Müzik (720p)
-https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Türk (720p)
-https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Kurdî (720p)
-https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Muzik
+#EXTINF:-1 group-title="Diger Kanallar",TRT Muzik
 https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT World (720p)
-https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT World (1080p) [Not 24/7]
-https://tv-trtworld.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Genc (1440p) [Geo-blocked]
+#EXTINF:-1 group-title="Diger Kanallar",TRT Kurdî (720p)
+https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT Genc (1440p) [Geo-blocked]
 https://tv-trtgenc.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT Müzik (720p)
+https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT World (1080p) [Not 24/7]
+https://tv-trtworld.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT Türk (720p)
+https://tv-trtturk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="Diger Kanallar",TRT World (720p)
+https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
