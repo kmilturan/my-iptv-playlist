@@ -2,8 +2,14 @@ name: Auto Update IPTV Playlist
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */2 * * *' # Hər 2 saatdan bir avtomatik işləyir
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'update_playlist.py'
+      - 'sources.txt'
 
 permissions:
   contents: write
@@ -16,6 +22,7 @@ jobs:
     - name: Repozitoriyanı yüklə
       uses: actions/checkout@v4
       with:
+        persist-credentials: true
         fetch-depth: 1
 
     - name: Python mühitini qur
@@ -26,18 +33,11 @@ jobs:
     - name: Skripti işə sal
       run: python update_playlist.py
 
-    - name: Git konfiqurasiyası və məcburi göndərmə
+    - name: Dəyişiklikləri yoxla və göndər
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        
-        # Git-in avtomatik rebase etməsinin qarşısını alırıq
-        git config --global pull.rebase false
-        
-        git add playlist.m3u
-        git commit -m "Auto update playlist" || echo "No changes"
-        
-        # Əgər uzaq qovluqda dəyişiklik varsa, bizim faylı üstün tutaraq birləşdiririk
-        git pull origin main --strategy-option theirs --no-rebase || true
-        
+        git status
+        git add playlist.m3u sources.txt
+        git commit -m "Auto update playlist and sources [skip ci]" || echo "No changes to commit"
         git push origin main --force
