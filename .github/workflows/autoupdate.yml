@@ -26,10 +26,18 @@ jobs:
     - name: Skripti işə sal
       run: python update_playlist.py
 
-    - name: Dəyişiklikləri konfliktsiz göndər
+    - name: Git konfiqurasiyası və məcburi göndərmə
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Git-in avtomatik rebase etməsinin qarşısını alırıq
+        git config --global pull.rebase false
+        
         git add playlist.m3u
         git commit -m "Auto update playlist" || echo "No changes"
+        
+        # Əgər uzaq qovluqda dəyişiklik varsa, bizim faylı üstün tutaraq birləşdiririk
+        git pull origin main --strategy-option theirs --no-rebase || true
+        
         git push origin main --force
