@@ -189,21 +189,25 @@ MASTER_CHANNELS = {
     "tgrt haber": {
         "name": "Tgrt Haber",
         "group": "Xeber",
+        "tvg_id": "",
         "aliases": ["tgrt haber", "tr: tgrt haber hd"]
     },
     "haber global": {
         "name": "Haber Global",
         "group": "Xeber",
+        "tvg_id": "",
         "aliases": ["haber global", "tr: haber global hd"]
     },
     "halk tv": {
         "name": "Halk TV",
         "group": "Xeber",
+        "tvg_id": "",
         "aliases": ["halk tv", "tr: halk tv"]
     },
     "ntv": {
         "name": "NTV",
         "group": "Xeber",
+        "tvg_id": "",
         "aliases": ["ntv", "ntv hd", "tr: ntv hd"]
     }
 }
@@ -291,9 +295,9 @@ def process_channel(entry):
     if master_key and channel_info:
         if not is_stream_valid(stream_url):
             return None
-        return (master_key, channel_info["group"], channel_info["name"], channel_info["tvg_id"], stream_url)
+        tvg_id = channel_info.get("tvg_id", "")
+        return (master_key, channel_info["group"], channel_info["name"], tvg_id, stream_url)
     
-    # Qrup normalizasiyası: Bütün xam qrupları və adları bizim 4 əsas təmiz qrupa yönəldirik
     l_name = channel_name.lower()
     if not is_stream_valid(stream_url):
         return None
@@ -307,7 +311,7 @@ def process_channel(entry):
     elif any(k in l_name for k in ["tr", "türkiye", "turkey", "trt", "kanal", "show", "star", "atv", "now", "tv4", "teve", "cine5", "360", "tivi6"]):
         group_title = "Turkiye - Esas"
     else:
-        group_title = "Turkiye - Esas" # Heç biri olmazsa avtomatik əsas qrupa düşür ki, unsorted-a düşməsin
+        group_title = "Turkiye - Esas"
     
     clean_name = re.sub(r'^(tr|az):\s*', '', channel_name, flags=re.IGNORECASE).strip()
     return (channel_name.lower(), group_title, clean_name, "", stream_url)
@@ -341,7 +345,6 @@ def main():
             if result:
                 unique_key, group, name, tvg_id, stream_url = result
                 if unique_key not in added_keys:
-                    # OTTPlayer-in 100% tanıması üçün həm tvg-group, həm də group-title eyni qrup adına tənzimlənir
                     if tvg_id:
                         extinf_line = f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-group="{group}" group-title="{group}",{name}\n'
                     else:
