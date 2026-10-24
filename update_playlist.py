@@ -3,7 +3,12 @@ import re
 
 # 1. Mənbə M3U linkləri (Bura istədiyiniz qədər işlək mənbə əlavə edə bilərsiniz)
 SOURCES = [
-    "https://qazim.github.io/IPTV/all_channels.m3u"
+    # 1. Sizin əsas mənbəniz
+    "https://qazim.github.io/IPTV/all_channels.m3u",
+    
+    # 2. Alternativ açıq mənbəli Azərbaycan və Türkiyə siyahıları
+    "https://raw.githubusercontent.com/funcen/IPTV/main/index.m3u",
+    "https://raw.githubusercontent.com/nemohost/IPTV/main/playlist.m3u",
 ]
 
 # 2. Genişləndirilmiş Kanal Siyahısı (Azərbaycan və Türkiyə)
