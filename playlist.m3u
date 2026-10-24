@@ -1,41 +1,143 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="trt-1-hd" group-title="Ulusal",TR: TRT 1 HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: TRT 1 HD
 https://trt.daioncdn.net/trt-1/master.m3u8?app=web
-#EXTINF:-1 tvg-id="atv-hd-tr" group-title="Ulusal",TR: ATV HD
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",TR: ATV HD
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
-#EXTINF:-1 tvg-id="star-tv-hd-tr" group-title="Ulusal",TR: Star TV HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: Star TV HD
 https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
-#EXTINF:-1 tvg-id="kanal-d-hd" group-title="Ulusal",TR: Kanal D HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: Kanal D HD
 https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
-#EXTINF:-1 tvg-id="fox-hd-tr" group-title="Ulusal",TR: Now HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: Now HD
 http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 tvg-id="kanal-7-hd-tr" group-title="Ulusal",TR: Kanal 7 HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: Kanal 7 HD
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
-#EXTINF:-1 tvg-id="beyaz-tv-tr" group-title="Ulusal",Beyaz TV
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Beyaz TV
 https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
-#EXTINF:-1 tvg-id="TRTHaber.tr" group-title="Haber",TR: TRT Haber HD
+#EXTINF:-1 group-title="📰 Xəbər",TR: TRT Haber HD
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TGRTHaber.tr" group-title="Haber",TR: Tgrt Haber HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: Tgrt Haber HD
 https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-id="HaberturkTV.tr" group-title="Haber",TR: Haberturk HD
+#EXTINF:-1 group-title="📰 Xəbər",TR: Haberturk HD
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
-#EXTINF:-1 tvg-id="HalkTV.tr" group-title="Haber",TR: Halk TV
+#EXTINF:-1 group-title="📰 Xəbər",TR: Halk TV
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 tvg-id="NTV.tr" group-title="Haber",TR: NTV HD
+#EXTINF:-1 group-title="📰 Xəbər",TR: NTV HD
 http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
-#EXTINF:-1 tvg-id="a2-tr" group-title="Eglence",TR: A2 TV HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: A2 TV HD
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
-#EXTINF:-1 tvg-id="teve2hd" group-title="Eglence",TR: Teve2 HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: Teve2 HD
 http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 group-title="Turk" tvg-id="360-tv",TR: 360 HD
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: TV8 HD
+https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=af4cdf62b2b38e9ddcfdff9e1e85adbf
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: Beyaz TV HD
+https://yayin2.canlitv.fun/live/beyaztv.stream/playlist.m3u8?hash=af4cdf62b2b38e9ddcfdff9e1e85adbf
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: 360 HD
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8?hash=bb504e08aafa6f1802409bdd7f2b541c
-#EXTINF:-1 group-title="azeri-muzik",now-music
+#EXTINF:-1 group-title="📰 Xəbər",TR: Tele1 HD
+https://tele1-live.ercdn.net/tele1/tele1.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",now-music
 https://v2.catcast.tv/content/48694/index.m3u8?token=e8768237f294381845d56500ab7d1353
-#EXTINF:-1 group-title="Azeri" tvg-id="KanalS",Kanal S
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",Ictimai TV
+https://live.itv.az/itv.m3u8
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",Kanal S
 https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
-#EXTINF:-1 group-title="Rus" tvg-id="fox",Fox HD
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",Medeniyyet TV (1080p)
+https://str.yodacdn.net/medeniyyettele/index.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Fox HD
 http://stream.mcquack.net/182/index.m3u8
-#EXTINF:-1 group-title="Rus" tvg-id="tv1000",viju TV1000 (576p)
+#EXTINF:-1 group-title="📰 Xəbər",viju TV1000 (576p)
 http://stream.mcquack.net/110/index.m3u8
-#EXTINF:-1 group-title="Rus" tvg-id="tv1000-action",viju TV1000 action (576p)
+#EXTINF:-1 group-title="📰 Xəbər",viju TV1000 action (576p)
 http://stream.mcquack.net/100/index.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Alvin Channel TV (360p) [Not 24/7]
+https://cdn10-alvinchannel.yayin.com.tr/alvinchannel/alvinchannel/playlist.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Az Star TV (1080p)
+https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",CBC Sport [Geo-blocked]
+https://mn-nl.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",24 TV (720p)
+https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",360 (720p) [Not 24/7]
+https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",A2TV (1080p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
+#EXTINF:-1 group-title="📰 Xəbər",A Haber (1080p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
+#EXTINF:-1 group-title="⚽ İdman",A Spor SD (1080p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",ATV (Turkiye) (1080p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",ATV Alanya (1080p)
+https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
+#EXTINF:-1 group-title="🇦🇿 Azərbaycan",ATV Avrupa (576p)
+https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
+#EXTINF:-1 group-title="⚽ İdman",beIN Sports 1 Turk
+https://andro.mangeinde4.lat/checklist/androstreamlivebs1.m3u8
+#EXTINF:-1 group-title="⚽ İdman",beIN Sports 2 Turk
+https://andro.mangeinde4.lat/checklist/androstreamlivebs2.m3u8
+#EXTINF:-1 group-title="⚽ İdman",beIN Sports 3 Turk
+https://andro.mangeinde4.lat/checklist/androstreamlivebs3.m3u8
+#EXTINF:-1 group-title="⚽ İdman",beIN Sports 4 Turk
+https://andro.mangeinde4.lat/checklist/androstreamlivebs4.m3u8
+#EXTINF:-1 group-title="⚽ İdman",beIN Sports 5 Turk
+https://andro.mangeinde4.lat/checklist/androstreamlivebs5.m3u8
+#EXTINF:-1 group-title="⚽ İdman",beIN Sports Haber
+https://andro.mangeinde4.lat/checklist/androstreamlivebsh.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Beyaz TV (720p) [Not 24/7]
+https://mn-nl.mncdn.com/blutv_beyaztv2/live.m3u8
+#EXTINF:-1 group-title="📰 Xəbər",Bloomberg HT (720p)
+https://ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",Dream Turk (720p)
+https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
+#EXTINF:-1 group-title="⚽ İdman",FB TV
+http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Flash Haber TV
+https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
+#EXTINF:-1 group-title="📰 Xəbər",Haberturk TV (720p) [Not 24/7]
+https://tv.ensonhaber.com/haberturk/haberturk.m3u8
+#EXTINF:-1 group-title="📰 Xəbər",Halk TV SD (1080p)
+https://halktv-live.daioncdn.net/halktv/halktv.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Kanal 7 (720p)
+https://kanal7.blutv.com/blutv_kanal7_live/live.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Kanal 7 Avrupa (720p) [Not 24/7]
+https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Kanal D (Turkiye) (1080p)
+https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Kanal D Drama (1080p)
+http://190.93.224.42/KANAL-D-DRAMA/index.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",Kral Pop TV (720p)
+https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",Minika Cocuk (720p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",Minika Go (720p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
+#EXTINF:-1 group-title="📰 Xəbər",NTV (Turkiye)
+https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",Power TV (Turkiye) (1080p)
+https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
+#EXTINF:-1 group-title="⚽ İdman",S Sport 2 (720p)
+https://corestream.siteyaptim.live/s-sport2/index.m3u8
+#EXTINF:-1 group-title="⚽ İdman",S Sport (720p)
+https://corestream.siteyaptim.live/s-sport/index.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",Star TV (Turkiye) (720p)
+https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TGRT Haber (720p)
+https://canli.tgrthaber.com/tgrt.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TRT 1 (1440p)
+https://tv-trt1.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Avaz (720p)
+https://tv-trtavaz.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Belgesel (1080p)
+http://hls127.freeott.top:8080/TRT_BELGESEL_TR/video.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Cocuk (1440p)
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="📰 Xəbər",TRT Haber (720p)
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Muzik (720p)
+https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="⚽ İdman",TRT Spor (720p)
+https://corestream.siteyaptim.live/trt-spor/index.m3u8
+#EXTINF:-1 group-title="⚽ İdman",TRT Spor Yildiz (1440p) [Geo-blocked]
+https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TV8 (Turkiye) (1080p)
+https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
