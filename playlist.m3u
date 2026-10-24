@@ -1,399 +1,107 @@
 #EXTM3U
-#EXTINF:-1 group-title="Ulusal",TR: TV 4 HD
-http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8
-#EXTINF:-1 group-title="Haber",TR: Tgrt Haber HD
-https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-id="TRT1.tr" group-title="🇹🇷 Türkiyə - Əsas",TRT 1
-https://tv-trt1.medya.trt.com.tr/master_480.m3u8
-#EXTINF:-1 group-title="Ulusal",Euro D
-http://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
-#EXTINF:-1 group-title="Ulusal",Meltem TV
-http://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-#EXTINF:-1 group-title="Ulusal",TR: Show HD
-http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
-#EXTINF:-1 tvg-id="AzTV.az" group-title="🇦🇿 Azərbaycan",AzTV
+#EXTINF:-1 tvg-id="BeyazTV.tr" group-title="🇹🇷 Türkiyə - Əsas",Beyaz TV
 https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
-#EXTINF:-1 tvg-id="Kanal7.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal 7
-https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
-#EXTINF:-1 group-title="Ulusal",TR: TRT Turk HD
-https://tv-trtturk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="Ulusal",TR: Now HD
 http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 tvg-id="KanalD.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal D
-https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
+#EXTINF:-1 tvg-id="TRT1.tr" group-title="🇹🇷 Türkiyə - Əsas",TRT 1
+https://tv-trt1.medya.trt.com.tr/master_480.m3u8
+#EXTINF:-1 tvg-id="Kanal7.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal 7
+https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
+#EXTINF:-1 group-title="Ulusal",TR: Show HD
+http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
+#EXTINF:-1 group-title="Ulusal",TR: TV 4 HD
+http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8
 #EXTINF:-1 tvg-id="StarTV.tr" group-title="🇹🇷 Türkiyə - Əsas",Star TV
 https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
-#EXTINF:-1 group-title="Haber",TR: Haber Global HD
-https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
+#EXTINF:-1 tvg-id="KanalD.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal D
+https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
+#EXTINF:-1 group-title="Ulusal",TR: TRT Turk HD
+https://tv-trtturk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="ATV.tr" group-title="🇹🇷 Türkiyə - Əsas",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
+#EXTINF:-1 group-title="Haber",TR: Tgrt Haber HD
+https://canli.tgrthaber.com/tgrt.m3u8
 #EXTINF:-1 tvg-id="Haberturk.tr" group-title="📰 Xəbər",Habertürk
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
-#EXTINF:-1 tvg-id="Teve2.tr" group-title="🇹🇷 Türkiyə - Əsas",Teve2
-http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 group-title="Eglence",Cine 1 TV
-http://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
+#EXTINF:-1 group-title="Haber",TR: Haber Global HD
+https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 group-title="Haber",TR: Halk TV
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 group-title="Eglence",SDM TV
-https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Eglence",Cine+
-http://cineplus-yesilcam.supersatadmin.workers.dev/cineplusyesilcam.m3u8
-#EXTINF:-1 group-title="Haber",TR: NTV HD
-http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
-#EXTINF:-1 group-title="Eglence",BEGEN TV
-https://ip44.radyotelekomtv.com:3958/stream/play.m3u8
 #EXTINF:-1 tvg-id="TRTHaber.tr" group-title="📰 Xəbər",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="Teve2.tr" group-title="🇹🇷 Türkiyə - Əsas",Teve2
+http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
+#EXTINF:-1 group-title="Haber",TR: NTV HD
+http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
 #EXTINF:-1 group-title="Eglence",TR: A2 TV HD
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
 #EXTINF:-1 group-title="Turk",TR: Cine5
 https://host.onlineradyotv.net:8081/cine5tv/index.m3u8
-#EXTINF:-1 group-title="Eglence",Tivi 6
-https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 group-title="Eglence",Ciftci TV
-https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-#EXTINF:-1 group-title="Turk",Cine1 HD
-https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
 #EXTINF:-1 group-title="Turk",TR: 360 HD
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8?hash=bb504e08aafa6f1802409bdd7f2b541c
-#EXTINF:-1 group-title="Catcast-Film-tv",kino-1
-https://kino-1.catcast.tv/content/38617/index.m3u8?token=6a4467c842bfee06c4c4003385509747
-#EXTINF:-1 group-title="Catcast-Film-tv",Detektiv-TV
-https://cityeden.catcast.tv/content/41327/index.m3u8?token=a48c3b55dc99e90872f4c45f81a3096d
-#EXTINF:-1 group-title="Turk",TR: Tivi6 HD
-https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
-#EXTINF:-1 group-title="Azeri",APA Tv (1080p)
-http://stream.apa.tv/apastream/index.m3u8
-#EXTINF:-1 tvg-id="BakuTV.az" group-title="🇦🇿 Azərbaycan",Baku TV
+#EXTINF:-1 group-title="Azeri",Ayaz TV (720p)
+https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
+#EXTINF:-1 group-title="Azeri",Baku.TV
 https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 group-title="Rus",Domkino
-http://stream.mcquack.net/236/index.m3u8
-#EXTINF:-1 tvg-id="NowTV.tr" group-title="🇹🇷 Türkiyə - Əsas",NOW TV
-http://stream.mcquack.net/182/index.m3u8
-#EXTINF:-1 group-title="Rus",Dom kino Premium HD (1080p)
-http://stream.mcquack.net/108/index.m3u8
-#EXTINF:-1 group-title="Rus",Kino TV SD (576p)
-http://stream.mcquack.net/221/index.m3u8
-#EXTINF:-1 group-title="Rus",KinoHit (576p)
-http://stream.mcquack.net/126/index.m3u8
-#EXTINF:-1 group-title="Rus",Evrokino HD (1080p)
-http://stream.mcquack.net/385/index.m3u8
-#EXTINF:-1 group-title="Rus",Indiyskoye Kino (576p)
-http://stream.mcquack.net/104/index.m3u8
-#EXTINF:-1 group-title="Rus",Kinomix (576p)
-http://stream.mcquack.net/133/index.m3u8
-#EXTINF:-1 group-title="Rus",Kinokomedija (576p)
-http://stream.mcquack.net/265/index.m3u8
-#EXTINF:-1 group-title="Rus",Cinema
-http://flussonic.linkintel.ru/cinema/index.m3u8
-#EXTINF:-1 group-title="Azeri",Kanal S
-https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
-#EXTINF:-1 group-title="Rus",Kinopokaz (576p)
-http://stream.mcquack.net/64/index.m3u8
-#EXTINF:-1 group-title="Rus",Kinosemja (576p)
-http://stream.mcquack.net/170/index.m3u8
-#EXTINF:-1 group-title="Rus",Kinouzhas (576p)
-http://stream.mcquack.net/278/index.m3u8
-#EXTINF:-1 group-title="Rus",Premialnoe HD (1080p)
-http://stream.mcquack.net/421/index.m3u8
+#EXTINF:-1 group-title="Azerbaijan",AzStarTV
+http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8
 #EXTINF:-1 group-title="Rus",Ostrosyuzhetnoye HD (1080p)
 http://stream.mcquack.net/214/index.m3u8
-#EXTINF:-1 group-title="Rus",Muzhskoe kino (576p)
-http://stream.mcquack.net/107/index.m3u8
-#EXTINF:-1 group-title="Rus",Kinosvidanie (576p)
-http://stream.mcquack.net/171/index.m3u8
-#EXTINF:-1 group-title="Rus",viju TV1000 (576p)
-http://stream.mcquack.net/110/index.m3u8
-#EXTINF:-1 group-title="Rus",viju+ Megahit HD (1080p)
-http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1 group-title="Rus",viju+ Comedy HD (1080p)
-http://stream.mcquack.net/201/index.m3u8
-#EXTINF:-1 group-title="Rus",viju TV1000 action (576p)
-http://stream.mcquack.net/100/index.m3u8
-#EXTINF:-1 group-title="Rus",viju+ Premiere HD (1080p)
-http://stream.mcquack.net/202/index.m3u8
-#EXTINF:-1 group-title="Rus",Nauka (576p)
-http://stream.mcquack.net/125/index.m3u8
-#EXTINF:-1 group-title="Rus",viju+ Planet HD (1080p)
-http://stream.mcquack.net/240/index.m3u8
-#EXTINF:-1 group-title="Rus",Investigation Discovery (1080p)
-http://stream.mcquack.net/205/index.m3u8
-#EXTINF:-1 group-title="Rus",Discovery Channel (1080p)
-http://stream.mcquack.net/177/index.m3u8
-#EXTINF:-1 group-title="Rus",viju Nature (576p)
-http://46.53.200.153:7777/play/a01k/index.m3u8
-#EXTINF:-1 group-title="Rus",viju History (576p)
-http://stream.mcquack.net/101/index.m3u8
-#EXTINF:-1 group-title="Rus",viju Explore (576p)
-http://stream.mcquack.net/239/index.m3u8
-#EXTINF:-1 group-title="Rus",National Geographic (576p)
-http://stream.mcquack.net/116/index.m3u8
-#EXTINF:-1 group-title="Azerbaijan",Muz TV Ⓨ
-https://www.youtube.com/channel/UCgHYcHd2SuX0ees5q0OWicQ/live
-#EXTINF:-1 group-title="Rus",Travel Channel (1080p)
-http://stream.mcquack.net/231/index.m3u8
-#EXTINF:-1 group-title="Azerbaijan",Real TV Ⓨ
-https://www.youtube.com/channel/UCjpoTfA8TXO6QfAWiAB67eA/live
+#EXTINF:-1 group-title="Rus",Kinopokaz (576p)
+http://stream.mcquack.net/64/index.m3u8
+#EXTINF:-1 group-title="Azeri",Kapaz TV
+http://85.132.78.122:8050/hls/stream/index.m3u8
 #EXTINF:-1 group-title="Azerbaijan",MTV Azerbaijan Ⓢ Ⓨ
 https://www.youtube.com/@MTVAzerbaijan/live
-#EXTINF:-1 group-title="Rus",Kinopremyera (1080p)
-http://5.188.159.128:8070/KINOPREMIERA/index.m3u8
-#EXTINF:-1 group-title="Undefined",AL ZAHRA TV
-http://live.al-zahratv.com/live/playlist.m3u8?checkedby:hlscat.com
-#EXTINF:-1 group-title="Undefined",ELTV
-http://85.132.53.162:1935/live/eltv/chunklist_.m3u8?checkedby:hlscat.com
-#EXTINF:-1 group-title="🌐 Digər Kanallar",EL TV (260p) [Not 24/7]
-http://85.132.53.162:1935/live/eltv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",KN Music TV
-https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Vilayet TV
-https://nl.livekadeh.com/hls2/vilayet.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",4U TV (720p)
-https://hls.4utv.live/hls/stream.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Al-Zahra TV Turkic (720p) [Not 24/7]
-https://live.al-zahratv.com/live/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",360 TV (720p) [Not 24/7]
-https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
+#EXTINF:-1 group-title="Rus",Travel Channel (1080p)
+http://stream.mcquack.net/231/index.m3u8
+#EXTINF:-1 tvg-id="BakuTV.az" group-title="🇦🇿 Azərbaycan",Baku TV
+https://rtmp.baku.tv/hls/bakutv.m3u8
+#EXTINF:-1 group-title="Turk",TR: Tivi6 HD
+https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
+#EXTINF:-1 group-title="🌐 Digər Kanallar",Azstar TV HD (1080p)
+https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
+#EXTINF:-1 tvg-id="AzTV.az" group-title="🇦🇿 Azərbaycan",AzTV
+https://stream8.cinerama.uz/1455/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="AHaber.tr" group-title="📰 Xəbər",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Almahriah TV (576p)
-https://starmenajo.com/hls/almahriah/index.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",BENGÜTÜRK TV (720p) [Not 24/7]
-https://tv.ensonhaber.com/benguturk/benguturk.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",A Spor (1080p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",A2TV (1080p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",ARAS TV (576p) [Not 24/7]
-http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Alanya Posta TV (1080p)
-https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Bloomberg HT (720p) [Not 24/7]
-https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Bir TV (720p)
-https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Aksu TV (720p)
-https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Anadolu Net TV (1080p)
-https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Diyanet TV (1080p)
-https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Çiftçi TV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",DHA (720p) [Not 24/7]
-https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Bursa AS TV (900p)
-https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",BRTV (720p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Dost TV (576p)
-https://dost.stream.emsal.im/tv/live.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",CNBC-e
-https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Dream Türk (720p)
-https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Edessa TV (1080p)
-https://canli.edessatv.com/hls/stream.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Finans Turk TV (720p)
-https://yayin30.haber100.com/live/finansturk/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Erzurum Web TV (720p)
-https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",FB TV
-http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Euro D (720p)
-https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Diyar TV (720p)
-https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",ES TV (720p)
-https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",ETV Kayseri (720p)
-https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Er TV (1080p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Deniz Postası TV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Fortuna TV (1080p)
-https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Flash Haber TV
-https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Haber61 TV (720p) [Not 24/7]
-https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Haber Global (720p) [Not 24/7]
-https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Halk TV (1080p)
-https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",HTSpor TV (1080p)
-https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Ilke TV (1080p)
-https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal 23 (1080p)
-https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal 3 (1080p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Hunat TV (720p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal 23 (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanal23/kanal23/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal 15 (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal 12 (720p)
-https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal 26 (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kocaeli TV (1080p)
-https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Lalegul TV (1080p)
-https://lbl.netmedya.net/hls/lalegultv.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",KRAL Pop TV (720p)
-https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Konya Olay TV (720p)
-https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal V (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kent Türk TV (1080p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",KANAL 58 (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kay TV (576p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Kanal Firat (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Med Muzik (1080p)
-http://54.36.110.140/live3/live3.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Mekameleen TV (1080p)
-https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",MaviKaradeniz (1080p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Life TV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Minika Go (576p)
-http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Luys TV (1080p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Minika Cocuk (576p)
-http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Mercan TV (576p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Meltem TV (1080p)
-https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Minika Cocuk (720p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Minika Go (720p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Number 1 Ask (720p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Number 1 TV (720p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",NTV
-https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Number 1 Damar (720p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Number 1 Dance (720p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Olay Türk TV Kayseri (720p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",Satranç TV (480p) [Not 24/7]
 http://139.162.182.79/live/test/index.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power TV (720p)
-https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",PowerTürk TV (720p)
-https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Sat7 Türk (1080p)
-https://live.artidijitalmedya.com/artidijital_sat7turk/sat7turk/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Dance (1080p)
-https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Türk Akustik (1080p)
-https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Türk Slow (1080p)
-https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power TV (1080p)
-https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Love (1080p)
-https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Türk Taptaze (1080p)
-https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Semerkand TV (1080p) [Not 24/7]
-https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Sercem TV (1080p)
-https://canli.sercemtv.com.tr/hls/0/stream.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TBMM TV (720p)
-https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TGRT Haber (720p)
-https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TGRT Belgesel TV (576p) [Not 24/7]
-https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TGRT Haber (360p) [Not 24/7]
-https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe4598be8e5d.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Sun RTV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TR24 TV (720p) [Not 24/7]
 https://tv.ensonhaber.com/tv24/tv24.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Turk (1080p) [Not 24/7]
-https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TJK TV (1080p)
-https://tjktv-live.tjk.org/tjktv.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Tivi 6 (720p)
-https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Ton TV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Tempo TV (720p)
-https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Diyanet Çocuk (720p)
-https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="NowTV.tr" group-title="🇹🇷 Türkiyə - Əsas",NOW TV
+https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
+#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Arabi (1080p) [Not 24/7]
+https://tv-trtarabi.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="🌐 Digər Kanallar",Power Türk Taptaze (1080p)
+https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT 3 (720p)
 https://tv-trt3.live.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Avaz (720p)
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT EBA Ilkokul (720p)
-https://tv-e-okul00.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Diyanet Çocuk (720p)
+https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Cocuk (1440p)
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TRTSpor.tr" group-title="⚽ İdman",TRT Spor
-https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT World (1080p) [Not 24/7]
-https://tv-trtworld.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Arabi (1080p) [Not 24/7]
-https://tv-trtarabi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Muzik
-https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT EBA Lise (720p)
 https://tv-e-okul02.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Müzik (720p)
-https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT EBA Ilkokul (720p)
+https://tv-e-okul00.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT EBA Ortaokul (720p)
 https://tv-e-okul01.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TV4 (720p)
-https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
+#EXTINF:-1 tvg-id="TRTSpor.tr" group-title="⚽ İdman",TRT Spor
+https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
+#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Müzik (720p)
+https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Türk (720p)
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TV 8 (1080p)
-https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TV 24 (720p)
-https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Kurdî (720p)
 https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TV 264 (1080p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Vav TV
-https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Zarok TV (720p)
-https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TV Den (576p) [Not 24/7]
-http://canli.tvden.com.tr/hls/live.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",TV 41 (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Van 65 TV
-https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Urfa Natik TV (720p)
-https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Ekoturk (720p)
-https://cdn.ekoturk.net/hls/master.m3u8
+#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Muzik
+https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT World (720p)
 https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Bloomberg HT (720p)
-https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
+#EXTINF:-1 group-title="🌐 Digər Kanallar",TRT World (1080p) [Not 24/7]
+https://tv-trtworld.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🌐 Digər Kanallar",TRT Genc (1440p) [Geo-blocked]
 https://tv-trtgenc.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 group-title="🌐 Digər Kanallar",Bloomberg HT
-http://193.123.61.120:3000/kanal/bloomberght
