@@ -5,7 +5,6 @@ import re
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Master Mapping: Əsas xüsusi nəzarətdə olan kanallarımız
 MASTER_CHANNELS = {
     "baku tv": {
         "name": "Baku TV",
@@ -190,10 +189,7 @@ MASTER_CHANNELS = {
 }
 
 def load_and_update_sources():
-    """sources.txt faylından mənbələri oxuyur, skraypinq edib yeni tapdıqlarını da həmin fayla əlavə edir"""
     sources = []
-    
-    # 1. Mövcud sources.txt faylını oxuyuruq
     if os.path.exists("sources.txt"):
         with open("sources.txt", "r", encoding="utf-8") as f:
             for line in f:
@@ -201,7 +197,6 @@ def load_and_update_sources():
                 if line and not line.startswith("#") and line not in sources:
                     sources.append(line)
                     
-    # Əgər fayl hələ boşdursa, baza linkləri əlavə edirik
     if not sources:
         sources = [
             "https://qazim.github.io/IPTV/all_channels.m3u",
@@ -210,41 +205,39 @@ def load_and_update_sources():
             "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
         ]
 
-    # 2. Açıq kataloqlardan yeni mənbələr skraypinq edirik
-    print("Açıq kataloqlardan yeni mənbələr axtarılır...")
+    # Dinamik mənbə axtarışı və sources.txt-yə yazılması
     directories = [
         "https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u",
         "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
     ]
     
-    new_found = False
+    updated = False
     for dir_url in directories:
         try:
-            req = urllib.request.Request(dir_url, headers={'User-Agent': 'Mozilla/5.0'})
-            with urllib.request.urlopen(req, timeout=10) as response:
+            req = urllib.request.Request(dir_url, headers={'User-Agent': 'VLC/3.0.18'})
+            with urllib.request.urlopen(req, timeout=8) as response:
                 content = response.read().decode('utf-8', errors='ignore')
                 found_links = re.findall(r'https?://[^\s]+\.(?:m3u|m3u8)', content, re.IGNORECASE)
                 for link in found_links:
                     if any(k in link.lower() for k in ["az", "turkey", "tr", "azerbaijan"]):
                         if link not in sources:
                             sources.append(link)
-                            print(f"Yeni mənbə tapıldı və əlavə olundu: {link}")
-                            new_found = True
+                            updated = True
         except Exception:
             pass
 
-    # 3. Əgər yeni mənbə tapılıbsa, onu sources.txt faylına yazırıq ki, yadda qalsın
-    if new_found:
+    # Əgər yeni mənbə tapılıbsa sources.txt-ni yeniləyirik
+    if updated:
         with open("sources.txt", "w", encoding="utf-8") as f:
-            f.write("# Avtomatik yenilənən və əlavə edilən IPTV mənbələri\n")
+            f.write("# Avtomatik yenilənən IPTV mənbələri\n")
             for s in sources:
                 f.write(f"{s}\n")
-                
+
     return sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower()
-    if "bein sports" in n or "s sport" in n or "exxen" in n:
+    if "bein sports" in n or "s sport" in n or "exxen" in n or "tivibu" in n:
         return "BLOCKED", None
 
     for key, data in MASTER_CHANNELS.items():
@@ -254,6 +247,7 @@ def match_master_channel(channel_name):
     return None, None
 
 def is_stream_smart_checked(url):
+    """Sərt və həqiqi yoxlama: Linkin cavab verib-vermədiyini yoxlayır"""
     try:
         req = urllib.request.Request(
             url, 
@@ -262,22 +256,17 @@ def is_stream_smart_checked(url):
                 'Accept': '*/*'
             }
         )
-        with urllib.request.urlopen(req, timeout=5) as response:
+        # Timeout-u qısa qoyuruq ki, ölü linklər tez kənarlaşdırılsın
+        with urllib.request.urlopen(req, timeout=4) as response:
             status = response.getcode()
             if status in [200, 301, 302]:
-                content = response.read(512).decode('utf-8', errors='ignore').lower()
-                if "<html" in content and "not found" in content:
+                # Əgər .m3u8 faylıdırsa və ya birbaşa axındırsa əmin oluruq
+                sample = response.read(256).decode('utf-8', errors='ignore').lower()
+                if "<html" in sample and ("not found" in sample or "error" in sample or "404" in sample):
                     return False
                 return True
-    except urllib.error.HTTPError as e:
-        if e.code in [404, 410]:
-            return False
     except Exception:
-        pass
-
-    if any(ext in url.lower() for ext in [".m3u8", ".ts", "/live/", "/hls/", "m3u"]):
-        return True
-        
+        return False
     return False
 
 def process_channel(entry):
@@ -301,27 +290,27 @@ def process_channel(entry):
 
 def main():
     sources = load_and_update_sources()
-    print(f"Ümumi aktiv mənbə sayı: {len(sources)}")
+    print(f"Aktiv mənbə sayı: {len(sources)}")
 
     all_entries = []
     for source_url in sources:
         try:
-            print(f"Mənbə oxunur: {source_url}")
-            req = urllib.request.Request(source_url, headers={'User-Agent': 'Mozilla/5.0'})
-            with urllib.request.urlopen(req, timeout=12) as response:
+            req = urllib.request.Request(source_url, headers={'User-Agent': 'VLC/3.0.18'})
+            with urllib.request.urlopen(req, timeout=10) as response:
                 content = response.read().decode('utf-8', errors='ignore')
 
             entries = re.findall(r'(#EXTINF:[^\n]+\n)(https?://[^\s]+)', content)
             all_entries.extend(entries)
-        except Exception as e:
-            print(f"Mənbə oxunmadı ({source_url}): {e}")
+        except Exception:
+            pass
 
-    print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. İşlənmə başlanır...")
+    print(f"Tapıldı: {len(all_entries)} xam kanal. Sərt yoxlama başlanır...")
 
     final_playlist = ["#EXTM3U\n"]
     added_keys = set()
 
-    with ThreadPoolExecutor(max_workers=20) as executor:
+    # Thread sayını bir az azaldırıq ki, serverlərə DDOS kimi getməsin və yoxlama dəqiq olsun
+    with ThreadPoolExecutor(max_workers=15) as executor:
         futures = [executor.submit(process_channel, entry) for entry in all_entries]
         
         for future in as_completed(futures):
@@ -340,7 +329,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} kanal playlistə yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} həqiqətən İŞLƏK kanal yazıldı.")
 
 if __name__ == "__main__":
     main()
