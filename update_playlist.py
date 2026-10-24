@@ -1,53 +1,50 @@
+
 import urllib.request
 import re
-import socket
 
-# Çoxmənbəli və zəngin IPTV siyahıları
 SOURCES = [
-    "https://qazim.github.io/IPTV/all_channels.m3u",
+     "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://iptv-org.github.io/iptv/languages/aze.m3u",
     "https://iptv-org.github.io/iptv/languages/tur.m3u"
 ]
 
-# Kanalları kateqoriyalara bölmək üçün açar sözlər
-CHANNEL_GROUPS = {
-    "🇦🇿 Azərbaycan": [
-        "AzTV", "AZTV", "İctimai", "Ictimai", "İTV", "ITV", 
-        "ATV", "ATV AZ", "ATV Azerbaijan", "Azad Azerbaijan", "Xazar", "Khazar", 
-        "ARB", "ARB 24", "Space", "Real TV", "Baku TV", "Lider", 
-        "Mədəniyyət", "Medeniyyet", "Dunya TV", "Kanal S", 
-        "CBC Sport", "CBC SPORT", "Idman", "İdman Azerbaijan", "Idman TV"
-    ],
-    "🇹🇷 Türkiyə - Əsas": [
-        "TRT 1", "TRT1", "Kanal D", "KANAL D", "Show TV", "SHOW TV", 
-        "Star TV", "STAR TV", "TV8", "TV8.5", "TV8 5", "NOW", "FOX", 
-        "Kanal 7", "KANAL 7", "Beyaz TV", "Flash Haber", "Teve2", "teve2",
-        "360", "24 TV", "TGRT Haber", "A2", "a2", "atv"
-    ],
-    "⚽ İdman": [
-        "TRT Spor", "TRT Spor Yildiz", "A Spor", "A SPOR", "S Sport", 
-        "beIN Sports", "ASpor", "FB TV", "GS TV", "CBC Sport"
-    ],
-    "📰 Xəbər": [
-        "TRT Haber", "Haberturk", "Haber Türk", "CNN Turk", "CNN Türk", 
-        "NTV", "A Haber", "A HABER", "Ekotürk", "Bloomberg HT", 
-        "Ülke TV", "SZC", "Sozcu TV", "Sözcü TV", "TV100", "Halk TV", "Tele1"
-    ],
-    "🧸 Uşaq & Sənədli": [
-        "TRT Çocuk", "TRT Cocuk", "Minika Çocuk", "Minika Cocuk", "Minika GO", "Cartoon Network",
-        "TRT Belgesel", "TRT Müzik", "TRT Muzik", "TRT Avaz", "TRT Kurdi",
-        "TMB", "Kral POP", "Power TV", "Dream Turk", "Dream Türk", "Number1"
+def get_channel_group(channel_name):
+    n = channel_name.lower()
+
+    # 1. Əvvəlcə Türkiyə kanallarını dəqiq ayıraq (Səhvən Az qovluğuna düşməməsi üçün)
+    tr_main = ["trt 1", "kanal d", "show tv", "star tv", "tv8", "tv8.5", "now", "fox", "kanal 7", "beyaz tv", "teve2", "360", "24 tv", "tgrt", "a2"]
+    if any(kw in n for kw in tr_main) or ("tr:" in n) or (n.startswith("atv") and not "azerbaijan" in n and not "azad" in n):
+        return "🇹🇷 Türkiyə - Əsas"
+
+    # 2. Azərbaycan kanalları (Dəqiq yoxlama)
+    az_keywords = [
+        "aztv", "ictimai", "itv", "azad azərbaycan", "azad azerbaijan", 
+        "xəzər", "khazar", "arb", "space", "real tv", "baku tv", "lider", 
+        "mədəniyyət", "medeniyyet", "dunya tv", "kanal s", "cbc sport", "idman tv", "atv azerbaijan", "az:"
     ]
-}
+    if any(kw in n for kw in az_keywords):
+        return "🇦🇿 Azərbaycan"
+
+    # 3. İdman kanalları
+    sport_keywords = ["trt spor", "a spor", "s sport", "bein sports", "aspor", "fb tv", "gs tv"]
+    if any(kw in n for kw in sport_keywords):
+        return "⚽ İdman"
+
+    # 4. Xəbər kanalları
+    news_keywords = ["trt haber", "haberturk", "haber türk", "cnn turk", "cnn türk", "ntv", "a haber", "ekotürk", "bloomberg", "ülke tv", "sozcu", "sözcü", "tv100", "halk tv", "tele1"]
+    if any(kw in n for kw in news_keywords):
+        return "📰 Xəbər"
+
+    # 5. Uşaq və Sənədli
+    kids_doc_keywords = ["trt çocuk", "cocuk", "minika", "cartoon network", "trt belgesel", "trt müzik", "muzik", "trt avaz", "tmb", "kral pop", "power tv", "dream"]
+    if any(kw in n for kw in kids_doc_keywords):
+        return "🧸 Uşaq & Sənədli"
+
+    return None
 
 def is_stream_working(url):
-    """Kanalın yayım linkinin cavab verib-vermədiyini yoxlayır"""
     try:
-        req = urllib.request.Request(
-            url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-        )
-        # Qısa müddətə (3 saniyə) qoşulma cəhdi edirik
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=3) as response:
             if response.status == 200:
                 return True
@@ -71,16 +68,10 @@ def main():
             for extinf, stream_url in entries:
                 channel_name = extinf.split(',')[-1].strip()
 
-                # Hansı qrupa aid olduğunu yoxlayaq
-                matched_group = None
-                for group_name, keywords in CHANNEL_GROUPS.items():
-                    if any(kw.lower() == channel_name.lower() or kw.lower() in channel_name.lower() for kw in keywords):
-                        matched_group = group_name
-                        break
+                matched_group = get_channel_group(channel_name)
 
-                # Əgər tanınan kanaldırsa və hələ əlavə olunmayıbsa
                 if matched_group and channel_name not in added_channels:
-                    print(f"Yoxlanılır: {channel_name}...")
+                    print(f"Yoxlanılır [{matched_group}]: {channel_name}...")
                     if is_stream_working(stream_url):
                         print(f" -> [İŞLƏK] {channel_name}")
                         clean_extinf = f'#EXTINF:-1 group-title="{matched_group}",{channel_name}\n'
@@ -94,7 +85,7 @@ def main():
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} işlək kanal tapıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} dəqiq və işlək kanal tapıldı.")
 
 if __name__ == "__main__":
     main()
