@@ -10,7 +10,7 @@ MASTER_CHANNELS = {
         "name": "Baku TV",
         "group": "Azerbaycan",
         "tvg_id": "BakuTV.az",
-        "aliases": ["baku tv", "bakutv", "baku-tv"]
+        "aliases": ["baku tv", "bakutv", "baku-tv", "baku.tv", "baku"]
     },
     "itv": {
         "name": "İTV HD",
@@ -28,13 +28,13 @@ MASTER_CHANNELS = {
         "name": "Xəzər TV",
         "group": "Azerbaycan",
         "tvg_id": "KhazarTV.az",
-        "aliases": ["xəzər tv", "khazar tv", "xezer tv", "xezertv"]
+        "aliases": ["xəzər tv", "khazar tv", "xezer tv", "xezertv", "xəzər"]
     },
     "arb tv": {
         "name": "ARB TV",
         "group": "Azerbaycan",
         "tvg_id": "ARBTv.az",
-        "aliases": ["arb tv", "azad azərbaycan"]
+        "aliases": ["arb tv", "azad azərbaycan", "arb"]
     },
     "arb 24": {
         "name": "ARB 24",
@@ -52,19 +52,19 @@ MASTER_CHANNELS = {
         "name": "Space TV",
         "group": "Azerbaycan",
         "tvg_id": "SpaceTV.az",
-        "aliases": ["space tv", "spacetv"]
+        "aliases": ["space tv", "spacetv", "space"]
     },
     "lider tv": {
         "name": "Lider TV",
         "group": "Azerbaycan",
         "tvg_id": "LiderTV.az",
-        "aliases": ["lider tv", "lidertv"]
+        "aliases": ["lider tv", "lidertv", "lider"]
     },
     "mədəniyyət tv": {
         "name": "Mədəniyyət TV",
         "group": "Azerbaycan",
         "tvg_id": "MedeniyyetTV.az",
-        "aliases": ["mədəniyyət tv", "medeniyyet tv"]
+        "aliases": ["mədəniyyət tv", "medeniyyet tv", "mədəniyyət"]
     },
     "dunya tv": {
         "name": "Dünya TV",
@@ -88,7 +88,7 @@ MASTER_CHANNELS = {
         "name": "İdman Azərbaycan",
         "group": "Idman",
         "tvg_id": "IdmanAzerbaijan.az",
-        "aliases": ["idman az", "idmanazerbaijan", "idman tv"]
+        "aliases": ["idman az", "idmanazerbaijan", "idman tv", "idman"]
     },
     "trt 1": {
         "name": "TRT 1",
@@ -118,7 +118,7 @@ MASTER_CHANNELS = {
         "name": "ATV",
         "group": "Turkiye - Esas",
         "tvg_id": "ATV.tr",
-        "aliases": ["atv türkiye", "atv turkiye", "atv hd"]
+        "aliases": ["atv", "atv türkiye", "atv turkiye", "atv hd", "tr: atv"]
     },
     "tv8": {
         "name": "TV8",
@@ -136,7 +136,7 @@ MASTER_CHANNELS = {
         "name": "NOW TV",
         "group": "Turkiye - Esas",
         "tvg_id": "NowTV.tr",
-        "aliases": ["now tv", "nowtv", "fox tv"]
+        "aliases": ["now tv", "nowtv", "fox tv", "fox"]
     },
     "kanal 7": {
         "name": "Kanal 7",
@@ -148,7 +148,7 @@ MASTER_CHANNELS = {
         "name": "Beyaz TV",
         "group": "Turkiye - Esas",
         "tvg_id": "BeyazTV.tr",
-        "aliases": ["beyaz tv", "beyaztv"]
+        "aliases": ["beyaz tv", "beyaztv", "tr: beyaz tv"]
     },
     "teve2": {
         "name": "Teve2",
@@ -234,15 +234,18 @@ def load_and_update_sources():
 
 def match_master_channel(channel_name):
     n = channel_name.lower().strip()
+    # Prefiksləri təmizləyirik (məsələn "tr: ", "az: " və s.)
+    n = re.sub(r'^(tr|az|hd|fhd|sd):\s*', '', n).strip()
     
     if any(b in n for b in ["bein sports", "s sport", "exxen", "tivibu", "smart spor"]):
         return "BLOCKED", None
 
     for key, data in MASTER_CHANNELS.items():
         for alias in data["aliases"]:
-            if alias == n or f" {alias} " in f" {n} " or n.startswith(f"{alias} ") or n.endswith(f" {alias}"):
+            clean_alias = re.sub(r'^(tr|az):\s*', '', alias).strip()
+            if clean_alias == n or f" {clean_alias} " in f" {n} " or n.startswith(f"{clean_alias} ") or n.endswith(f" {clean_alias}"):
                 return key, data
-            elif len(alias) <= 5 and alias in n.split():
+            elif len(clean_alias) <= 5 and clean_alias in n.split():
                 return key, data
                 
     return None, None
@@ -282,8 +285,6 @@ def process_channel(entry):
 
     group_match = re.search(r'group-title="([^"]+)"', extinf)
     group_title = group_match.group(1) if group_match else "Diger Kanallar"
-    
-    # Əgər xam qrup adında da emojilər varsa təmizləyirik
     group_title = re.sub(r'[^\w\s\-\.]', '', group_title).strip()
     if not group_title:
         group_title = "Diger Kanallar"
@@ -319,10 +320,11 @@ def main():
             if result:
                 unique_key, group, name, tvg_id, stream_url = result
                 if unique_key not in added_keys:
+                    # OTTPlayer üçün həm group-title, həm də tvg-group atributlarını əlavə edirik
                     if tvg_id:
-                        extinf_line = f'#EXTINF:-1 tvg-id="{tvg_id}" group-title="{group}",{name}\n'
+                        extinf_line = f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-group="{group}" group-title="{group}",{name}\n'
                     else:
-                        extinf_line = f'#EXTINF:-1 group-title="{group}",{name}\n'
+                        extinf_line = f'#EXTINF:-1 tvg-group="{group}" group-title="{group}",{name}\n'
                         
                     final_playlist.append(f"{extinf_line}{stream_url}\n")
                     added_keys.add(unique_key)
@@ -330,7 +332,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} təmiz kanal yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} təmiz kanal qruplara ayrılaraq yazıldı.")
 
 if __name__ == "__main__":
     main()
