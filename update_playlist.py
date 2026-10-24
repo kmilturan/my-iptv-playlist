@@ -1,9 +1,9 @@
-
 import urllib.request
 import re
 
+# İstifadə etdiyiniz mənbələr
 SOURCES = [
-     "https://qazim.github.io/IPTV/all_channels.m3u",
+    "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://iptv-org.github.io/iptv/languages/aze.m3u",
     "https://iptv-org.github.io/iptv/languages/tur.m3u"
 ]
@@ -11,9 +11,9 @@ SOURCES = [
 def get_channel_group(channel_name):
     n = channel_name.lower()
 
-    # 1. Əvvəlcə Türkiyə kanallarını dəqiq ayıraq (Səhvən Az qovluğuna düşməməsi üçün)
-    tr_main = ["trt 1", "kanal d", "show tv", "star tv", "tv8", "tv8.5", "now", "fox", "kanal 7", "beyaz tv", "teve2", "360", "24 tv", "tgrt", "a2"]
-    if any(kw in n for kw in tr_main) or ("tr:" in n) or (n.startswith("atv") and not "azerbaijan" in n and not "azad" in n):
+    # 1. İlk olaraq Türkiyə kanallarını dəqiq ayıraq (ATV daxil olmaqla, səhvən Az qovluğuna düşməməsi üçün)
+    tr_main = ["trt 1", "kanal d", "show tv", "star tv", "tv8", "tv8.5", "now", "fox", "kanal 7", "beyaz tv", "teve2", "360", "24 tv", "tgrt", "a2", "atv"]
+    if any(kw in n for kw in tr_main) and not ("azerbaijan" in n or "azad" in n or "az:" in n):
         return "🇹🇷 Türkiyə - Əsas"
 
     # 2. Azərbaycan kanalları (Dəqiq yoxlama)
@@ -43,6 +43,7 @@ def get_channel_group(channel_name):
     return None
 
 def is_stream_working(url):
+    """Kanalın yayım linkinin işlək olub-olmadığını yoxlayır"""
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=3) as response:
