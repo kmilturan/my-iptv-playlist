@@ -1,15 +1,15 @@
 import urllib.request
 import re
+import socket
 
-# Bir neçə stabil və işlək mənbəni bura əlavə edirik
+# Çoxmənbəli və zəngin IPTV siyahıları
 SOURCES = [
     "https://qazim.github.io/IPTV/all_channels.m3u",
-    "https://raw.githubusercontent.com/funcen/IPTV/main/index.m3u",
-    "https://iptv-org.github.io/iptv/languages/aze.m3u",
-    "https://iptv-org.github.io/iptv/languages/tur.m3u"
+    "https://iptv-org.github.io/iptv/countries/az.m3u",
+    "https://iptv-org.github.io/iptv/countries/tr.m3u"
 ]
 
-# Kanalları kateqoriyalara (qruplara) bölürük
+# Kanalları kateqoriyalara bölmək üçün açar sözlər
 CHANNEL_GROUPS = {
     "🇦🇿 Azərbaycan": [
         "AzTV", "AZTV", "İctimai", "Ictimai", "İTV", "ITV", 
@@ -22,12 +22,11 @@ CHANNEL_GROUPS = {
         "TRT 1", "TRT1", "Kanal D", "KANAL D", "Show TV", "SHOW TV", 
         "Star TV", "STAR TV", "TV8", "TV8.5", "TV8 5", "NOW", "FOX", 
         "Kanal 7", "KANAL 7", "Beyaz TV", "Flash Haber", "Teve2", "teve2",
-        "360", "24 TV", "TGRT Haber", "A2", "a2", 
-        "ATV TR", "ATV HD", "ATV Turkiye", "ATV Türkiye", "atv"
+        "360", "24 TV", "TGRT Haber", "A2", "a2", "atv"
     ],
     "⚽ İdman": [
         "TRT Spor", "TRT Spor Yildiz", "A Spor", "A SPOR", "S Sport", 
-        "beIN Sports", "ASpor", "FB TV", "GS TV"
+        "beIN Sports", "ASpor", "FB TV", "GS TV", "CBC Sport"
     ],
     "📰 Xəbər": [
         "TRT Haber", "Haberturk", "Haber Türk", "CNN Turk", "CNN Türk", 
@@ -40,6 +39,21 @@ CHANNEL_GROUPS = {
         "TMB", "Kral POP", "Power TV", "Dream Turk", "Dream Türk", "Number1"
     ]
 }
+
+def is_stream_working(url):
+    """Kanalın yayım linkinin cavab verib-vermədiyini yoxlayır"""
+    try:
+        req = urllib.request.Request(
+            url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        )
+        # Qısa müddətə (3 saniyə) qoşulma cəhdi edirik
+        with urllib.request.urlopen(req, timeout=3) as response:
+            if response.status == 200:
+                return True
+    except Exception:
+        pass
+    return False
 
 def main():
     final_playlist = ["#EXTM3U\n"]
@@ -57,24 +71,30 @@ def main():
             for extinf, stream_url in entries:
                 channel_name = extinf.split(',')[-1].strip()
 
+                # Hansı qrupa aid olduğunu yoxlayaq
                 matched_group = None
                 for group_name, keywords in CHANNEL_GROUPS.items():
-                    if any(kw.lower() in channel_name.lower() for kw in keywords):
+                    if any(kw.lower() == channel_name.lower() or kw.lower() in channel_name.lower() for kw in keywords):
                         matched_group = group_name
                         break
 
+                # Əgər tanınan kanaldırsa və hələ əlavə olunmayıbsa
                 if matched_group and channel_name not in added_channels:
-                    clean_extinf = f'#EXTINF:-1 group-title="{matched_group}",{channel_name}\n'
-                    final_playlist.append(f"{clean_extinf}{stream_url}\n")
-                    added_channels.add(channel_name)
-                    print(f"Əlavə edildi [{matched_group}]: {channel_name}")
+                    print(f"Yoxlanılır: {channel_name}...")
+                    if is_stream_working(stream_url):
+                        print(f" -> [İŞLƏK] {channel_name}")
+                        clean_extinf = f'#EXTINF:-1 group-title="{matched_group}",{channel_name}\n'
+                        final_playlist.append(f"{clean_extinf}{stream_url}\n")
+                        added_channels.add(channel_name)
+                    else:
+                        print(f" -> [İŞLƏMİR] {channel_name}")
 
         except Exception as e:
             print(f"Xəta baş verdi ({source_url}): {e}")
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
-    print("Yenilənmə tamamlandı! Çoxmənbəli və kateqoriyalı playlist yaradıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} işlək kanal tapıldı.")
 
 if __name__ == "__main__":
     main()
