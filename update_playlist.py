@@ -1,8 +1,10 @@
 import urllib.request
 import re
 
+# Bir neçə stabil və işlək mənbəni bura əlavə edirik
 SOURCES = [
     "https://qazim.github.io/IPTV/all_channels.m3u",
+    "https://raw.githubusercontent.com/funcen/IPTV/main/index.m3u",
 ]
 
 # Kanalları kateqoriyalara (qruplara) bölürük
@@ -53,16 +55,13 @@ def main():
             for extinf, stream_url in entries:
                 channel_name = extinf.split(',')[-1].strip()
 
-                # Kanalın hansı qrupa aid olduğunu tapırıq
                 matched_group = None
                 for group_name, keywords in CHANNEL_GROUPS.items():
                     if any(kw.lower() in channel_name.lower() for kw in keywords):
                         matched_group = group_name
                         break
 
-                # Əgər siyahıdadırsa və hələ əlavə olunmayıbsa
                 if matched_group and channel_name not in added_channels:
-                    # Pleyerdə qrup şəklində görünməsi üçün group-title əlavə edirik
                     clean_extinf = f'#EXTINF:-1 group-title="{matched_group}",{channel_name}\n'
                     final_playlist.append(f"{clean_extinf}{stream_url}\n")
                     added_channels.add(channel_name)
@@ -73,7 +72,7 @@ def main():
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
-    print("Yenilənmə tamamlandı! Kateqoriyalı playlist yaradıldı.")
+    print("Yenilənmə tamamlandı! Çoxmənbəli və kateqoriyalı playlist yaradıldı.")
 
 if __name__ == "__main__":
     main()
