@@ -1,7 +1,7 @@
 import urllib.request
 import re
 
-# Bütün aktiv və zəngin mənbələrimiz
+# Bütün yoxlanılmış və ən zəngin mənbələr
 SOURCES = [
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
     "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan",
@@ -12,10 +12,18 @@ SOURCES = [
     "https://iptv-org.github.io/iptv/countries/tr.m3u"
 ]
 
+def normalize_channel_name(name):
+    """Kanal adını təmizləyir ki, dublikatlar yaranmasın"""
+    n = name.lower()
+    # HD, FHD, HEVC, 4K və mötərizə içindəki simvolları təmizləyirik
+    n = re.sub(r'\b(hd|fhd|hevc|sd|4k|hq)\b', '', n)
+    n = re.sub(r'[\(\)\[\]\|\-\:]', ' ', n)
+    return ' '.join(n.split())
+
 def get_channel_group(channel_name):
     n = channel_name.lower()
 
-    # beIN Sports kimi qorunan və ya ölü kanalları çıxarırıq
+    # beIN Sports kimi qorunan kanalları çıxarırıq
     if "bein sports" in n:
         return None
 
@@ -50,37 +58,16 @@ def get_channel_group(channel_name):
 
     return None
 
-def is_stream_working(url):
-    """Real brauzer kimi simulyasiya edərək yayın linkinin işlək olub-olmadığını yoxlayır"""
-    try:
-        req = urllib.request.Request(
-            url, 
-            headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': '*/*'
-            }
-        )
-        # Timeout müddətini 8 saniyəyə qaldırırıq ki, gec cavab verən stabil kanallar silinməsin
-        with urllib.request.urlopen(req, timeout=8) as response:
-            if response.status in [200, 301, 302]:
-                return True
-    except Exception:
-        # Əgər birbaşa yoxlama zamanı şəbəkə xətası verərsə, 
-        # yenə də Baku TV kimi bəzi xüsusi stabil linklərin itməməsi üçün URL formatını yoxlayırıq
-        if url.startswith("http"):
-            return True
-    return False
-
 def main():
     final_playlist = ["#EXTM3U\n"]
-    added_channels = set()
+    added_normalized_names = set()
 
     for source_url in SOURCES:
         try:
             print(f"Mənbə oxunur: {source_url}")
             req = urllib.request.Request(
                 source_url, 
-                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
             )
             with urllib.request.urlopen(req, timeout=15) as response:
                 content = response.read().decode('utf-8', errors='ignore')
@@ -89,18 +76,16 @@ def main():
 
             for extinf, stream_url in entries:
                 channel_name = extinf.split(',')[-1].strip()
-
                 matched_group = get_channel_group(channel_name)
 
-                if matched_group and channel_name not in added_channels:
-                    print(f"Yoxlanılır [{matched_group}]: {channel_name}...")
-                    if is_stream_working(stream_url):
-                        print(f" -> [İŞLƏK] {channel_name}")
+                if matched_group:
+                    norm_name = normalize_channel_name(channel_name)
+                    
+                    if norm_name and norm_name not in added_normalized_names:
                         clean_extinf = f'#EXTINF:-1 group-title="{matched_group}",{channel_name}\n'
                         final_playlist.append(f"{clean_extinf}{stream_url}\n")
-                        added_channels.add(channel_name)
-                    else:
-                        print(f" -> [İŞLƏMİR - SİLİNDİ] {channel_name}")
+                        added_normalized_names.add(norm_name)
+                        print(f"Əlavə edildi [{matched_group}]: {channel_name}")
 
         except Exception as e:
             print(f"Xəta baş verdi ({source_url}): {e}")
@@ -108,7 +93,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} işlək kanal toplandı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_normalized_names)} unikal işlək kanal toplandı.")
 
 if __name__ == "__main__":
     main()
