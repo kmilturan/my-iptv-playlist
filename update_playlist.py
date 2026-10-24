@@ -100,13 +100,13 @@ MASTER_CHANNELS = {
         "name": "Kanal D",
         "group": "Turkiye - Esas",
         "tvg_id": "KanalD.tr",
-        "aliases": ["kanal d", "kanald"]
+        "aliases": ["kanal d", "kanald", "euro d"]
     },
     "show tv": {
         "name": "Show TV",
         "group": "Turkiye - Esas",
         "tvg_id": "ShowTV.tr",
-        "aliases": ["show tv", "showtv"]
+        "aliases": ["show tv", "showtv", "show hd"]
     },
     "star tv": {
         "name": "Star TV",
@@ -118,7 +118,7 @@ MASTER_CHANNELS = {
         "name": "ATV",
         "group": "Turkiye - Esas",
         "tvg_id": "ATV.tr",
-        "aliases": ["atv", "atv türkiye", "atv turkiye", "atv hd", "tr: atv"]
+        "aliases": ["atv", "atv türkiye", "atv turkiye", "atv hd", "tr: atv", "a2 tv", "a2 tv hd"]
     },
     "tv8": {
         "name": "TV8",
@@ -136,7 +136,7 @@ MASTER_CHANNELS = {
         "name": "NOW TV",
         "group": "Turkiye - Esas",
         "tvg_id": "NowTV.tr",
-        "aliases": ["now tv", "nowtv", "fox tv", "fox"]
+        "aliases": ["now tv", "nowtv", "fox tv", "fox", "now hd", "tr: now hd"]
     },
     "kanal 7": {
         "name": "Kanal 7",
@@ -166,7 +166,7 @@ MASTER_CHANNELS = {
         "name": "TRT Spor",
         "group": "Idman",
         "tvg_id": "TRTSpor.tr",
-        "aliases": ["trt spor", "trtspor"]
+        "aliases": ["trt spor", "trtspor", "trt spor yıldız"]
     },
     "a haber": {
         "name": "A Haber",
@@ -185,6 +185,26 @@ MASTER_CHANNELS = {
         "group": "Xeber",
         "tvg_id": "Haberturk.tr",
         "aliases": ["habertürk", "haberturk"]
+    },
+    "tgrt haber": {
+        "name": "Tgrt Haber",
+        "group": "Xeber",
+        "aliases": ["tgrt haber", "tr: tgrt haber hd"]
+    },
+    "haber global": {
+        "name": "Haber Global",
+        "group": "Xeber",
+        "aliases": ["haber global", "tr: haber global hd"]
+    },
+    "halk tv": {
+        "name": "Halk TV",
+        "group": "Xeber",
+        "aliases": ["halk tv", "tr: halk tv"]
+    },
+    "ntv": {
+        "name": "NTV",
+        "group": "Xeber",
+        "aliases": ["ntv", "ntv hd", "tr: ntv hd"]
     }
 }
 
@@ -234,8 +254,7 @@ def load_and_update_sources():
 
 def match_master_channel(channel_name):
     n = channel_name.lower().strip()
-    # Prefiksləri təmizləyirik (məsələn "tr: ", "az: " və s.)
-    n = re.sub(r'^(tr|az|hd|fhd|sd):\s*', '', n).strip()
+    n = re.sub(r'^(tr|az|hd|fhd|sd|hevc):\s*', '', n).strip()
     
     if any(b in n for b in ["bein sports", "s sport", "exxen", "tivibu", "smart spor"]):
         return "BLOCKED", None
@@ -243,9 +262,7 @@ def match_master_channel(channel_name):
     for key, data in MASTER_CHANNELS.items():
         for alias in data["aliases"]:
             clean_alias = re.sub(r'^(tr|az):\s*', '', alias).strip()
-            if clean_alias == n or f" {clean_alias} " in f" {n} " or n.startswith(f"{clean_alias} ") or n.endswith(f" {clean_alias}"):
-                return key, data
-            elif len(clean_alias) <= 5 and clean_alias in n.split():
+            if clean_alias == n or clean_alias in n or n in clean_alias:
                 return key, data
                 
     return None, None
@@ -276,20 +293,24 @@ def process_channel(entry):
             return None
         return (master_key, channel_info["group"], channel_info["name"], channel_info["tvg_id"], stream_url)
     
+    # Qrup normalizasiyası: Bütün xam qrupları və adları bizim 4 əsas təmiz qrupa yönəldirik
     l_name = channel_name.lower()
-    if not any(k in l_name for k in ["az", "azerbaijan", "tr", "türkiye", "turkey", "baku", "baki"]):
-        return None
-
     if not is_stream_valid(stream_url):
         return None
 
-    group_match = re.search(r'group-title="([^"]+)"', extinf)
-    group_title = group_match.group(1) if group_match else "Diger Kanallar"
-    group_title = re.sub(r'[^\w\s\-\.]', '', group_title).strip()
-    if not group_title:
-        group_title = "Diger Kanallar"
+    if any(k in l_name for k in ["az", "azerbaijan", "baku", "baki", "kapaz", "space", "xezer", "azstar"]):
+        group_title = "Azerbaycan"
+    elif any(k in l_name for k in ["haber", "trt haber", "tgrt", "halk", "ntv", "cnn", "habertürk"]):
+        group_title = "Xeber"
+    elif any(k in l_name for k in ["spor", "idman", "cbc sport", "tv8.5"]):
+        group_title = "Idman"
+    elif any(k in l_name for k in ["tr", "türkiye", "turkey", "trt", "kanal", "show", "star", "atv", "now", "tv4", "teve", "cine5", "360", "tivi6"]):
+        group_title = "Turkiye - Esas"
+    else:
+        group_title = "Turkiye - Esas" # Heç biri olmazsa avtomatik əsas qrupa düşür ki, unsorted-a düşməsin
     
-    return (channel_name.lower(), group_title, channel_name, "", stream_url)
+    clean_name = re.sub(r'^(tr|az):\s*', '', channel_name, flags=re.IGNORECASE).strip()
+    return (channel_name.lower(), group_title, clean_name, "", stream_url)
 
 def main():
     sources = load_and_update_sources()
@@ -320,7 +341,7 @@ def main():
             if result:
                 unique_key, group, name, tvg_id, stream_url = result
                 if unique_key not in added_keys:
-                    # OTTPlayer üçün həm group-title, həm də tvg-group atributlarını əlavə edirik
+                    # OTTPlayer-in 100% tanıması üçün həm tvg-group, həm də group-title eyni qrup adına tənzimlənir
                     if tvg_id:
                         extinf_line = f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-group="{group}" group-title="{group}",{name}\n'
                     else:
@@ -332,7 +353,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} təmiz kanal qruplara ayrılaraq yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} kanal təmiz qruplara ayrılaraq yazıldı.")
 
 if __name__ == "__main__":
     main()
