@@ -15,22 +15,21 @@ jobs:
     steps:
     - name: Repozitoriyanı yüklə
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
 
     - name: Python mühitini qur
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
-    - name: Git konfiqurasiyası
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git pull origin main
-
     - name: Skripti işə sal
       run: python update_playlist.py
 
-    - name: Yenilənmiş faylı avtomatik olaraq repoya göndər
+    - name: Yenilənmiş faylı repoya məcburi göndər
       run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add playlist.m3u
-        git diff --staged --quiet || (git commit -m "Auto update playlist" && git push origin main)
+        git commit -m "Auto update playlist" || echo "No changes to commit"
+        git push origin main --force
