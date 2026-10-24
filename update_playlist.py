@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.error
 import json
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -192,7 +193,7 @@ MASTER_CHANNELS = {
     }
 }
 
-# Sizin xüsusi olaraq qeyd etdiyiniz mənbəni listin ən başına əlavə edirik
+# Təməl mənbələr (Sizin xüsusi mənbəniz ən başdadır)
 BASE_SOURCES = [
     "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
@@ -200,6 +201,34 @@ BASE_SOURCES = [
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
 ]
+
+def discover_dynamic_sources():
+    """GitHub Search API vasitəsilə yeni açıq mənbəli IPTV m3u fayllarını avtomatik tapır"""
+    dynamic_sources = []
+    queries = ["azerbaijan extension:m3u", "turkey extension:m3u iptv"]
+    
+    for q in queries:
+        try:
+            api_url = f"https://api.github.com/search/code?q={urllib.parse.quote(q)}"
+            req = urllib.request.Request(
+                api_url, 
+                headers={
+                    'User-Agent': 'Mozilla/5.0',
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            )
+            with urllib.request.urlopen(req, timeout=8) as response:
+                data = json.loads(response.read().decode('utf-8'))
+                for item in data.get("items", [])[:3]: # Hər sorğudan ən yaxşı 3 mənbə götürürük
+                    html_url = item.get("html_url", "")
+                    raw_url = html_url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
+                    if raw_url not in dynamic_sources:
+                        dynamic_sources.append(raw_url)
+                        print(f"Dinamik yeni mənbə kəşf edildi: {raw_url}")
+        except Exception as e:
+            print(f"Dinamik axtarış xətası ({q}): {e}")
+            
+    return dynamic_sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower()
@@ -212,9 +241,11 @@ def match_master_channel(channel_name):
                 return key, data
     return None, None
 
-def is_stream_healthy(url):
+def is_stream_smart_checked(url):
     """
-    Yönləndirmələri (Redirects) və HTTP cavablarını düzgün idarə edən sağlamlıq yoxlaması.
+    Balanslaşdırılmış Sağlamlıq Yoxlaması:
+    - Yalnız dəqiq ölü linkləri (404, 410) rədd edir.
+    - Server qorunması (403) olsa belə, axın formatı düzgündürsə qəbul edir.
     """
     try:
         req = urllib.request.Request(
@@ -224,24 +255,22 @@ def is_stream_healthy(url):
                 'Accept': '*/*'
             }
         )
-        # urlopen avtomatik olaraq 301/302 yönləndirmələrini izləyir
-        with urllib.request.urlopen(req, timeout=6) as response:
+        with urllib.request.urlopen(req, timeout=5) as response:
             status = response.getcode()
-            if status == 200:
-                # Server cavabını oxuyuruq
-                content = response.read(1024).decode('utf-8', errors='ignore').strip()
-                content_lower = content.lower()
-                
-                # Əgər səhvən HTML xəta səhifəsi veribsə
-                if "<html" in content_lower or "access denied" in content_lower or "forbidden" in content_lower:
+            if status in [200, 301, 302]:
+                content = response.read(512).decode('utf-8', errors='ignore').lower()
+                if "<html" in content and "not found" in content:
                     return False
-                
                 return True
+    except urllib.error.HTTPError as e:
+        if e.code in [404, 410]:
+            return False
     except Exception:
-        # Bəzi IPTV axınları HTTP status 200 verməsə belə, 
-        # birbaşa pleyerdə işləyə bilir. Buna görə də əgər link birbaşa stream uzantısı ilə bitirsə, şans tanıyırıq:
-        if any(ext in url.lower() for ext in [".m3u8", ".ts", "/live/", "/hls/", "m3u"]):
-            return True
+        pass
+
+    if any(ext in url.lower() for ext in [".m3u8", ".ts", "/live/", "/hls/", "m3u"]):
+        return True
+        
     return False
 
 def process_channel(entry):
@@ -250,12 +279,19 @@ def process_channel(entry):
     
     master_key, channel_info = match_master_channel(channel_name)
     if master_key and channel_info:
-        if is_stream_healthy(stream_url):
+        if is_stream_smart_checked(stream_url):
             return master_key, channel_info, stream_url
     return None
 
 def main():
+    # 1. Təməl mənbələri götürürük və dinamik tapılanları əlavə edirik
     sources = BASE_SOURCES.copy()
+    print("GitHub üzrə dinamik mənbə kəşfiyyatı başladılır...")
+    dynamic_ones = discover_dynamic_sources()
+    for d_url in dynamic_ones:
+        if d_url not in sources:
+            sources.append(d_url)
+    print(f"Ümumi aktiv mənbə sayı: {len(sources)}")
 
     all_entries = []
     for source_url in sources:
@@ -270,7 +306,7 @@ def main():
         except Exception as e:
             print(f"Mənbə oxunmadı ({source_url}): {e}")
 
-    print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. Yoxlama aparılır...")
+    print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. Ağıllı yoxlama və master mapping tətbiq olunur...")
 
     final_playlist = ["#EXTM3U\n"]
     added_keys = set()
@@ -286,12 +322,12 @@ def main():
                     extinf_line = f'#EXTINF:-1 tvg-id="{info["tvg_id"]}" group-title="{info["group"]}",{info["name"]}\n'
                     final_playlist.append(f"{extinf_line}{stream_url}\n")
                     added_keys.add(master_key)
-                    print(f"İşlək təsdiqləndi [{info['group']}]: {info['name']}")
+                    print(f"Əlavə edildi [{info['group']}]: {info['name']}")
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} yoxlanılmış işlək kanal yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} unikal kanal playlistə yazıldı.")
 
 if __name__ == "__main__":
     main()
