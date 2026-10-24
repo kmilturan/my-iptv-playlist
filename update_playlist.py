@@ -5,8 +5,8 @@ import socket
 # Çoxmənbəli və zəngin IPTV siyahıları
 SOURCES = [
     "https://qazim.github.io/IPTV/all_channels.m3u",
-    "https://iptv-org.github.io/iptv/countries/az.m3u",
-    "https://iptv-org.github.io/iptv/countries/tr.m3u"
+    "https://iptv-org.github.io/iptv/languages/aze.m3u",
+    "https://iptv-org.github.io/iptv/languages/tur.m3u"
 ]
 
 # Kanalları kateqoriyalara bölmək üçün açar sözlər
