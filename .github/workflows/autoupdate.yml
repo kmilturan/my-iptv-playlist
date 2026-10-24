@@ -26,10 +26,13 @@ jobs:
     - name: Skripti işə sal
       run: python update_playlist.py
 
-    - name: Yenilənmiş faylı repoya məcburi göndər
+    - name: Repoya məcburi göndər (Konfliktsiz)
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add playlist.m3u
-        git commit -m "Auto update playlist" || echo "No changes to commit"
-        git push origin main --force
+        git checkout --orphan latest_branch
+        git add -A
+        git commit -m "Auto update playlist"
+        git branch -D main
+        git branch -m main
+        git push -f origin main
