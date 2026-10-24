@@ -10,7 +10,7 @@ MASTER_CHANNELS = {
         "name": "Baku TV",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "BakuTV.az",
-        "aliases": ["baku tv", "bakutv", "baku-tv"]
+        "aliases": ["baku tv", "bakutv", "baku-tv", "baku"]
     },
     "itv": {
         "name": "İTV HD",
@@ -192,240 +192,14 @@ MASTER_CHANNELS = {
     }
 }
 
-# Əsas təməl mənbələr
+# Sizin xüsusi olaraq qeyd etdiyiniz mənbəni listin ən başına əlavə edirik
 BASE_SOURCES = [
+    "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
     "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan",
-    "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
 ]
-import urllib.request
-import json
-import re
-from concurrent.futures import ThreadPoolExecutor, as_completed
-
-# Master Mapping: Genişləndirilmiş Azərbaycan və Türkiyə Kanalları Lüğəti
-MASTER_CHANNELS = {
-    # --- AZƏRBAYCAN KANALLARI ---
-    "baku tv": {
-        "name": "Baku TV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "BakuTV.az",
-        "aliases": ["baku tv", "bakutv", "baku-tv"]
-    },
-    "itv": {
-        "name": "İTV HD",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "ITV.az",
-        "aliases": ["ictimai", "itv", "ictimai tv"]
-    },
-    "aztv": {
-        "name": "AzTV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "AzTV.az",
-        "aliases": ["aztv", "azerbaijan tv", "az tv"]
-    },
-    "xəzər tv": {
-        "name": "Xəzər TV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "KhazarTV.az",
-        "aliases": ["xəzər", "khazar", "xezer tv", "xezertv"]
-    },
-    "arb tv": {
-        "name": "ARB TV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "ARBTv.az",
-        "aliases": ["arb tv", "arb", "azad azərbaycan"]
-    },
-    "arb 24": {
-        "name": "ARB 24",
-        "group": "📰 Xəbər",
-        "tvg_id": "ARB24.az",
-        "aliases": ["arb 24", "arb24"]
-    },
-    "arb günəş": {
-        "name": "ARB Günəş",
-        "group": "🧸 Uşaq & Sənədli",
-        "tvg_id": "ARBGunesh.az",
-        "aliases": ["arb günəş", "arb gunes", "gunes tv"]
-    },
-    "space tv": {
-        "name": "Space TV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "SpaceTV.az",
-        "aliases": ["space", "space tv", "spacetv"]
-    },
-    "lider tv": {
-        "name": "Lider TV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "LiderTV.az",
-        "aliases": ["lider", "lider tv", "lidertv"]
-    },
-    "mədəniyyət tv": {
-        "name": "Mədəniyyət TV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "MedeniyyetTV.az",
-        "aliases": ["mədəniyyət", "medeniyyet", "medeniyyet tv"]
-    },
-    "dunya tv": {
-        "name": "Dünya TV",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "DunyaTV.az",
-        "aliases": ["dunya tv", "dünya tv", "dunyatv"]
-    },
-    "cbc az": {
-        "name": "CBC Azerbaijan",
-        "group": "🇦🇿 Azərbaycan",
-        "tvg_id": "CBCAzerbaijan.az",
-        "aliases": ["cbc az", "cbc azerbaijan", "cbcaz"]
-    },
-    "cbc sport": {
-        "name": "CBC Sport",
-        "group": "⚽ İdman",
-        "tvg_id": "CBCSport.az",
-        "aliases": ["cbc sport", "cbcsport"]
-    },
-    "idman az": {
-        "name": "İdman Azərbaycan",
-        "group": "⚽ İdman",
-        "tvg_id": "IdmanAzerbaijan.az",
-        "aliases": ["idman az", "idmanazerbaijan", "idman tv"]
-    },
-
-    # --- TÜRKİYƏ - ƏSAS KANALLAR ---
-    "trt 1": {
-        "name": "TRT 1",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "TRT1.tr",
-        "aliases": ["trt 1", "trt1"]
-    },
-    "kanal d": {
-        "name": "Kanal D",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "KanalD.tr",
-        "aliases": ["kanal d", "kanald"]
-    },
-    "show tv": {
-        "name": "Show TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "ShowTV.tr",
-        "aliases": ["show tv", "showtv"]
-    },
-    "star tv": {
-        "name": "Star TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "StarTV.tr",
-        "aliases": ["star tv", "startv"]
-    },
-    "atv tr": {
-        "name": "ATV",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "ATV.tr",
-        "aliases": ["atv", "atv türkiye", "atv turkiye"]
-    },
-    "tv8": {
-        "name": "TV8",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "TV8.tr",
-        "aliases": ["tv8"]
-    },
-    "tv8.5": {
-        "name": "TV8.5",
-        "group": "⚽ İdman",
-        "tvg_id": "TV85.tr",
-        "aliases": ["tv8.5", "tv85", "tv 8.5"]
-    },
-    "now tv": {
-        "name": "NOW TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "NowTV.tr",
-        "aliases": ["now tv", "nowtv", "fox tv", "fox"]
-    },
-    "kanal 7": {
-        "name": "Kanal 7",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "Kanal7.tr",
-        "aliases": ["kanal 7", "kanal7"]
-    },
-    "beyaz tv": {
-        "name": "Beyaz TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "BeyazTV.tr",
-        "aliases": ["beyaz tv", "beyaztv"]
-    },
-    "teve2": {
-        "name": "Teve2",
-        "group": "🇹🇷 Türkiyə - Əsas",
-        "tvg_id": "Teve2.tr",
-        "aliases": ["teve2", "teve 2"]
-    },
-
-    # --- XƏBƏR VƏ İDMAN ---
-    "trt haber": {
-        "name": "TRT Haber",
-        "group": "📰 Xəbər",
-        "tvg_id": "TRTHaber.tr",
-        "aliases": ["trt haber", "trthaber"]
-    },
-    "trt spor": {
-        "name": "TRT Spor",
-        "group": "⚽ İdman",
-        "tvg_id": "TRTSpor.tr",
-        "aliases": ["trt spor", "trtspor"]
-    },
-    "a haber": {
-        "name": "A Haber",
-        "group": "📰 Xəbər",
-        "tvg_id": "AHaber.tr",
-        "aliases": ["a haber", "ahaber"]
-    },
-    "cnnturk": {
-        "name": "CNN Türk",
-        "group": "📰 Xəbər",
-        "tvg_id": "CNNTurk.tr",
-        "aliases": ["cnn türk", "cnn turk", "cnntürk"]
-    },
-    "haberturk": {
-        "name": "Habertürk",
-        "group": "📰 Xəbər",
-        "tvg_id": "Haberturk.tr",
-        "aliases": ["habertürk", "haberturk"]
-    }
-}
-
-BASE_SOURCES = [
-    "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
-    "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan",
-    "https://qazim.github.io/IPTV/all_channels.m3u",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
-]
-
-def discover_dynamic_sources():
-    dynamic_sources = []
-    queries = ["azerbaijan extension:m3u", "turkey extension:m3u iptv"]
-    
-    for q in queries:
-        try:
-            api_url = f"https://api.github.com/search/code?q={urllib.parse.quote(q)}"
-            req = urllib.request.Request(
-                api_url, 
-                headers={
-                    'User-Agent': 'Mozilla/5.0',
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            )
-            with urllib.request.urlopen(req, timeout=10) as response:
-                data = json.loads(response.read().decode('utf-8'))
-                for item in data.get("items", [])[:3]:
-                    html_url = item.get("html_url", "")
-                    raw_url = html_url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
-                    if raw_url not in dynamic_sources:
-                        dynamic_sources.append(raw_url)
-        except Exception:
-            pass
-    return dynamic_sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower()
@@ -440,10 +214,7 @@ def match_master_channel(channel_name):
 
 def is_stream_healthy(url):
     """
-    Qüsursuzlaşdırılmış Sağlamlıq Yoxlaması:
-    1. IPTV Pleyer User-Agent (VLC) istifadə edir (bloklanmanın qarşısını alır).
-    2. HTML xəta səhifələrini ("Access Denied", "404" və s.) filtrləyir.
-    3. HLS manifest daxilindəki rəsmi teqləri yoxlayır.
+    Yönləndirmələri (Redirects) və HTTP cavablarını düzgün idarə edən sağlamlıq yoxlaması.
     """
     try:
         req = urllib.request.Request(
@@ -453,30 +224,24 @@ def is_stream_healthy(url):
                 'Accept': '*/*'
             }
         )
-        # Timeout müddətini 5 saniyə təyin edirik
-        with urllib.request.urlopen(req, timeout=5) as response:
-            if response.status != 200:
-                return False
-            
-            content = response.read().decode('utf-8', errors='ignore').strip()
-            
-            # Əgər server cavab olaraq HTML xəta səhifəsi qaytarıbsa
-            content_lower = content.lower()
-            if "<html" in content_lower or "access denied" in content_lower or "forbidden" in content_lower:
-                return False
-
-            # Əgər .m3u8 manifestidirsə, içində HLS teqləri olmalıdır
-            if ".m3u" in url or "m3u8" in url:
-                if any(tag in content for tag in ["#EXTINF", "#EXT-X-STREAM-INF", "#EXT-X-TARGETDURATION"]):
-                    return True
-                return False
+        # urlopen avtomatik olaraq 301/302 yönləndirmələrini izləyir
+        with urllib.request.urlopen(req, timeout=6) as response:
+            status = response.getcode()
+            if status == 200:
+                # Server cavabını oxuyuruq
+                content = response.read(1024).decode('utf-8', errors='ignore').strip()
+                content_lower = content.lower()
                 
-            # Digər birbaşa axın linkləri üçün cavabın boş olmadığını yoxlayırıq
-            if len(content) > 0:
+                # Əgər səhvən HTML xəta səhifəsi veribsə
+                if "<html" in content_lower or "access denied" in content_lower or "forbidden" in content_lower:
+                    return False
+                
                 return True
-                
     except Exception:
-        pass
+        # Bəzi IPTV axınları HTTP status 200 verməsə belə, 
+        # birbaşa pleyerdə işləyə bilir. Buna görə də əgər link birbaşa stream uzantısı ilə bitirsə, şans tanıyırıq:
+        if any(ext in url.lower() for ext in [".m3u8", ".ts", "/live/", "/hls/", "m3u"]):
+            return True
     return False
 
 def process_channel(entry):
@@ -491,22 +256,21 @@ def process_channel(entry):
 
 def main():
     sources = BASE_SOURCES.copy()
-    print("Dinamik mənbələr axtarılır...")
-    sources.extend(discover_dynamic_sources())
 
     all_entries = []
     for source_url in sources:
         try:
+            print(f"Mənbə oxunur: {source_url}")
             req = urllib.request.Request(source_url, headers={'User-Agent': 'Mozilla/5.0'})
             with urllib.request.urlopen(req, timeout=12) as response:
                 content = response.read().decode('utf-8', errors='ignore')
 
             entries = re.findall(r'(#EXTINF:[^\n]+\n)(https?://[^\s]+)', content)
             all_entries.extend(entries)
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"Mənbə oxunmadı ({source_url}): {e}")
 
-    print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. Dəqiq sağlamlıq yoxlaması aparılır...")
+    print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. Yoxlama aparılır...")
 
     final_playlist = ["#EXTM3U\n"]
     added_keys = set()
