@@ -10,13 +10,13 @@ MASTER_CHANNELS = {
         "name": "Baku TV",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "BakuTV.az",
-        "aliases": ["baku tv", "bakutv", "baku-tv", "baku"]
+        "aliases": ["baku tv", "bakutv", "baku-tv"]
     },
     "itv": {
         "name": "İTV HD",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "ITV.az",
-        "aliases": ["ictimai", "itv", "ictimai tv"]
+        "aliases": ["ictimai tv", "itv hd", "ictimai", "itv"]
     },
     "aztv": {
         "name": "AzTV",
@@ -28,13 +28,13 @@ MASTER_CHANNELS = {
         "name": "Xəzər TV",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "KhazarTV.az",
-        "aliases": ["xəzər", "khazar", "xezer tv", "xezertv"]
+        "aliases": ["xəzər tv", "khazar tv", "xezer tv", "xezertv"]
     },
     "arb tv": {
         "name": "ARB TV",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "ARBTv.az",
-        "aliases": ["arb tv", "arb", "azad azərbaycan"]
+        "aliases": ["arb tv", "azad azərbaycan"]
     },
     "arb 24": {
         "name": "ARB 24",
@@ -46,25 +46,25 @@ MASTER_CHANNELS = {
         "name": "ARB Günəş",
         "group": "🧸 Uşaq & Sənədli",
         "tvg_id": "ARBGunesh.az",
-        "aliases": ["arb günəş", "arb gunes", "gunes tv"]
+        "aliases": ["arb günəş", "arb gunes"]
     },
     "space tv": {
         "name": "Space TV",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "SpaceTV.az",
-        "aliases": ["space", "space tv", "spacetv"]
+        "aliases": ["space tv", "spacetv"]
     },
     "lider tv": {
         "name": "Lider TV",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "LiderTV.az",
-        "aliases": ["lider", "lider tv", "lidertv"]
+        "aliases": ["lider tv", "lidertv"]
     },
     "mədəniyyət tv": {
         "name": "Mədəniyyət TV",
         "group": "🇦🇿 Azərbaycan",
         "tvg_id": "MedeniyyetTV.az",
-        "aliases": ["mədəniyyət", "medeniyyet", "medeniyyet tv"]
+        "aliases": ["mədəniyyət tv", "medeniyyet tv"]
     },
     "dunya tv": {
         "name": "Dünya TV",
@@ -118,7 +118,7 @@ MASTER_CHANNELS = {
         "name": "ATV",
         "group": "🇹🇷 Türkiyə - Əsas",
         "tvg_id": "ATV.tr",
-        "aliases": ["atv", "atv türkiye", "atv turkiye"]
+        "aliases": ["atv türkiye", "atv turkiye", "atv hd"]
     },
     "tv8": {
         "name": "TV8",
@@ -136,7 +136,7 @@ MASTER_CHANNELS = {
         "name": "NOW TV",
         "group": "🇹🇷 Türkiyə - Əsas",
         "tvg_id": "NowTV.tr",
-        "aliases": ["now tv", "nowtv", "fox tv", "fox"]
+        "aliases": ["now tv", "nowtv", "fox tv"]
     },
     "kanal 7": {
         "name": "Kanal 7",
@@ -188,7 +188,7 @@ MASTER_CHANNELS = {
     }
 }
 
-def load_and_update_sources():
+def load_sources():
     sources = []
     if os.path.exists("sources.txt"):
         with open("sources.txt", "r", encoding="utf-8") as f:
@@ -199,71 +199,39 @@ def load_and_update_sources():
                     
     if not sources:
         sources = [
-            "https://qazim.github.io/IPTV/all_channels.m3u",
-            "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
             "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
-            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
+            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
+            "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8"
         ]
-
-    # Dinamik mənbə axtarışı və sources.txt-yə yazılması
-    directories = [
-        "https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u",
-        "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
-    ]
-    
-    updated = False
-    for dir_url in directories:
-        try:
-            req = urllib.request.Request(dir_url, headers={'User-Agent': 'VLC/3.0.18'})
-            with urllib.request.urlopen(req, timeout=8) as response:
-                content = response.read().decode('utf-8', errors='ignore')
-                found_links = re.findall(r'https?://[^\s]+\.(?:m3u|m3u8)', content, re.IGNORECASE)
-                for link in found_links:
-                    if any(k in link.lower() for k in ["az", "turkey", "tr", "azerbaijan"]):
-                        if link not in sources:
-                            sources.append(link)
-                            updated = True
-        except Exception:
-            pass
-
-    # Əgər yeni mənbə tapılıbsa sources.txt-ni yeniləyirik
-    if updated:
-        with open("sources.txt", "w", encoding="utf-8") as f:
-            f.write("# Avtomatik yenilənən IPTV mənbələri\n")
-            for s in sources:
-                f.write(f"{s}\n")
-
     return sources
 
 def match_master_channel(channel_name):
-    n = channel_name.lower()
-    if "bein sports" in n or "s sport" in n or "exxen" in n or "tivibu" in n:
+    n = channel_name.lower().strip()
+    
+    # Bloklanan ödənişli kanallar
+    if any(b in n for b in ["bein sports", "s sport", "exxen", "tivibu", "smart spor"]):
         return "BLOCKED", None
 
     for key, data in MASTER_CHANNELS.items():
         for alias in data["aliases"]:
-            if alias in n:
+            # Dəqiq uyğunlaşma: alias kanal adının içində tam söz olaraq keçməlidir
+            if alias == n or f" {alias} " in f" {n} " or n.startswith(f"{alias} ") or n.endswith(f" {alias}"):
                 return key, data
+            # Xüsusi qısa adlar üçün (məsələn 'atv', 'itv', 'aztv')
+            elif len(alias) <= 5 and alias in n.split():
+                return key, data
+                
     return None, None
 
-def is_stream_smart_checked(url):
-    """Sərt və həqiqi yoxlama: Linkin cavab verib-vermədiyini yoxlayır"""
+def is_stream_valid(url):
+    """Linkin həqiqətən işlək və cavab verdiyini yoxlayır"""
     try:
         req = urllib.request.Request(
             url, 
-            headers={
-                'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18',
-                'Accept': '*/*'
-            }
+            headers={'User-Agent': 'VLC/3.0.18', 'Accept': '*/*'}
         )
-        # Timeout-u qısa qoyuruq ki, ölü linklər tez kənarlaşdırılsın
-        with urllib.request.urlopen(req, timeout=4) as response:
-            status = response.getcode()
-            if status in [200, 301, 302]:
-                # Əgər .m3u8 faylıdırsa və ya birbaşa axındırsa əmin oluruq
-                sample = response.read(256).decode('utf-8', errors='ignore').lower()
-                if "<html" in sample and ("not found" in sample or "error" in sample or "404" in sample):
-                    return False
+        with urllib.request.urlopen(req, timeout=3) as response:
+            if response.getcode() in [200, 301, 302]:
                 return True
     except Exception:
         return False
@@ -277,26 +245,34 @@ def process_channel(entry):
     if master_key == "BLOCKED":
         return None
         
-    if not is_stream_smart_checked(stream_url):
-        return None
-
+    # Əgər Master kanaldırsa, mütləq sağlamlıq yoxlamasından keçməlidir
     if master_key and channel_info:
+        if not is_stream_valid(stream_url):
+            return None
         return (master_key, channel_info["group"], channel_info["name"], channel_info["tvg_id"], stream_url)
     
+    # Master-də olmayan digər kanallar üçün sərt filtr (yalnız az və tr olanları saxlayırıக் ki, zibil dolmasın)
+    l_name = channel_name.lower()
+    if not any(k in l_name for k in ["az", "azerbaijan", "tr", "türkiye", "turkey", "baku", "baki"]):
+        return None
+
+    if not is_stream_valid(stream_url):
+        return None
+
     group_match = re.search(r'group-title="([^"]+)"', extinf)
     group_title = group_match.group(1) if group_match else "🌐 Digər Kanallar"
     
     return (channel_name.lower(), group_title, channel_name, "", stream_url)
 
 def main():
-    sources = load_and_update_sources()
-    print(f"Aktiv mənbə sayı: {len(sources)}")
+    sources = load_sources()
+    print(f"Mənbə sayı: {len(sources)}")
 
     all_entries = []
     for source_url in sources:
         try:
             req = urllib.request.Request(source_url, headers={'User-Agent': 'VLC/3.0.18'})
-            with urllib.request.urlopen(req, timeout=10) as response:
+            with urllib.request.urlopen(req, timeout=8) as response:
                 content = response.read().decode('utf-8', errors='ignore')
 
             entries = re.findall(r'(#EXTINF:[^\n]+\n)(https?://[^\s]+)', content)
@@ -304,13 +280,12 @@ def main():
         except Exception:
             pass
 
-    print(f"Tapıldı: {len(all_entries)} xam kanal. Sərt yoxlama başlanır...")
+    print(f"Tapıldı: {len(all_entries)} xam kanal. Dəqiq uyğunlaşma yoxlanılır...")
 
     final_playlist = ["#EXTM3U\n"]
     added_keys = set()
 
-    # Thread sayını bir az azaldırıq ki, serverlərə DDOS kimi getməsin və yoxlama dəqiq olsun
-    with ThreadPoolExecutor(max_workers=15) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(process_channel, entry) for entry in all_entries]
         
         for future in as_completed(futures):
@@ -329,7 +304,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} həqiqətən İŞLƏK kanal yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} təmiz və düzgün kanal yazıldı.")
 
 if __name__ == "__main__":
     main()
