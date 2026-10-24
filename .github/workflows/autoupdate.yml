@@ -38,6 +38,8 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git status
-        git add playlist.m3u sources.txt
+        git add playlist.m3u
+        if [ -f "sources.txt" ]; then git add sources.txt; fi
         git commit -m "Auto update playlist and sources [skip ci]" || echo "No changes to commit"
         git push origin main --force
+
