@@ -1,21 +1,24 @@
 import urllib.request
 import re
 
-# Azərbaycan kanalları üçün xüsusi stabil mənbələr və ümumi siyahılar
+# Genişləndirilmiş və ən zəngin IPTV mənbə bazası
 SOURCES = [
     "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
+    "https://raw.githubusercontent.com/funcen/IPTV/main/index.m3u",
+    "https://iptv-org.github.io/iptv/countries/az.m3u",
+    "https://iptv-org.github.io/iptv/countries/tr.m3u"
 ]
 
 def get_channel_group(channel_name):
     n = channel_name.lower()
 
-    # beIN Sports kimi saxta/ölü idman kanallarını qəti şəkildə çıxarırıq
+    # Ölü və ya saxta premium kanalları tamamilə bloklayırıq
     if "bein sports" in n:
         return None
 
-    # 1. Azərbaycan kanalları (prioritet)
+    # 1. Azərbaycan kanalları (Prioritet)
     az_keywords = [
         "aztv", "ictimai", "itv", "azad azərbaycan", "azad azerbaijan", 
         "xəzər", "khazar", "arb", "space", "real tv", "baku tv", "lider", 
@@ -30,31 +33,30 @@ def get_channel_group(channel_name):
         return "🇹🇷 Türkiyə - Əsas"
 
     # 3. İdman kanalları
-    sport_keywords = ["trt spor", "a spor", "s sport", "aspor", "fb tv", "gs tv", "cbc sport"]
+    sport_keywords = ["sport", "trtspor", "aspor", "fb tv", "gs tv", "bjk", "tivibu spor", "smart spor"]
     if any(kw in n for kw in sport_keywords):
         return "⚽ İdman"
 
     # 4. Xəbər kanalları
-    news_keywords = ["trt haber", "haberturk", "haber türk", "cnn turk", "cnn türk", "ntv", "a haber", "ekotürk", "bloomberg", "ülke tv", "sozcu", "sözcü", "tv100", "halk tv", "tele1"]
+    news_keywords = ["haber", "news", "cnn", "ntv", "bloomberg", "ekotürk", "sozcu", "sözcü", "tv100", "halk tv", "tele1"]
     if any(kw in n for kw in news_keywords):
         return "📰 Xəbər"
 
     # 5. Uşaq və Sənədli
-    kids_doc_keywords = ["trt çocuk", "cocuk", "minika", "cartoon network", "trt belgesel", "trt müzik", "muzik", "trt avaz", "tmb", "kral pop", "power tv", "dream"]
+    kids_doc_keywords = ["çocuk", "cocuk", "minika", "cartoon", "belgesel", "discovery", "national geographic", "history", "animal", "müzik", "muzik", "dream", "kral"]
     if any(kw in n for kw in kids_doc_keywords):
         return "🧸 Uşaq & Sənədli"
 
     return None
 
 def is_stream_working(url):
-    """Yayımın işlək olub-olmadığını daha etibarlı yoxlayır (vaxt limitini artırırıq)"""
+    """Yayımın işlək olub-olmadığını yoxlayır"""
     try:
         req = urllib.request.Request(
             url, 
             headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
         )
-        # Bəzi serverlər gec cavab verdiyi üçün vaxtı 6 saniyəyə qaldırırıq
-        with urllib.request.urlopen(req, timeout=6) as response:
+        with urllib.request.urlopen(req, timeout=5) as response:
             if response.status == 200:
                 return True
     except Exception:
@@ -94,7 +96,7 @@ def main():
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} kanal əlavə edildi.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} aktiv kanal toplandı.")
 
 if __name__ == "__main__":
     main()
