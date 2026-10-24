@@ -3,9 +3,7 @@ import re
 
 # 1. Mənbə M3U linkləri (Bura istədiyiniz qədər işlək mənbə əlavə edə bilərsiniz)
 SOURCES = [
-    "https://qazim.github.io/IPTV/all_channels.m3u",
-    "https://iptv-org.github.io/iptv/countries/aze.m3u",
-    "https://iptv-org.github.io/iptv/countries/tur.m3u",
+    "https://qazim.github.io/IPTV/all_channels.m3u"
 ]
 
 # 2. Genişləndirilmiş Kanal Siyahısı (Azərbaycan və Türkiyə)
