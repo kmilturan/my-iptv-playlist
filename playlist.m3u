@@ -115,6 +115,8 @@ https://canli.tgrthaber.com/tgrt.m3u8
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe4598be8e5d.smil/playlist.m3u8
 #EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR24 TV (720p) [Not 24/7]
 https://tv.ensonhaber.com/tv24/tv24.m3u8
+#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TRT 1 (1440p)
+https://tv-trt1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Cocuk (1440p)
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Diyanet Çocuk (720p)
@@ -151,8 +153,6 @@ https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
 https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
 #EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TGRT Belgesel (576p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8
-#EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TRT 1 (1440p)
-https://tv-trt1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Diyanet Cocuk (720p)
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🧸 Uşaq & Sənədli",TRT Muzik (720p)
