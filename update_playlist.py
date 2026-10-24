@@ -8,187 +8,187 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 MASTER_CHANNELS = {
     "baku tv": {
         "name": "Baku TV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "BakuTV.az",
         "aliases": ["baku tv", "bakutv", "baku-tv"]
     },
     "itv": {
         "name": "İTV HD",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "ITV.az",
         "aliases": ["ictimai tv", "itv hd", "ictimai", "itv"]
     },
     "aztv": {
         "name": "AzTV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "AzTV.az",
         "aliases": ["aztv", "azerbaijan tv", "az tv"]
     },
     "xəzər tv": {
         "name": "Xəzər TV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "KhazarTV.az",
         "aliases": ["xəzər tv", "khazar tv", "xezer tv", "xezertv"]
     },
     "arb tv": {
         "name": "ARB TV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "ARBTv.az",
         "aliases": ["arb tv", "azad azərbaycan"]
     },
     "arb 24": {
         "name": "ARB 24",
-        "group": "📰 Xəbər",
+        "group": "Xeber",
         "tvg_id": "ARB24.az",
         "aliases": ["arb 24", "arb24"]
     },
     "arb günəş": {
         "name": "ARB Günəş",
-        "group": "🧸 Uşaq & Sənədli",
+        "group": "Usaq ve Senedli",
         "tvg_id": "ARBGunesh.az",
         "aliases": ["arb günəş", "arb gunes"]
     },
     "space tv": {
         "name": "Space TV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "SpaceTV.az",
         "aliases": ["space tv", "spacetv"]
     },
     "lider tv": {
         "name": "Lider TV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "LiderTV.az",
         "aliases": ["lider tv", "lidertv"]
     },
     "mədəniyyət tv": {
         "name": "Mədəniyyət TV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "MedeniyyetTV.az",
         "aliases": ["mədəniyyət tv", "medeniyyet tv"]
     },
     "dunya tv": {
         "name": "Dünya TV",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "DunyaTV.az",
         "aliases": ["dunya tv", "dünya tv", "dunyatv"]
     },
     "cbc az": {
         "name": "CBC Azerbaijan",
-        "group": "🇦🇿 Azərbaycan",
+        "group": "Azerbaycan",
         "tvg_id": "CBCAzerbaijan.az",
         "aliases": ["cbc az", "cbc azerbaijan", "cbcaz"]
     },
     "cbc sport": {
         "name": "CBC Sport",
-        "group": "⚽ İdman",
+        "group": "Idman",
         "tvg_id": "CBCSport.az",
         "aliases": ["cbc sport", "cbcsport"]
     },
     "idman az": {
         "name": "İdman Azərbaycan",
-        "group": "⚽ İdman",
+        "group": "Idman",
         "tvg_id": "IdmanAzerbaijan.az",
         "aliases": ["idman az", "idmanazerbaijan", "idman tv"]
     },
     "trt 1": {
         "name": "TRT 1",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "TRT1.tr",
         "aliases": ["trt 1", "trt1"]
     },
     "kanal d": {
         "name": "Kanal D",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "KanalD.tr",
         "aliases": ["kanal d", "kanald"]
     },
     "show tv": {
         "name": "Show TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "ShowTV.tr",
         "aliases": ["show tv", "showtv"]
     },
     "star tv": {
         "name": "Star TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "StarTV.tr",
         "aliases": ["star tv", "startv"]
     },
     "atv tr": {
         "name": "ATV",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "ATV.tr",
         "aliases": ["atv türkiye", "atv turkiye", "atv hd"]
     },
     "tv8": {
         "name": "TV8",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "TV8.tr",
         "aliases": ["tv8"]
     },
     "tv8.5": {
         "name": "TV8.5",
-        "group": "⚽ İdman",
+        "group": "Idman",
         "tvg_id": "TV85.tr",
         "aliases": ["tv8.5", "tv85", "tv 8.5"]
     },
     "now tv": {
         "name": "NOW TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "NowTV.tr",
         "aliases": ["now tv", "nowtv", "fox tv"]
     },
     "kanal 7": {
         "name": "Kanal 7",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "Kanal7.tr",
         "aliases": ["kanal 7", "kanal7"]
     },
     "beyaz tv": {
         "name": "Beyaz TV",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "BeyazTV.tr",
         "aliases": ["beyaz tv", "beyaztv"]
     },
     "teve2": {
         "name": "Teve2",
-        "group": "🇹🇷 Türkiyə - Əsas",
+        "group": "Turkiye - Esas",
         "tvg_id": "Teve2.tr",
         "aliases": ["teve2", "teve 2"]
     },
     "trt haber": {
         "name": "TRT Haber",
-        "group": "📰 Xəbər",
+        "group": "Xeber",
         "tvg_id": "TRTHaber.tr",
         "aliases": ["trt haber", "trthaber"]
     },
     "trt spor": {
         "name": "TRT Spor",
-        "group": "⚽ İdman",
+        "group": "Idman",
         "tvg_id": "TRTSpor.tr",
         "aliases": ["trt spor", "trtspor"]
     },
     "a haber": {
         "name": "A Haber",
-        "group": "📰 Xəbər",
+        "group": "Xeber",
         "tvg_id": "AHaber.tr",
         "aliases": ["a haber", "ahaber"]
     },
     "cnnturk": {
         "name": "CNN Türk",
-        "group": "📰 Xəbər",
+        "group": "Xeber",
         "tvg_id": "CNNTurk.tr",
         "aliases": ["cnn türk", "cnn turk", "cnntürk"]
     },
     "haberturk": {
         "name": "Habertürk",
-        "group": "📰 Xəbər",
+        "group": "Xeber",
         "tvg_id": "Haberturk.tr",
         "aliases": ["habertürk", "haberturk"]
     }
 }
 
-def load_sources():
+def load_and_update_sources():
     sources = []
     if os.path.exists("sources.txt"):
         with open("sources.txt", "r", encoding="utf-8") as f:
@@ -203,28 +203,51 @@ def load_sources():
             "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
             "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8"
         ]
+
+    directories = [
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u",
+        "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
+    ]
+    
+    new_found = False
+    for dir_url in directories:
+        try:
+            req = urllib.request.Request(dir_url, headers={'User-Agent': 'VLC/3.0.18'})
+            with urllib.request.urlopen(req, timeout=8) as response:
+                content = response.read().decode('utf-8', errors='ignore')
+                found_links = re.findall(r'https?://[^\s]+\.(?:m3u|m3u8)', content, re.IGNORECASE)
+                for link in found_links:
+                    if any(k in link.lower() for k in ["az", "turkey", "tr", "azerbaijan"]):
+                        if link not in sources:
+                            sources.append(link)
+                            new_found = True
+        except Exception:
+            pass
+
+    if new_found:
+        with open("sources.txt", "w", encoding="utf-8") as f:
+            f.write("# Avtomatik yenilənən və genişlənən IPTV mənbələri\n")
+            for s in sources:
+                f.write(f"{s}\n")
+
     return sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower().strip()
     
-    # Bloklanan ödənişli kanallar
     if any(b in n for b in ["bein sports", "s sport", "exxen", "tivibu", "smart spor"]):
         return "BLOCKED", None
 
     for key, data in MASTER_CHANNELS.items():
         for alias in data["aliases"]:
-            # Dəqiq uyğunlaşma: alias kanal adının içində tam söz olaraq keçməlidir
             if alias == n or f" {alias} " in f" {n} " or n.startswith(f"{alias} ") or n.endswith(f" {alias}"):
                 return key, data
-            # Xüsusi qısa adlar üçün (məsələn 'atv', 'itv', 'aztv')
             elif len(alias) <= 5 and alias in n.split():
                 return key, data
                 
     return None, None
 
 def is_stream_valid(url):
-    """Linkin həqiqətən işlək və cavab verdiyini yoxlayır"""
     try:
         req = urllib.request.Request(
             url, 
@@ -245,13 +268,11 @@ def process_channel(entry):
     if master_key == "BLOCKED":
         return None
         
-    # Əgər Master kanaldırsa, mütləq sağlamlıq yoxlamasından keçməlidir
     if master_key and channel_info:
         if not is_stream_valid(stream_url):
             return None
         return (master_key, channel_info["group"], channel_info["name"], channel_info["tvg_id"], stream_url)
     
-    # Master-də olmayan digər kanallar üçün sərt filtr (yalnız az və tr olanları saxlayırıக் ki, zibil dolmasın)
     l_name = channel_name.lower()
     if not any(k in l_name for k in ["az", "azerbaijan", "tr", "türkiye", "turkey", "baku", "baki"]):
         return None
@@ -260,13 +281,18 @@ def process_channel(entry):
         return None
 
     group_match = re.search(r'group-title="([^"]+)"', extinf)
-    group_title = group_match.group(1) if group_match else "🌐 Digər Kanallar"
+    group_title = group_match.group(1) if group_match else "Diger Kanallar"
+    
+    # Əgər xam qrup adında da emojilər varsa təmizləyirik
+    group_title = re.sub(r'[^\w\s\-\.]', '', group_title).strip()
+    if not group_title:
+        group_title = "Diger Kanallar"
     
     return (channel_name.lower(), group_title, channel_name, "", stream_url)
 
 def main():
-    sources = load_sources()
-    print(f"Mənbə sayı: {len(sources)}")
+    sources = load_and_update_sources()
+    print(f"Aktiv mənbə sayı: {len(sources)}")
 
     all_entries = []
     for source_url in sources:
@@ -280,7 +306,7 @@ def main():
         except Exception:
             pass
 
-    print(f"Tapıldı: {len(all_entries)} xam kanal. Dəqiq uyğunlaşma yoxlanılır...")
+    print(f"Tapıldı: {len(all_entries)} xam kanal yoxlanılır...")
 
     final_playlist = ["#EXTM3U\n"]
     added_keys = set()
@@ -304,7 +330,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} təmiz və düzgün kanal yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} təmiz kanal yazıldı.")
 
 if __name__ == "__main__":
     main()
