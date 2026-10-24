@@ -1,0 +1,41 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="trt-1-hd" group-title="Ulusal",TR: TRT 1 HD
+https://trt.daioncdn.net/trt-1/master.m3u8?app=web
+#EXTINF:-1 tvg-id="atv-hd-tr" group-title="Ulusal",TR: ATV HD
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
+#EXTINF:-1 tvg-id="star-tv-hd-tr" group-title="Ulusal",TR: Star TV HD
+https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
+#EXTINF:-1 tvg-id="kanal-d-hd" group-title="Ulusal",TR: Kanal D HD
+https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
+#EXTINF:-1 tvg-id="fox-hd-tr" group-title="Ulusal",TR: Now HD
+http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
+#EXTINF:-1 tvg-id="kanal-7-hd-tr" group-title="Ulusal",TR: Kanal 7 HD
+https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
+#EXTINF:-1 tvg-id="beyaz-tv-tr" group-title="Ulusal",Beyaz TV
+https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
+#EXTINF:-1 tvg-id="TRTHaber.tr" group-title="Haber",TR: TRT Haber HD
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="TGRTHaber.tr" group-title="Haber",TR: Tgrt Haber HD
+https://canli.tgrthaber.com/tgrt.m3u8
+#EXTINF:-1 tvg-id="HaberturkTV.tr" group-title="Haber",TR: Haberturk HD
+https://tv.ensonhaber.com/haberturk/haberturk.m3u8
+#EXTINF:-1 tvg-id="HalkTV.tr" group-title="Haber",TR: Halk TV
+https://halktv-live.daioncdn.net/halktv/halktv.m3u8
+#EXTINF:-1 tvg-id="NTV.tr" group-title="Haber",TR: NTV HD
+http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
+#EXTINF:-1 tvg-id="a2-tr" group-title="Eglence",TR: A2 TV HD
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
+#EXTINF:-1 tvg-id="teve2hd" group-title="Eglence",TR: Teve2 HD
+http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
+#EXTINF:-1 group-title="Turk" tvg-id="360-tv",TR: 360 HD
+https://turkmedya-live.ercdn.net/tv360/tv360.m3u8?hash=bb504e08aafa6f1802409bdd7f2b541c
+#EXTINF:-1 group-title="azeri-muzik",now-music
+https://v2.catcast.tv/content/48694/index.m3u8?token=e8768237f294381845d56500ab7d1353
+#EXTINF:-1 group-title="Azeri" tvg-id="KanalS",Kanal S
+https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
+#EXTINF:-1 group-title="Rus" tvg-id="fox",Fox HD
+http://stream.mcquack.net/182/index.m3u8
+#EXTINF:-1 group-title="Rus" tvg-id="tv1000",viju TV1000 (576p)
+http://stream.mcquack.net/110/index.m3u8
+#EXTINF:-1 group-title="Rus" tvg-id="tv1000-action",viju TV1000 action (576p)
+http://stream.mcquack.net/100/index.m3u8
