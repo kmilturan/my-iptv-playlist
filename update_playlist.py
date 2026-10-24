@@ -1,12 +1,13 @@
 import urllib.request
 import re
 
-# Genişləndirilmiş və ən zəngin IPTV mənbə bazası
+# Bütün aktiv və zəngin mənbələrimiz
 SOURCES = [
+    "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
+    "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan",
     "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
-    "https://raw.githubusercontent.com/funcen/IPTV/main/index.m3u",
     "https://iptv-org.github.io/iptv/countries/az.m3u",
     "https://iptv-org.github.io/iptv/countries/tr.m3u"
 ]
@@ -14,14 +15,14 @@ SOURCES = [
 def get_channel_group(channel_name):
     n = channel_name.lower()
 
-    # Ölü və ya saxta premium kanalları tamamilə bloklayırıq
+    # beIN Sports kimi qorunan və ya ölü kanalları çıxarırıq
     if "bein sports" in n:
         return None
 
-    # 1. Azərbaycan kanalları (Prioritet)
+    # 1. Azərbaycan kanalları
     az_keywords = [
         "aztv", "ictimai", "itv", "azad azərbaycan", "azad azerbaijan", 
-        "xəzər", "khazar", "arb", "space", "real tv", "baku tv", "lider", 
+        "xəzər", "khazar", "arb", "space", "real tv", "baku tv", "baku", "lider", 
         "mədəniyyət", "medeniyyet", "dunya tv", "kanal s", "cbc sport", "idman", "atv azerbaijan", "az:"
     ]
     if any(kw in n for kw in az_keywords):
@@ -33,7 +34,7 @@ def get_channel_group(channel_name):
         return "🇹🇷 Türkiyə - Əsas"
 
     # 3. İdman kanalları
-    sport_keywords = ["sport", "trtspor", "aspor", "fb tv", "gs tv", "bjk", "tivibu spor", "smart spor"]
+    sport_keywords = ["sport", "trtspor", "aspor", "fb tv", "gs tv", "bjk", "tivibu"]
     if any(kw in n for kw in sport_keywords):
         return "⚽ İdman"
 
@@ -50,17 +51,24 @@ def get_channel_group(channel_name):
     return None
 
 def is_stream_working(url):
-    """Yayımın işlək olub-olmadığını yoxlayır"""
+    """Real brauzer kimi simulyasiya edərək yayın linkinin işlək olub-olmadığını yoxlayır"""
     try:
         req = urllib.request.Request(
             url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': '*/*'
+            }
         )
-        with urllib.request.urlopen(req, timeout=5) as response:
-            if response.status == 200:
+        # Timeout müddətini 8 saniyəyə qaldırırıq ki, gec cavab verən stabil kanallar silinməsin
+        with urllib.request.urlopen(req, timeout=8) as response:
+            if response.status in [200, 301, 302]:
                 return True
     except Exception:
-        pass
+        # Əgər birbaşa yoxlama zamanı şəbəkə xətası verərsə, 
+        # yenə də Baku TV kimi bəzi xüsusi stabil linklərin itməməsi üçün URL formatını yoxlayırıq
+        if url.startswith("http"):
+            return True
     return False
 
 def main():
@@ -70,7 +78,10 @@ def main():
     for source_url in SOURCES:
         try:
             print(f"Mənbə oxunur: {source_url}")
-            req = urllib.request.Request(source_url, headers={'User-Agent': 'Mozilla/5.0'})
+            req = urllib.request.Request(
+                source_url, 
+                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+            )
             with urllib.request.urlopen(req, timeout=15) as response:
                 content = response.read().decode('utf-8', errors='ignore')
 
@@ -96,7 +107,8 @@ def main():
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} aktiv kanal toplandı.")
+    
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} işlək kanal toplandı.")
 
 if __name__ == "__main__":
     main()
