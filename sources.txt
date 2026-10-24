@@ -1,0 +1,5 @@
+https://qazim.github.io/IPTV/all_channels.m3u
+https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8
+https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan
+https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u
+https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u
