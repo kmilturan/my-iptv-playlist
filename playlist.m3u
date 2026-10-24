@@ -1,28 +1,30 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="AzTV.az" group-title="🇦🇿 Azərbaycan",AzTV
-https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
 #EXTINF:-1 tvg-id="BakuTV.az" group-title="🇦🇿 Azərbaycan",Baku TV
 https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 tvg-id="TRT1.tr" group-title="🇹🇷 Türkiyə - Əsas",TRT 1
-https://tv-trt1.medya.trt.com.tr/master_480.m3u8
+#EXTINF:-1 tvg-id="Haberturk.tr" group-title="📰 Xəbər",Habertürk
+https://tv.ensonhaber.com/haberturk/haberturk.m3u8
+#EXTINF:-1 tvg-id="AzTV.az" group-title="🇦🇿 Azərbaycan",AzTV
+https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
 #EXTINF:-1 tvg-id="Haberturk.tr" group-title="📰 Xəbər",Habertürk
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
 #EXTINF:-1 tvg-id="Teve2.tr" group-title="🇹🇷 Türkiyə - Əsas",Teve2
 http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 tvg-id="TRTHaber.tr" group-title="📰 Xəbər",TRT Haber
-https://tv-trthaber.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TV8.tr" group-title="🇹🇷 Türkiyə - Əsas",TV8
-https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=af4cdf62b2b38e9ddcfdff9e1e85adbf
 #EXTINF:-1 tvg-id="KanalD.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal D
 https://yayin2.canlitv.fun/live/kanald.stream/playlist.m3u8?hash=bb504e08aafa6f1802409bdd7f2b541c
-#EXTINF:-1 tvg-id="StarTV.tr" group-title="🇹🇷 Türkiyə - Əsas",Star TV
-https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
 #EXTINF:-1 tvg-id="Kanal7.tr" group-title="🇹🇷 Türkiyə - Əsas",Kanal 7
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
+#EXTINF:-1 tvg-id="StarTV.tr" group-title="🇹🇷 Türkiyə - Əsas",Star TV
+https://yayin2.canlitv.fun/live/startv.stream/playlist.m3u8?hash=bb504e08aafa6f1802409bdd7f2b541c
+#EXTINF:-1 tvg-id="TV8.tr" group-title="🇹🇷 Türkiyə - Əsas",TV8
+https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=af4cdf62b2b38e9ddcfdff9e1e85adbf
 #EXTINF:-1 tvg-id="NowTV.tr" group-title="🇹🇷 Türkiyə - Əsas",NOW TV
 http://stream.mcquack.net/182/index.m3u8
+#EXTINF:-1 tvg-id="TRTHaber.tr" group-title="📰 Xəbər",TRT Haber
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="ATV.tr" group-title="🇹🇷 Türkiyə - Əsas",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
+#EXTINF:-1 tvg-id="CBCSport.az" group-title="⚽ İdman",CBC Sport
+https://mn-nl.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8
 #EXTINF:-1 tvg-id="MedeniyyetTV.az" group-title="🇦🇿 Azərbaycan",Mədəniyyət TV
 https://str.yodacdn.net/medeniyyettele/index.m3u8
 #EXTINF:-1 tvg-id="CBCSport.az" group-title="⚽ İdman",CBC Sport

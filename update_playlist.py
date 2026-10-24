@@ -2,11 +2,11 @@ import urllib.request
 import urllib.error
 import json
 import re
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Master Mapping: Genişləndirilmiş Azərbaycan və Türkiyə Kanalları Lüğəti
+# Master Mapping: Əsas xüsusi nəzarətdə olan kanallarımız
 MASTER_CHANNELS = {
-    # --- AZƏRBAYCAN KANALLARI ---
     "baku tv": {
         "name": "Baku TV",
         "group": "🇦🇿 Azərbaycan",
@@ -91,8 +91,6 @@ MASTER_CHANNELS = {
         "tvg_id": "IdmanAzerbaijan.az",
         "aliases": ["idman az", "idmanazerbaijan", "idman tv"]
     },
-
-    # --- TÜRKİYƏ - ƏSAS KANALLAR ---
     "trt 1": {
         "name": "TRT 1",
         "group": "🇹🇷 Türkiyə - Əsas",
@@ -159,8 +157,6 @@ MASTER_CHANNELS = {
         "tvg_id": "Teve2.tr",
         "aliases": ["teve2", "teve 2"]
     },
-
-    # --- XƏBƏR VƏ İDMAN ---
     "trt haber": {
         "name": "TRT Haber",
         "group": "📰 Xəbər",
@@ -193,47 +189,63 @@ MASTER_CHANNELS = {
     }
 }
 
-# Təməl mənbələr (Sizin xüsusi mənbəniz ən başdadır)
-BASE_SOURCES = [
-    "https://qazim.github.io/IPTV/all_channels.m3u",
-    "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
-    "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
-]
-
-def discover_dynamic_sources():
-    """GitHub Search API vasitəsilə yeni açıq mənbəli IPTV m3u fayllarını avtomatik tapır"""
-    dynamic_sources = []
-    queries = ["azerbaijan extension:m3u", "turkey extension:m3u iptv"]
+def load_and_update_sources():
+    """sources.txt faylından mənbələri oxuyur, skraypinq edib yeni tapdıqlarını da həmin fayla əlavə edir"""
+    sources = []
     
-    for q in queries:
+    # 1. Mövcud sources.txt faylını oxuyuruq
+    if os.path.exists("sources.txt"):
+        with open("sources.txt", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and line not in sources:
+                    sources.append(line)
+                    
+    # Əgər fayl hələ boşdursa, baza linkləri əlavə edirik
+    if not sources:
+        sources = [
+            "https://qazim.github.io/IPTV/all_channels.m3u",
+            "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
+            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
+            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
+        ]
+
+    # 2. Açıq kataloqlardan yeni mənbələr skraypinq edirik
+    print("Açıq kataloqlardan yeni mənbələr axtarılır...")
+    directories = [
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u",
+        "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
+    ]
+    
+    new_found = False
+    for dir_url in directories:
         try:
-            api_url = f"https://api.github.com/search/code?q={urllib.parse.quote(q)}"
-            req = urllib.request.Request(
-                api_url, 
-                headers={
-                    'User-Agent': 'Mozilla/5.0',
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            )
-            with urllib.request.urlopen(req, timeout=8) as response:
-                data = json.loads(response.read().decode('utf-8'))
-                for item in data.get("items", [])[:3]: # Hər sorğudan ən yaxşı 3 mənbə götürürük
-                    html_url = item.get("html_url", "")
-                    raw_url = html_url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
-                    if raw_url not in dynamic_sources:
-                        dynamic_sources.append(raw_url)
-                        print(f"Dinamik yeni mənbə kəşf edildi: {raw_url}")
-        except Exception as e:
-            print(f"Dinamik axtarış xətası ({q}): {e}")
-            
-    return dynamic_sources
+            req = urllib.request.Request(dir_url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=10) as response:
+                content = response.read().decode('utf-8', errors='ignore')
+                found_links = re.findall(r'https?://[^\s]+\.(?:m3u|m3u8)', content, re.IGNORECASE)
+                for link in found_links:
+                    if any(k in link.lower() for k in ["az", "turkey", "tr", "azerbaijan"]):
+                        if link not in sources:
+                            sources.append(link)
+                            print(f"Yeni mənbə tapıldı və əlavə olundu: {link}")
+                            new_found = True
+        except Exception:
+            pass
+
+    # 3. Əgər yeni mənbə tapılıbsa, onu sources.txt faylına yazırıq ki, yadda qalsın
+    if new_found:
+        with open("sources.txt", "w", encoding="utf-8") as f:
+            f.write("# Avtomatik yenilənən və əlavə edilən IPTV mənbələri\n")
+            for s in sources:
+                f.write(f"{s}\n")
+                
+    return sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower()
     if "bein sports" in n or "s sport" in n or "exxen" in n:
-        return None, None
+        return "BLOCKED", None
 
     for key, data in MASTER_CHANNELS.items():
         for alias in data["aliases"]:
@@ -242,11 +254,6 @@ def match_master_channel(channel_name):
     return None, None
 
 def is_stream_smart_checked(url):
-    """
-    Balanslaşdırılmış Sağlamlıq Yoxlaması:
-    - Yalnız dəqiq ölü linkləri (404, 410) rədd edir.
-    - Server qorunması (403) olsa belə, axın formatı düzgündürsə qəbul edir.
-    """
     try:
         req = urllib.request.Request(
             url, 
@@ -278,19 +285,22 @@ def process_channel(entry):
     channel_name = extinf.split(',')[-1].strip()
     
     master_key, channel_info = match_master_channel(channel_name)
+    if master_key == "BLOCKED":
+        return None
+        
+    if not is_stream_smart_checked(stream_url):
+        return None
+
     if master_key and channel_info:
-        if is_stream_smart_checked(stream_url):
-            return master_key, channel_info, stream_url
-    return None
+        return (master_key, channel_info["group"], channel_info["name"], channel_info["tvg_id"], stream_url)
+    
+    group_match = re.search(r'group-title="([^"]+)"', extinf)
+    group_title = group_match.group(1) if group_match else "🌐 Digər Kanallar"
+    
+    return (channel_name.lower(), group_title, channel_name, "", stream_url)
 
 def main():
-    # 1. Təməl mənbələri götürürük və dinamik tapılanları əlavə edirik
-    sources = BASE_SOURCES.copy()
-    print("GitHub üzrə dinamik mənbə kəşfiyyatı başladılır...")
-    dynamic_ones = discover_dynamic_sources()
-    for d_url in dynamic_ones:
-        if d_url not in sources:
-            sources.append(d_url)
+    sources = load_and_update_sources()
     print(f"Ümumi aktiv mənbə sayı: {len(sources)}")
 
     all_entries = []
@@ -306,7 +316,7 @@ def main():
         except Exception as e:
             print(f"Mənbə oxunmadı ({source_url}): {e}")
 
-    print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. Ağıllı yoxlama və master mapping tətbiq olunur...")
+    print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. İşlənmə başlanır...")
 
     final_playlist = ["#EXTM3U\n"]
     added_keys = set()
@@ -317,17 +327,20 @@ def main():
         for future in as_completed(futures):
             result = future.result()
             if result:
-                master_key, info, stream_url = result
-                if master_key not in added_keys:
-                    extinf_line = f'#EXTINF:-1 tvg-id="{info["tvg_id"]}" group-title="{info["group"]}",{info["name"]}\n'
+                unique_key, group, name, tvg_id, stream_url = result
+                if unique_key not in added_keys:
+                    if tvg_id:
+                        extinf_line = f'#EXTINF:-1 tvg-id="{tvg_id}" group-title="{group}",{name}\n'
+                    else:
+                        extinf_line = f'#EXTINF:-1 group-title="{group}",{name}\n'
+                        
                     final_playlist.append(f"{extinf_line}{stream_url}\n")
-                    added_keys.add(master_key)
-                    print(f"Əlavə edildi [{info['group']}]: {info['name']}")
+                    added_keys.add(unique_key)
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} unikal kanal playlistə yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_keys)} kanal playlistə yazıldı.")
 
 if __name__ == "__main__":
     main()
