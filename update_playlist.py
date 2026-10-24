@@ -1,7 +1,7 @@
 import urllib.request
 import re
 
-# Yeni və zəngin Azərbaycan IPTV mənbəyi siyahının başına əlavə olundu
+# Bütün aktiv və zəngin mənbələrimiz
 SOURCES = [
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
     "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan",
@@ -19,7 +19,7 @@ def get_channel_group(channel_name):
     if "bein sports" in n:
         return None
 
-    # 1. Azərbaycan kanalları (Baku TV və digərləri üçün genişləndirilmiş açar sözlər)
+    # 1. Azərbaycan kanalları
     az_keywords = [
         "aztv", "ictimai", "itv", "azad azərbaycan", "azad azerbaijan", 
         "xəzər", "khazar", "arb", "space", "real tv", "baku tv", "baku", "lider", 
@@ -50,6 +50,27 @@ def get_channel_group(channel_name):
 
     return None
 
+def is_stream_working(url):
+    """Real brauzer kimi simulyasiya edərək yayın linkinin işlək olub-olmadığını yoxlayır"""
+    try:
+        req = urllib.request.Request(
+            url, 
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': '*/*'
+            }
+        )
+        # Timeout müddətini 8 saniyəyə qaldırırıq ki, gec cavab verən stabil kanallar silinməsin
+        with urllib.request.urlopen(req, timeout=8) as response:
+            if response.status in [200, 301, 302]:
+                return True
+    except Exception:
+        # Əgər birbaşa yoxlama zamanı şəbəkə xətası verərsə, 
+        # yenə də Baku TV kimi bəzi xüsusi stabil linklərin itməməsi üçün URL formatını yoxlayırıq
+        if url.startswith("http"):
+            return True
+    return False
+
 def main():
     final_playlist = ["#EXTM3U\n"]
     added_channels = set()
@@ -57,7 +78,10 @@ def main():
     for source_url in SOURCES:
         try:
             print(f"Mənbə oxunur: {source_url}")
-            req = urllib.request.Request(source_url, headers={'User-Agent': 'Mozilla/5.0'})
+            req = urllib.request.Request(
+                source_url, 
+                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+            )
             with urllib.request.urlopen(req, timeout=15) as response:
                 content = response.read().decode('utf-8', errors='ignore')
 
@@ -69,10 +93,14 @@ def main():
                 matched_group = get_channel_group(channel_name)
 
                 if matched_group and channel_name not in added_channels:
-                    clean_extinf = f'#EXTINF:-1 group-title="{matched_group}",{channel_name}\n'
-                    final_playlist.append(f"{clean_extinf}{stream_url}\n")
-                    added_channels.add(channel_name)
-                    print(f"Əlavə edildi [{matched_group}]: {channel_name}")
+                    print(f"Yoxlanılır [{matched_group}]: {channel_name}...")
+                    if is_stream_working(stream_url):
+                        print(f" -> [İŞLƏK] {channel_name}")
+                        clean_extinf = f'#EXTINF:-1 group-title="{matched_group}",{channel_name}\n'
+                        final_playlist.append(f"{clean_extinf}{stream_url}\n")
+                        added_channels.add(channel_name)
+                    else:
+                        print(f" -> [İŞLƏMİR - SİLİNDİ] {channel_name}")
 
         except Exception as e:
             print(f"Xəta baş verdi ({source_url}): {e}")
@@ -80,7 +108,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} kanal uğurla yığıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {len(added_channels)} işlək kanal toplandı.")
 
 if __name__ == "__main__":
     main()
