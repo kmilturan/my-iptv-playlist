@@ -2,6 +2,7 @@ import urllib.request
 import urllib.error
 import json
 import re
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Master Mapping: Əsas xüsusi nəzarətdə olan kanallarımız
@@ -188,14 +189,58 @@ MASTER_CHANNELS = {
     }
 }
 
-# Güclü və stabil baza mənbələr siyahısı
-BASE_SOURCES = [
-    "https://qazim.github.io/IPTV/all_channels.m3u",
-    "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
-    "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
-]
+def load_and_update_sources():
+    """sources.txt faylından mənbələri oxuyur, skraypinq edib yeni tapdıqlarını da həmin fayla əlavə edir"""
+    sources = []
+    
+    # 1. Mövcud sources.txt faylını oxuyuruq
+    if os.path.exists("sources.txt"):
+        with open("sources.txt", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and line not in sources:
+                    sources.append(line)
+                    
+    # Əgər fayl hələ boşdursa, baza linkləri əlavə edirik
+    if not sources:
+        sources = [
+            "https://qazim.github.io/IPTV/all_channels.m3u",
+            "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
+            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
+            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
+        ]
+
+    # 2. Açıq kataloqlardan yeni mənbələr skraypinq edirik
+    print("Açıq kataloqlardan yeni mənbələr axtarılır...")
+    directories = [
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u",
+        "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
+    ]
+    
+    new_found = False
+    for dir_url in directories:
+        try:
+            req = urllib.request.Request(dir_url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=10) as response:
+                content = response.read().decode('utf-8', errors='ignore')
+                found_links = re.findall(r'https?://[^\s]+\.(?:m3u|m3u8)', content, re.IGNORECASE)
+                for link in found_links:
+                    if any(k in link.lower() for k in ["az", "turkey", "tr", "azerbaijan"]):
+                        if link not in sources:
+                            sources.append(link)
+                            print(f"Yeni mənbə tapıldı və əlavə olundu: {link}")
+                            new_found = True
+        except Exception:
+            pass
+
+    # 3. Əgər yeni mənbə tapılıbsa, onu sources.txt faylına yazırıq ki, yadda qalsın
+    if new_found:
+        with open("sources.txt", "w", encoding="utf-8") as f:
+            f.write("# Avtomatik yenilənən və əlavə edilən IPTV mənbələri\n")
+            for s in sources:
+                f.write(f"{s}\n")
+                
+    return sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower()
@@ -255,7 +300,7 @@ def process_channel(entry):
     return (channel_name.lower(), group_title, channel_name, "", stream_url)
 
 def main():
-    sources = BASE_SOURCES.copy()
+    sources = load_and_update_sources()
     print(f"Ümumi aktiv mənbə sayı: {len(sources)}")
 
     all_entries = []
