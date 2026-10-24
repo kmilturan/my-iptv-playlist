@@ -188,6 +188,7 @@ MASTER_CHANNELS = {
     }
 }
 
+# Güclü və stabil baza mənbələr siyahısı
 BASE_SOURCES = [
     "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8",
@@ -195,31 +196,6 @@ BASE_SOURCES = [
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
 ]
-
-def discover_dynamic_sources():
-    dynamic_sources = []
-    queries = ["azerbaijan extension:m3u", "turkey extension:m3u iptv"]
-    
-    for q in queries:
-        try:
-            api_url = f"https://api.github.com/search/code?q={urllib.parse.quote(q)}"
-            req = urllib.request.Request(
-                api_url, 
-                headers={
-                    'User-Agent': 'Mozilla/5.0',
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            )
-            with urllib.request.urlopen(req, timeout=8) as response:
-                data = json.loads(response.read().decode('utf-8'))
-                for item in data.get("items", [])[:3]:
-                    html_url = item.get("html_url", "")
-                    raw_url = html_url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
-                    if raw_url not in dynamic_sources:
-                        dynamic_sources.append(raw_url)
-        except Exception:
-            pass
-    return dynamic_sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower()
@@ -263,44 +239,37 @@ def process_channel(entry):
     extinf, stream_url = entry
     channel_name = extinf.split(',')[-1].strip()
     
-    # Bloklanmış ödənişli kanalları atırıq
     master_key, channel_info = match_master_channel(channel_name)
     if master_key == "BLOCKED":
         return None
         
-    # Sağlamlıq yoxlaması
     if not is_stream_smart_checked(stream_url):
         return None
 
-    # Əgər master lüğətdə varsa, təmiz formatda qaytarırıq
     if master_key and channel_info:
         return (master_key, channel_info["group"], channel_info["name"], channel_info["tvg_id"], stream_url)
     
-    # Əgər master lüğətdə yoxdursa, amma işləkdirsə, orijinal ad və qrupu ilə saxlayırıq!
     group_match = re.search(r'group-title="([^"]+)"', extinf)
     group_title = group_match.group(1) if group_match else "🌐 Digər Kanallar"
     
-    # Unikal açar kimi kanal adını istifadə edirik
     return (channel_name.lower(), group_title, channel_name, "", stream_url)
 
 def main():
     sources = BASE_SOURCES.copy()
-    print("Dinamik mənbələr əlavə edilir...")
-    for d_url in discover_dynamic_sources():
-        if d_url not in sources:
-            sources.append(d_url)
+    print(f"Ümumi aktiv mənbə sayı: {len(sources)}")
 
     all_entries = []
     for source_url in sources:
         try:
+            print(f"Mənbə oxunur: {source_url}")
             req = urllib.request.Request(source_url, headers={'User-Agent': 'Mozilla/5.0'})
             with urllib.request.urlopen(req, timeout=12) as response:
                 content = response.read().decode('utf-8', errors='ignore')
 
             entries = re.findall(r'(#EXTINF:[^\n]+\n)(https?://[^\s]+)', content)
             all_entries.extend(entries)
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"Mənbə oxunmadı ({source_url}): {e}")
 
     print(f"Ümumi tapıldı: {len(all_entries)} xam kanal. İşlənmə başlanır...")
 
