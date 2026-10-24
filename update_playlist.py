@@ -9,6 +9,7 @@ SOURCES = [
     "https://raw.githubusercontent.com/funcen/IPTV/main/index.m3u",
     "https://iptv-org.github.io/iptv/countries/az.m3u",
     "https://iptv-org.github.io/iptv/countries/tr.m3u"
+    "https://raw.githubusercontent.com/Hero355/iptv/refs/heads/master/Azerbaijan"
 ]
 
 def get_channel_group(channel_name):
