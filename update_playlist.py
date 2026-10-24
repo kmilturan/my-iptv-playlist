@@ -6,7 +6,7 @@ SOURCES = [
     "https://qazim.github.io/IPTV/all_channels.m3u",
     "https://raw.githubusercontent.com/funcen/IPTV/main/index.m3u",
     "https://iptv-org.github.io/iptv/languages/aze.m3u",
-    "https://iptv-org.github.io/iptv/languages/tur.m3u",
+    "https://iptv-org.github.io/iptv/languages/tur.m3u"
 ]
 
 # Kanalları kateqoriyalara (qruplara) bölürük
