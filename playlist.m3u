@@ -31,6 +31,8 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
 http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
 #EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",TR: 360 HD
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8?hash=bb504e08aafa6f1802409bdd7f2b541c
+#EXTINF:-1 group-title="📰 Xəbər",TR: Tele1 HD
+https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",now-music
 https://v2.catcast.tv/content/48694/index.m3u8?token=e8768237f294381845d56500ab7d1353
 #EXTINF:-1 group-title="🇦🇿 Azərbaycan",Kanal S
@@ -127,6 +129,8 @@ https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="📰 Xəbər",Bloomberg HT (720p)
 https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
+#EXTINF:-1 group-title="📰 Xəbər",Bloomberg HT
+http://193.123.61.120:3000/kanal/bloomberght
 #EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",24 TV (720p)
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 group-title="🇹🇷 Türkiyə - Əsas",360 (720p) [Not 24/7]
