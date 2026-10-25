@@ -3,7 +3,7 @@ import urllib.error
 import json
 import re
 import os
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 
 MASTER_CHANNELS = {
     "aztv": {
@@ -212,8 +212,9 @@ MASTER_CHANNELS = {
     }
 }
 
-def load_and_update_sources():
+def load_sources():
     sources = []
+    # sources.txt faylına toxunulmur, olduğu kimi oxunur
     if os.path.exists("sources.txt"):
         with open("sources.txt", "r", encoding="utf-8") as f:
             for line in f:
@@ -221,44 +222,18 @@ def load_and_update_sources():
                 if line and not line.startswith("#") and line not in sources:
                     sources.append(line)
                     
+    # Əgər sources.txt boşdursa və ya yoxdursa standart ehtiyat siyahı
     if not sources:
         sources = [
             "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
-            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
-            "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_azerbaijan.m3u8"
+            "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u"
         ]
-
-    directories = [
-        "https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u",
-        "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
-    ]
-    
-    new_found = False
-    for dir_url in directories:
-        try:
-            req = urllib.request.Request(dir_url, headers={'User-Agent': 'VLC/3.0.18'})
-            with urllib.request.urlopen(req, timeout=8) as response:
-                content = response.read().decode('utf-8', errors='ignore')
-                found_links = re.findall(r'https?://[^\s]+\.(?:m3u|m3u8)', content, re.IGNORECASE)
-                for link in found_links:
-                    if any(k in link.lower() for k in ["az", "turkey", "tr", "azerbaijan"]):
-                        if link not in sources:
-                            sources.append(link)
-                            new_found = True
-        except Exception:
-            pass
-
-    if new_found:
-        with open("sources.txt", "w", encoding="utf-8") as f:
-            f.write("# Avtomatik yenilənən və genişlənən IPTV mənbələri\n")
-            for s in sources:
-                f.write(f"{s}\n")
 
     return sources
 
 def match_master_channel(channel_name):
     n = channel_name.lower().strip()
-    n = re.sub(r'^(tr|az|hd|fhd|sd|hevc|fhd|4k):\s*', '', n).strip()
+    n = re.sub(r'^(tr|az|hd|fhd|sd|hevc|4k):\s*', '', n).strip()
     
     if any(b in n for b in ["bein sports", "s sport", "exxen", "tivibu", "smart spor"]):
         return "BLOCKED", None
@@ -270,18 +245,14 @@ def match_master_channel(channel_name):
                 
     return None, None
 
-def is_stream_valid(url):
+def fetch_source_content(source_url):
     try:
-        req = urllib.request.Request(
-            url, 
-            headers={'User-Agent': 'VLC/3.0.18', 'Accept': '*/*'}
-        )
-        with urllib.request.urlopen(req, timeout=3) as response:
-            if response.getcode() in [200, 301, 302]:
-                return True
-    except Exception:
-        return False
-    return False
+        req = urllib.request.Request(source_url, headers={'User-Agent': 'VLC/3.0.18'})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            return response.read().decode('utf-8', errors='ignore')
+    except Exception as e:
+        print(f"Mənbə oxunmadı ({source_url}): {e}")
+        return ""
 
 def process_channel(entry):
     extinf, stream_url = entry
@@ -291,69 +262,57 @@ def process_channel(entry):
     if master_key == "BLOCKED":
         return None
         
-    # 1. Əgər master kanaldırsa, öz qrupuna yazılır
+    # 1. Əgər master kanaldırsa, öz təyin olunmuş qrupuna yazılır
     if master_key and channel_info:
-        if not is_stream_valid(stream_url):
-            return None
         tvg_id = channel_info.get("tvg_id", "")
         return (master_key, channel_info["group"], channel_info["name"], tvg_id, stream_url)
     
-    # 2. Master olmayan digər işlək kanallar itmir, "unsorted" qovluğuna düşür
-    if not is_stream_valid(stream_url):
-        return None
-
+    # 2. Master olmayan digər kanallar mənbədə hansı qrupdadırsa o şəkildə qalır
     group_match = re.search(r'group-title="([^"]+)"', extinf)
-    group_title = group_match.group(1) if group_match else "unsorted"
+    group_title = group_match.group(1) if group_match else "Digər Kanallar"
     
-    # Əgər qrup adı boşdursa və ya şübhəlidirsə birbaşa unsorted edirik
-    if not group_title or group_title.lower() in ["diger kanallar", "other"]:
-        group_title = "unsorted"
+    if not group_title or group_title.lower() in ["diger kanallar", "other", "unsorted"]:
+        group_title = "Digər Kanallar"
 
-    clean_name = re.sub(r'^(tr|az):\s*', '', channel_name, flags=re.IGNORECASE).strip()
-    return (channel_name.lower(), group_title, clean_name, "", stream_url)
+    return (channel_name.lower() + "_" + stream_url, group_title, channel_name, "", stream_url)
 
 def main():
-    sources = load_and_update_sources()
+    sources = load_sources()
     print(f"Aktiv mənbə sayı: {len(sources)}")
 
     all_entries = []
-    for source_url in sources:
-        try:
-            req = urllib.request.Request(source_url, headers={'User-Agent': 'VLC/3.0.18'})
-            with urllib.request.urlopen(req, timeout=8) as response:
-                content = response.read().decode('utf-8', errors='ignore')
-
+    
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        contents = list(executor.map(fetch_source_content, sources))
+        
+    for content in contents:
+        if content:
             entries = re.findall(r'(#EXTINF:[^\n]+\n)(https?://[^\s]+)', content)
             all_entries.extend(entries)
-        except Exception:
-            pass
 
-    print(f"Tapıldı: {len(all_entries)} xam kanal yoxlanılır...")
+    print(f"Tapıldı: {len(all_entries)} xam kanal emal olunur...")
 
     final_playlist = ["#EXTM3U\n"]
     added_keys = set()
 
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = [executor.submit(process_channel, entry) for entry in all_entries]
-        
-        for future in as_completed(futures):
-            result = future.result()
-            if result:
-                unique_key, group, name, tvg_id, stream_url = result
-                if unique_key not in added_keys:
-                    if tvg_id:
-                        extinf_line = f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-group="{group}" group-title="{group}",{name}\n'
-                    else:
-                        extinf_line = f'#EXTINF:-1 tvg-group="{group}" group-title="{group}",{name}\n'
-                        
-                    final_playlist.append(f"{extinf_line}{stream_url}\n")
-                    added_keys.add(unique_key)
+    for entry in all_entries:
+        result = process_channel(entry)
+        if result:
+            unique_key, group, name, tvg_id, stream_url = result
+            if unique_key not in added_keys:
+                if tvg_id:
+                    extinf_line = f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-group="{group}" group-title="{group}",{name}\n'
+                else:
+                    extinf_line = f'#EXTINF:-1 tvg-group="{group}" group-title="{group}",{name}\n'
+                    
+                final_playlist.append(f"{extinf_line}{stream_url}\n")
+                added_keys.add(unique_key)
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
     count = len(added_keys)
-    print(f"Yenilənmə tamamlandı! Cəmi {count} işlək kanal (qruplar və unsorted) yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {count} kanal uğurla 'playlist.m3u' faylına yazıldı.")
 
 if __name__ == "__main__":
     main()
