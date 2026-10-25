@@ -1,421 +1,425 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="TRT1.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 1
 https://tv-trt1.medya.trt.com.tr/master_480.m3u8
-#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
-https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
 #EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D
 http://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
-#EXTINF:-1 tvg-id="NowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",NOW TV
-http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
+#EXTINF:-1 tvg-id="ShowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Show TV
+http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
 #EXTINF:-1 tvg-id="Kanal7.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 7
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV 4 HD
-http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8
+#EXTINF:-1 tvg-id="NowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",NOW TV
+http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 #EXTINF:-1 tvg-id="ATV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Meltem TV
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
+https://dogus.daioncdn.net/startv/startv.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9
+#EXTINF:-1 tvg-group="Ulusal" group-title="Ulusal",TV 4 HD
+http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8
+#EXTINF:-1 tvg-id="BeyazTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Beyaz TV
+https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
+#EXTINF:-1 tvg-group="Ulusal" group-title="Ulusal",Meltem TV
 http://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Tgrt Haber
 https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber Global
-https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-id="Haberturk.tr" tvg-group="Xeber" group-title="Xeber",Habertürk
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
-#EXTINF:-1 tvg-id="ShowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Show TV
-http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Turk HD
-https://tv-trtturk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber Global
+https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-id="Teve2.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Teve2
 http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Halk TV
-https://halktv-live.daioncdn.net/halktv/halktv.m3u8
 #EXTINF:-1 tvg-id="TRTHaber.tr" tvg-group="Xeber" group-title="Xeber",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Halk TV
+https://halktv-live.daioncdn.net/halktv/halktv.m3u8
+#EXTINF:-1 tvg-group="Ulusal" group-title="Ulusal",TRT Turk HD
+https://tv-trtturk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Cine 1 TV
+http://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",NTV
 http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Cine 1 TV
-http://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Cine+
+#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Cine+
 http://cineplus-yesilcam.supersatadmin.workers.dev/cineplusyesilcam.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",SDM TV
+#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",SDM TV
 https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="BeyazTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Beyaz TV
-https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",BEGEN TV
+#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",BEGEN TV
 https://ip44.radyotelekomtv.com:3958/stream/play.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ciftci TV
+#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Ciftci TV
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tivi 6
+#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Tivi 6
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Cine5
+#EXTINF:-1 tvg-group="Turk" group-title="Turk",Cine5
 https://host.onlineradyotv.net:8081/cine5tv/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Cine1 HD
+#EXTINF:-1 tvg-group="Turk" group-title="Turk",Cine1 HD
 https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",kanal-65
-https://v2.catcast.tv/content/47437/index.m3u8?token=4d16871a152b91a3a272e7d7e9f1da68
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tivi6 HD
-https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tele1 HD
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",360 HD
+#EXTINF:-1 tvg-group="Turk" group-title="Turk",360 HD
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8?hash=bb504e08aafa6f1802409bdd7f2b541c
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",now-music
+#EXTINF:-1 tvg-group="Turk" group-title="Turk",Tele1 HD
+https://tele1-live.ercdn.net/tele1/tele1.m3u8
+#EXTINF:-1 tvg-group="azeri-muzik" group-title="azeri-muzik",kanal-65
+https://v2.catcast.tv/content/47437/index.m3u8?token=4d16871a152b91a3a272e7d7e9f1da68
+#EXTINF:-1 tvg-group="azeri-muzik" group-title="azeri-muzik",now-music
 https://v2.catcast.tv/content/48694/index.m3u8?token=fecd2053ee946bb214ab66f1840e11ca
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",rihatmusic
+#EXTINF:-1 tvg-group="azeri-muzik" group-title="azeri-muzik",rihatmusic
 https://v2.catcast.tv/content/48076/index.m3u8?token=3ee33d984865033d11e4d2e73463c442
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",kino-1
-https://kino-1.catcast.tv/content/38617/index.m3u8?token=fee2bdfd6e2c7d693011b77bf7a77ea7
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",turkuzplay1
+#EXTINF:-1 tvg-group="azeri-muzik" group-title="azeri-muzik",turkuzplay1
 https://v2.catcast.tv/content/48591/index.m3u8?token=4610337b38d63495fcaebb4068f9bccf
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Strax-TV
-https://s.catcast.tv/content/34816/index.m3u8?token=19f5a911bc61934761e98e40dafb7e34
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Fenix SSSR
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",kino-1
+https://kino-1.catcast.tv/content/38617/index.m3u8?token=fee2bdfd6e2c7d693011b77bf7a77ea7
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Fenix SSSR
 https://v2.catcast.tv/content/40102/index.m3u8?token=31dd4c77249a4bc14de6899208144f7f
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Komedi-az-TV
-https://v2.catcast.tv/content/50370/index.m3u8?token=74291df502ae983f6b3fdae77f9ab8b5
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Action-TV
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Strax-TV
+https://s.catcast.tv/content/34816/index.m3u8?token=19f5a911bc61934761e98e40dafb7e34
+#EXTINF:-1 tvg-group="Turk" group-title="Turk",Tivi6 HD
+https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Action-TV
 https://v2.catcast.tv/content/36517/index.m3u8?token=ce503fe50600dc42e1e0bedefcd342a2
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",PlayerCinema-TV
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",PlayerCinema-TV
 https://v2.catcast.tv/content/50372/index.m3u8?token=9d71a4d2355a229c4d0fcad5d62d5ec7
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",PlayerFilmAzerbaycan-TV
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",PlayerFilmAzerbaycan-TV
 https://v2.catcast.tv/content/50472/index.m3u8?token=baa08a4fabe7fa8f8aab4b2c326d7083
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Azeri-Retro filmler
-https://v2.catcast.tv/content/50852/index.m3u8?token=309ce8eacb63b0801c12eb5459f03940
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Ayaz TV (720p)
-https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",playercinema-hind_filmleri-2
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Komedi-az-TV
+https://v2.catcast.tv/content/50370/index.m3u8?token=74291df502ae983f6b3fdae77f9ab8b5
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Detektiv-TV
+https://cityeden.catcast.tv/content/41327/index.m3u8?token=6fc25b88f510172894a40eb4246a529b
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",playercinema-hind_filmleri-2
 https://v2.catcast.tv/content/50892/index.m3u8?token=ed970e17355b52bd98c45945d8096f54
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",playercinema-premium-5
-https://v2.catcast.tv/content/50961/index.m3u8?token=dce64d7cb6a8837ce5b21a3c516e53b2
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",playercinema-hind_filmleri-5
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",playercinema-hind_filmleri-5
 https://v2.catcast.tv/content/50895/index.m3u8?token=350398affde47001759d68975ce10f4f
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Azeri-Retro filmler
+https://v2.catcast.tv/content/50852/index.m3u8?token=309ce8eacb63b0801c12eb5459f03940
+#EXTINF:-1 tvg-group="Azeri" group-title="Azeri",Ayaz TV (720p)
+https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
 #EXTINF:-1 tvg-id="BakuTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Baku TV
 https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",APA Tv (1080p)
+#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",playercinema-premium-5
+https://v2.catcast.tv/content/50961/index.m3u8?token=dce64d7cb6a8837ce5b21a3c516e53b2
+#EXTINF:-1 tvg-group="Azeri" group-title="Azeri",APA Tv (1080p)
 http://stream.apa.tv/apastream/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kapaz TV
+#EXTINF:-1 tvg-group="Azeri" group-title="Azeri",Kapaz TV
 http://85.132.78.122:8050/hls/stream/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Domkino
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Domkino
 http://stream.mcquack.net/236/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Dom kino Premium HD (1080p)
+http://stream.mcquack.net/108/index.m3u8
 #EXTINF:-1 tvg-id="KhazarTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Xəzər TV
 https://xezer.tvstream.az/hls/stream/main_stream.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Dom kino Premium HD (1080p)
-http://stream.mcquack.net/108/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Cinema
-http://flussonic.linkintel.ru/cinema/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Evrokino HD (1080p)
-http://stream.mcquack.net/385/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Indiyskoye Kino (576p)
-http://stream.mcquack.net/104/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal S
+#EXTINF:-1 tvg-group="Azeri" group-title="Azeri",Kanal S
 https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kino TV SD (576p)
-http://stream.mcquack.net/221/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",KinoHit (576p)
-http://stream.mcquack.net/126/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kinokomedija (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Evrokino HD (1080p)
+http://stream.mcquack.net/385/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Indiyskoye Kino (576p)
+http://stream.mcquack.net/104/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Cinema
+http://flussonic.linkintel.ru/cinema/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinokomedija (576p)
 http://stream.mcquack.net/265/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kinopokaz (576p)
-http://stream.mcquack.net/64/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kinomix (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",KinoHit (576p)
+http://stream.mcquack.net/126/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kino TV SD (576p)
+http://stream.mcquack.net/221/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinomix (576p)
 http://stream.mcquack.net/133/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kinopremyera (1080p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinopremyera (1080p)
 http://5.188.159.128:8070/KINOPREMIERA/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kinosemja (576p)
-http://stream.mcquack.net/170/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kinouzhas (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinopokaz (576p)
+http://stream.mcquack.net/64/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinouzhas (576p)
 http://stream.mcquack.net/278/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kinosvidanie (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinosemja (576p)
+http://stream.mcquack.net/170/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinosvidanie (576p)
 http://stream.mcquack.net/171/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Muzhskoe kino (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Muzhskoe kino (576p)
 http://stream.mcquack.net/107/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ostrosyuzhetnoye HD (1080p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Ostrosyuzhetnoye HD (1080p)
 http://stream.mcquack.net/214/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Premialnoe HD (1080p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Premialnoe HD (1080p)
 http://stream.mcquack.net/421/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju TV1000 action (576p)
-http://stream.mcquack.net/100/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju+ Comedy HD (1080p)
-http://stream.mcquack.net/201/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju TV1000 (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju TV1000 (576p)
 http://stream.mcquack.net/110/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju+ Megahit HD (1080p)
-http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju+ Planet HD (1080p)
-http://stream.mcquack.net/240/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju+ Premiere HD (1080p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju TV1000 action (576p)
+http://stream.mcquack.net/100/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Comedy HD (1080p)
+http://stream.mcquack.net/201/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Premiere HD (1080p)
 http://stream.mcquack.net/202/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",National Geographic (576p)
-http://stream.mcquack.net/116/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Discovery Channel (1080p)
-http://stream.mcquack.net/177/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Investigation Discovery (1080p)
-http://stream.mcquack.net/205/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju Explore (576p)
-http://stream.mcquack.net/239/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Nauka (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Megahit HD (1080p)
+http://stream.mcquack.net/200/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Planet HD (1080p)
+http://stream.mcquack.net/240/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Nauka (576p)
 http://stream.mcquack.net/125/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju History (576p)
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Investigation Discovery (1080p)
+http://stream.mcquack.net/205/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Discovery Channel (1080p)
+http://stream.mcquack.net/177/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",National Geographic (576p)
+http://stream.mcquack.net/116/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju History (576p)
 http://stream.mcquack.net/101/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",viju Nature (576p)
-http://46.53.200.153:7777/play/a01k/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",AzStarTV
+#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",AzStarTV
 http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Travel Channel (1080p)
-http://stream.mcquack.net/231/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Muz TV Ⓨ
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju Explore (576p)
+http://stream.mcquack.net/239/index.m3u8
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju Nature (576p)
+http://46.53.200.153:7777/play/a01k/index.m3u8
+#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Muz TV Ⓨ
 https://www.youtube.com/channel/UCgHYcHd2SuX0ees5q0OWicQ/live
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Real TV Ⓨ
+#EXTINF:-1 tvg-group="Rus" group-title="Rus",Travel Channel (1080p)
+http://stream.mcquack.net/231/index.m3u8
+#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Real TV Ⓨ
 https://www.youtube.com/channel/UCjpoTfA8TXO6QfAWiAB67eA/live
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",MTV Azerbaijan Ⓢ Ⓨ
+#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",MTV Azerbaijan Ⓢ Ⓨ
 https://www.youtube.com/@MTVAzerbaijan/live
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",AL ZAHRA TV
+#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",AL ZAHRA TV
 http://live.al-zahratv.com/live/playlist.m3u8?checkedby:hlscat.com
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ELTV
+#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",ELTV
 http://85.132.53.162:1935/live/eltv/chunklist_.m3u8?checkedby:hlscat.com
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Azstar TV HD (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Azstar TV HD (1080p)
 https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",EL TV (260p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",EL TV (260p) [Not 24/7]
 http://85.132.53.162:1935/live/eltv/playlist.m3u8
 #EXTINF:-1 tvg-id="AzTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",AzTV
 https://stream8.cinerama.uz/1455/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",KN Music TV
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",KN Music TV
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",4U TV (720p)
-https://hls.4utv.live/hls/stream.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Al-Zahra TV Turkic (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Vilayet TV
+https://nl.livekadeh.com/hls2/vilayet.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Al-Zahra TV Turkic (720p) [Not 24/7]
 https://live.al-zahratv.com/live/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",360 TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",4U TV (720p)
+https://hls.4utv.live/hls/stream.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",360 TV (720p) [Not 24/7]
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",A Spor (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",A Spor (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Alanya Posta TV (1080p)
-https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Almahriah TV (576p)
-https://starmenajo.com/hls/almahriah/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",A2TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",A2TV (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Almahriah TV (576p)
+https://starmenajo.com/hls/almahriah/index.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",ARAS TV (576p) [Not 24/7]
+http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="AHaber.tr" tvg-group="Xeber" group-title="Xeber",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ARAS TV (576p) [Not 24/7]
-http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Vilayet TV
-https://nl.livekadeh.com/hls2/vilayet.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Aksu TV (720p)
-https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Anadolu Net TV (1080p)
-https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",BENGÜTÜRK TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Alanya Posta TV (1080p)
+https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",BENGÜTÜRK TV (720p) [Not 24/7]
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Bloomberg HT (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Anadolu Net TV (1080p)
+https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Aksu TV (720p)
+https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Bloomberg HT (720p) [Not 24/7]
 https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Bir TV (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Bir TV (720p)
 https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Bursa AS TV (900p)
-https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Çiftçi TV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",BRTV (720p) [Geo-blocked]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",BRTV (720p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",CNBC-e
-https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",DHA (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Bursa AS TV (900p)
+https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",DHA (720p) [Not 24/7]
 https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Deniz Postası TV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Diyanet TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Diyanet TV (1080p)
 https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Edessa TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Deniz Postası TV (720p) [Not 24/7]
+https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Çiftçi TV (720p) [Not 24/7]
+https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Edessa TV (1080p)
 https://canli.edessatv.com/hls/stream.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Dost TV (576p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",CNBC-e
+https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Dost TV (576p)
 https://dost.stream.emsal.im/tv/live.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Dream Türk (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Dream Türk (720p)
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Diyar TV (720p)
-https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Finans Turk TV (720p)
-https://yayin30.haber100.com/live/finansturk/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Erzurum Web TV (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Erzurum Web TV (720p)
 https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",FB TV
-http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Fortuna TV (1080p)
-https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Flash Haber TV
-https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ES TV (720p)
-https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ETV Kayseri (720p)
-https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Er TV (1080p) [Geo-blocked]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Finans Turk TV (720p)
+https://yayin30.haber100.com/live/finansturk/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Diyar TV (720p)
+https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Er TV (1080p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber61 TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",FB TV
+http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Fortuna TV (1080p)
+https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Haber61 TV (720p) [Not 24/7]
 https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",HTSpor TV (1080p)
-https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ilke TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",ETV Kayseri (720p)
+https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",ES TV (720p)
+https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Flash Haber TV
+https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Ilke TV (1080p)
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Hunat TV (720p) [Geo-blocked]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",HTSpor TV (1080p)
+https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Hunat TV (720p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 3 (1080p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal 3 (1080p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 23 (1080p)
-https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 12 (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal 12 (720p)
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 26 (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal 23 (1080p)
+https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal 26 (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 23 (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal 23 (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal23/kanal23/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 15 (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal 15 (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",KANAL 58 (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",KANAL 58 (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal V (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kay TV (576p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal Firat (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kocaeli TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kocaeli TV (1080p)
 https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Lalegul TV (1080p)
-https://lbl.netmedya.net/hls/lalegultv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",KRAL Pop TV (720p)
-https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Life TV (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kent Türk TV (1080p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kent Türk TV (1080p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Konya Olay TV (720p)
-https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Med Muzik (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal V (720p) [Not 24/7]
+https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kay TV (576p) [Geo-blocked]
+https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Kanal Firat (720p) [Not 24/7]
+https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Lalegul TV (1080p)
+https://lbl.netmedya.net/hls/lalegultv.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",KRAL Pop TV (720p)
+https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Med Muzik (1080p)
 http://54.36.110.140/live3/live3.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Mekameleen TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Mekameleen TV (1080p)
 https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Luys TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Luys TV (1080p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Minika Cocuk (576p)
-http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",MaviKaradeniz (1080p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",MaviKaradeniz (1080p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Minika Go (576p)
-http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Mercan TV (576p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Minika Cocuk (720p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Meltem TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Konya Olay TV (720p)
+https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Life TV (720p) [Not 24/7]
+https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Meltem TV (1080p)
 https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Minika Go (720p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Number 1 Ask (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Minika Cocuk (576p)
+http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Minika Go (576p)
+http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Mercan TV (576p) [Not 24/7]
+https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Minika Cocuk (720p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Number 1 Ask (720p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Number 1 Dance (720p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Number 1 Damar (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Number 1 Damar (720p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Number 1 TV (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Number 1 Dance (720p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Number 1 TV (720p)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Olay Türk TV Kayseri (720p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Power Türk Akustik (1080p)
-https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Power Dance (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Minika Go (720p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power Dance (1080p)
 https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Power Türk Slow (1080p)
-https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Power Turk (1080p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power Türk Akustik (1080p)
+https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power Turk (1080p) [Not 24/7]
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Power Türk Taptaze (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power Türk Slow (1080p)
+https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power Türk Taptaze (1080p)
 https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Power Love (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power Love (1080p)
 https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Power TV (1080p)
-https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Satranç TV (480p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Olay Türk TV Kayseri (720p) [Geo-blocked]
+https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Satranç TV (480p) [Not 24/7]
 http://139.162.182.79/live/test/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Power TV (720p)
-https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Sat7 Türk (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Sat7 Türk (1080p)
 https://svs.itworkscdn.net/sat7turklive/sat7turk.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Sercem TV (1080p)
-https://canli.sercemtv.com.tr/hls/0/stream.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",PowerTürk TV (720p)
-https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TBMM TV (720p)
-https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Semerkand TV (1080p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Semerkand TV (1080p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Sun RTV (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Sercem TV (1080p)
+https://canli.sercemtv.com.tr/hls/0/stream.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",PowerTürk TV (720p)
+https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power TV (720p)
+https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Power TV (1080p)
+https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Sun RTV (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tele 1 (1080p)
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tempo TV (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TBMM TV (720p)
+https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Tempo TV (720p)
 https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TGRT Belgesel TV (576p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TGRT Belgesel TV (576p) [Not 24/7]
 https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TR24 TV (720p) [Not 24/7]
-https://tv.ensonhaber.com/tv24/tv24.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tivi 6 (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Tivi 6 (720p)
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TJK TV (1080p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TR24 TV (720p) [Not 24/7]
+https://tv.ensonhaber.com/tv24/tv24.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TJK TV (1080p)
 https://tjktv-live.tjk.org/tjktv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ton TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Ton TV (720p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Arabi (1080p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Arabi (1080p) [Not 24/7]
 https://tv-trtarabi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 3 (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT 3 (720p)
 https://tv-trt3.live.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 2 (1440p) [Geo-blocked]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT 2 (1440p) [Geo-blocked]
 https://tv-trt2.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Diyanet Çocuk (720p)
-https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",TRT Avaz (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Avaz (720p)
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT EBA Ilkokul (720p)
-https://tv-e-okul00.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT EBA Lise (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT EBA Lise (720p)
 https://tv-e-okul02.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT EBA Ortaokul (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT EBA Ilkokul (720p)
+https://tv-e-okul00.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Diyanet Çocuk (720p)
+https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Cocuk (1440p)
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT EBA Ortaokul (720p)
 https://tv-e-okul01.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Kurdî (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Kurdî (720p)
 https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Müzik (720p)
+https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Muzik
+https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="TRTSpor.tr" tvg-group="Idman" group-title="Idman",TRT Spor
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Müzik (720p)
-https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Muzik
-https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV4 (720p)
-https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV 8 (1080p)
-https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV 24 (720p)
-https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Türk (720p)
-https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV 41 (720p) [Not 24/7]
-https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Vav TV
-https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV 264 (1080p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV Den (576p) [Not 24/7]
-http://canli.tvden.com.tr/hls/live.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Zarok TV (720p)
-https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Van 65 TV
-https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Urfa Natik TV (720p)
-https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ekoturk (720p)
-https://cdn.ekoturk.net/hls/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Genc (1440p) [Geo-blocked]
-https://tv-trtgenc.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT World (1080p) [Not 24/7]
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT World (1080p) [Not 24/7]
 https://tv-trtworld.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Bloomberg HT (720p)
-https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT World (720p)
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TV4 (720p)
+https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TV 8 (1080p)
+https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TV 24 (720p)
+https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TV 41 (720p) [Not 24/7]
+https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Türk (720p)
+https://tv-trtturk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TV 264 (1080p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Zarok TV (720p)
+https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Vav TV
+https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TV Den (576p) [Not 24/7]
+http://canli.tvden.com.tr/hls/live.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Van 65 TV
+https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Urfa Natik TV (720p)
+https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Ekoturk (720p)
+https://cdn.ekoturk.net/hls/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT World (720p)
 https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",TRT Genc (1440p) [Geo-blocked]
+https://tv-trtgenc.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Bloomberg HT (720p)
+https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
+#EXTINF:-1 tvg-group="unsorted" group-title="unsorted",Bloomberg HT
+http://193.123.61.120:3000/kanal/bloomberght
