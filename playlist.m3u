@@ -1,35 +1,35 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="AzTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",AzTV
 https://str.yodacdn.net/azertv/index.m3u8
-#EXTINF:-1 tvg-id="ATV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ATV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",ATV Azərbaycan
 https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8
 #EXTINF:-1 tvg-id="MedeniyyetTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Mədəniyyət TV
 https://str.yodacdn.net/medeniyyettele/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",GunAz TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",GunAz TV
 https://tv.gunaz.tv/hls/live.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Ayaz TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Ayaz TV
 https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",KN Music TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",KN Music TV
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="BakuTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Baku TV
 https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",İctimai TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",İctimai TV
 https://live.itv.az/itv.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Kanal 35
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kanal 35
 https://str2.yodacdn.net/kanal35/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Naxçıvan TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Naxçıvan TV
 https://str2.yodacdn.net/ntv/video.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Kəpəz TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kəpəz TV
 http://85.132.78.122:8050/hls/stream/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Vilayət TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Vilayət TV
 https://nl.livekadeh.com/hls2/vilayet.m3u8
-#EXTINF:-1 tvg-group="Azerbaijan" group-title="Azerbaijan",Kanal S
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kanal S
 https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
 #EXTINF:-1 tvg-id="TRT1.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 1
 https://tv-trt1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTHaber.tr" tvg-group="Xeber" group-title="Xeber",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",TRT Çocuk
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Çocuk
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
@@ -43,23 +43,25 @@ https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&c
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 #EXTINF:-1 tvg-id="Haberturk.tr" tvg-group="Xeber" group-title="Xeber",Habertürk
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",TRT Türk
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Türk
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",TRT Müzik
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ATV Türkiyə
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-id="AHaber.tr" tvg-group="Xeber" group-title="Xeber",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",A Spor
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",A2TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",A2TV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",24 TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",NTV
 https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",TRT Avaz
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Avaz
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",TRT Kurdî
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Kurdî
 https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber Global
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
@@ -67,19 +69,19 @@ https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Tgrt Haber
 https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",Ekoturk
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ekoturk
 https://cdn.ekoturk.net/hls/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",Diyar TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Diyar TV
 https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",Dost TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Dost TV
 https://dost.stream.emsal.im/tv/live.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",HTSpor TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",HTSpor TV
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",Tele 1
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tele 1
 https://tele1-live.ercdn.net/tele1/tele1.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",TJK TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TJK TV
 https://tjktv-live.tjk.org/tjktv.m3u8
-#EXTINF:-1 tvg-group="Turkiye" group-title="Turkiye",Meltem TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Meltem TV
 https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTINF:-1 tvg-group="Russia" group-title="Russia",TNT
 http://stream.mcquack.net/135/index.m3u8
@@ -117,21 +119,21 @@ http://stream.mcquack.net/227/index.m3u8
 http://flussonic.linkintel.ru/tnt4/index.m3u8
 #EXTINF:-1 tvg-group="Russia" group-title="Russia",TV-3
 http://flussonic.linkintel.ru/tv-3/index.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",Belarus-5 HD
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",Belarus-5 HD
 http://178.124.179.122:8080/BT5/index.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",Futbol TV
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",Futbol TV
 http://stream3.cinerama.uz/1010/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",Sportivnyy
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",Sportivnyy
 https://live-3.otcnet.ru/sportivny/index.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",Match! Ultra
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",Match! Ultra
 http://31.148.5.241/kanal_3/index.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",viju+ Sport
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",viju+ Sport
 http://stream.mcquack.net/333/index.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",Match! Boets
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",Match! Boets
 http://stream.mcquack.net/112/index.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",MMA-TV
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",MMA-TV
 https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",Astrahan.Ru Sport
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",Astrahan.Ru Sport
 https://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8
-#EXTINF:-1 tvg-group="Futbol" group-title="Futbol",FB TV
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",FB TV
 http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
