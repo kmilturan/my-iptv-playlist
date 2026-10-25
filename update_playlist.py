@@ -6,209 +6,209 @@ import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 MASTER_CHANNELS = {
-    "baku tv": {
-        "name": "Baku TV",
+    "aztv": {
+        "name": "AzTV",
         "group": "Azerbaycan",
-        "tvg_id": "BakuTV.az",
-        "aliases": ["baku tv", "bakutv", "baku-tv", "baku.tv", "baku"]
+        "tvg_id": "AzTV.az",
+        "exact_matches": ["aztv", "az tv", "azerbaijan tv"]
     },
     "itv": {
         "name": "İTV HD",
         "group": "Azerbaycan",
         "tvg_id": "ITV.az",
-        "aliases": ["ictimai tv", "itv hd", "ictimai", "itv"]
+        "exact_matches": ["itv", "itv hd", "ictimai tv", "ictimai"]
     },
-    "aztv": {
-        "name": "AzTV",
+    "baku tv": {
+        "name": "Baku TV",
         "group": "Azerbaycan",
-        "tvg_id": "AzTV.az",
-        "aliases": ["aztv", "azerbaijan tv", "az tv"]
+        "tvg_id": "BakuTV.az",
+        "exact_matches": ["baku tv", "bakutv", "baku.tv", "baku-tv"]
     },
     "xəzər tv": {
         "name": "Xəzər TV",
         "group": "Azerbaycan",
         "tvg_id": "KhazarTV.az",
-        "aliases": ["xəzər tv", "khazar tv", "xezer tv", "xezertv", "xəzər"]
+        "exact_matches": ["xəzər tv", "khazar tv", "xezer tv", "xezertv", "xəzər"]
     },
     "arb tv": {
         "name": "ARB TV",
         "group": "Azerbaycan",
         "tvg_id": "ARBTv.az",
-        "aliases": ["arb tv", "azad azərbaycan", "arb"]
+        "exact_matches": ["arb tv", "azad azərbaycan", "arb"]
     },
     "arb 24": {
         "name": "ARB 24",
         "group": "Xeber",
         "tvg_id": "ARB24.az",
-        "aliases": ["arb 24", "arb24"]
+        "exact_matches": ["arb 24", "arb24"]
     },
     "arb günəş": {
         "name": "ARB Günəş",
         "group": "Usaq ve Senedli",
         "tvg_id": "ARBGunesh.az",
-        "aliases": ["arb günəş", "arb gunes"]
+        "exact_matches": ["arb günəş", "arb gunes"]
     },
     "space tv": {
         "name": "Space TV",
         "group": "Azerbaycan",
         "tvg_id": "SpaceTV.az",
-        "aliases": ["space tv", "spacetv", "space"]
+        "exact_matches": ["space tv", "spacetv", "space"]
     },
     "lider tv": {
         "name": "Lider TV",
         "group": "Azerbaycan",
         "tvg_id": "LiderTV.az",
-        "aliases": ["lider tv", "lidertv", "lider"]
+        "exact_matches": ["lider tv", "lidertv", "lider"]
     },
     "mədəniyyət tv": {
         "name": "Mədəniyyət TV",
         "group": "Azerbaycan",
         "tvg_id": "MedeniyyetTV.az",
-        "aliases": ["mədəniyyət tv", "medeniyyet tv", "mədəniyyət"]
+        "exact_matches": ["mədəniyyət tv", "medeniyyet tv", "mədəniyyət"]
     },
     "dunya tv": {
         "name": "Dünya TV",
         "group": "Azerbaycan",
         "tvg_id": "DunyaTV.az",
-        "aliases": ["dunya tv", "dünya tv", "dunyatv"]
+        "exact_matches": ["dunya tv", "dünya tv", "dunyatv"]
     },
     "cbc az": {
         "name": "CBC Azerbaijan",
         "group": "Azerbaycan",
         "tvg_id": "CBCAzerbaijan.az",
-        "aliases": ["cbc az", "cbc azerbaijan", "cbcaz"]
+        "exact_matches": ["cbc az", "cbc azerbaijan", "cbcaz"]
     },
     "cbc sport": {
         "name": "CBC Sport",
         "group": "Idman",
         "tvg_id": "CBCSport.az",
-        "aliases": ["cbc sport", "cbcsport"]
+        "exact_matches": ["cbc sport", "cbcsport"]
     },
     "idman az": {
         "name": "İdman Azərbaycan",
         "group": "Idman",
         "tvg_id": "IdmanAzerbaijan.az",
-        "aliases": ["idman az", "idmanazerbaijan", "idman tv", "idman"]
+        "exact_matches": ["idman az", "idmanazerbaijan", "idman tv"]
     },
     "trt 1": {
         "name": "TRT 1",
         "group": "Turkiye - Esas",
         "tvg_id": "TRT1.tr",
-        "aliases": ["trt 1", "trt1"]
+        "exact_matches": ["trt 1", "trt1"]
     },
     "kanal d": {
         "name": "Kanal D",
         "group": "Turkiye - Esas",
         "tvg_id": "KanalD.tr",
-        "aliases": ["kanal d", "kanald", "euro d"]
+        "exact_matches": ["kanal d", "kanald", "euro d"]
     },
     "show tv": {
         "name": "Show TV",
         "group": "Turkiye - Esas",
         "tvg_id": "ShowTV.tr",
-        "aliases": ["show tv", "showtv", "show hd"]
+        "exact_matches": ["show tv", "showtv", "show hd"]
     },
     "star tv": {
         "name": "Star TV",
         "group": "Turkiye - Esas",
         "tvg_id": "StarTV.tr",
-        "aliases": ["star tv", "startv"]
+        "exact_matches": ["star tv", "startv"]
     },
     "atv tr": {
         "name": "ATV",
         "group": "Turkiye - Esas",
         "tvg_id": "ATV.tr",
-        "aliases": ["atv", "atv türkiye", "atv turkiye", "atv hd", "tr: atv", "a2 tv", "a2 tv hd"]
+        "exact_matches": ["atv", "atv türkiye", "atv turkiye", "atv hd", "tr: atv", "a2 tv"]
     },
     "tv8": {
         "name": "TV8",
         "group": "Turkiye - Esas",
         "tvg_id": "TV8.tr",
-        "aliases": ["tv8"]
+        "exact_matches": ["tv8"]
     },
     "tv8.5": {
         "name": "TV8.5",
         "group": "Idman",
         "tvg_id": "TV85.tr",
-        "aliases": ["tv8.5", "tv85", "tv 8.5"]
+        "exact_matches": ["tv8.5", "tv85", "tv 8.5"]
     },
     "now tv": {
         "name": "NOW TV",
         "group": "Turkiye - Esas",
         "tvg_id": "NowTV.tr",
-        "aliases": ["now tv", "nowtv", "fox tv", "fox", "now hd", "tr: now hd"]
+        "exact_matches": ["now tv", "nowtv", "fox tv", "fox", "now hd"]
     },
     "kanal 7": {
         "name": "Kanal 7",
         "group": "Turkiye - Esas",
         "tvg_id": "Kanal7.tr",
-        "aliases": ["kanal 7", "kanal7"]
+        "exact_matches": ["kanal 7", "kanal7"]
     },
     "beyaz tv": {
         "name": "Beyaz TV",
         "group": "Turkiye - Esas",
         "tvg_id": "BeyazTV.tr",
-        "aliases": ["beyaz tv", "beyaztv", "tr: beyaz tv"]
+        "exact_matches": ["beyaz tv", "beyaztv"]
     },
     "teve2": {
         "name": "Teve2",
         "group": "Turkiye - Esas",
         "tvg_id": "Teve2.tr",
-        "aliases": ["teve2", "teve 2"]
+        "exact_matches": ["teve2", "teve 2"]
     },
     "trt haber": {
         "name": "TRT Haber",
         "group": "Xeber",
         "tvg_id": "TRTHaber.tr",
-        "aliases": ["trt haber", "trthaber"]
+        "exact_matches": ["trt haber", "trthaber"]
     },
     "trt spor": {
         "name": "TRT Spor",
         "group": "Idman",
         "tvg_id": "TRTSpor.tr",
-        "aliases": ["trt spor", "trtspor", "trt spor yıldız"]
+        "exact_matches": ["trt spor", "trtspor", "trt spor yıldız"]
     },
     "a haber": {
         "name": "A Haber",
         "group": "Xeber",
         "tvg_id": "AHaber.tr",
-        "aliases": ["a haber", "ahaber"]
+        "exact_matches": ["a haber", "ahaber"]
     },
     "cnnturk": {
         "name": "CNN Türk",
         "group": "Xeber",
         "tvg_id": "CNNTurk.tr",
-        "aliases": ["cnn türk", "cnn turk", "cnntürk"]
+        "exact_matches": ["cnn türk", "cnn turk", "cnntürk"]
     },
     "haberturk": {
         "name": "Habertürk",
         "group": "Xeber",
         "tvg_id": "Haberturk.tr",
-        "aliases": ["habertürk", "haberturk"]
+        "exact_matches": ["habertürk", "haberturk"]
     },
     "tgrt haber": {
         "name": "Tgrt Haber",
         "group": "Xeber",
         "tvg_id": "",
-        "aliases": ["tgrt haber", "tr: tgrt haber hd"]
+        "exact_matches": ["tgrt haber", "tgrthaber"]
     },
     "haber global": {
         "name": "Haber Global",
         "group": "Xeber",
         "tvg_id": "",
-        "aliases": ["haber global", "tr: haber global hd"]
+        "exact_matches": ["haber global"]
     },
     "halk tv": {
         "name": "Halk TV",
         "group": "Xeber",
         "tvg_id": "",
-        "aliases": ["halk tv", "tr: halk tv"]
+        "exact_matches": ["halk tv", "halktv"]
     },
     "ntv": {
         "name": "NTV",
         "group": "Xeber",
         "tvg_id": "",
-        "aliases": ["ntv", "ntv hd", "tr: ntv hd"]
+        "exact_matches": ["ntv", "ntv hd"]
     }
 }
 
@@ -258,17 +258,14 @@ def load_and_update_sources():
 
 def match_master_channel(channel_name):
     n = channel_name.lower().strip()
-    n = re.sub(r'^(tr|az|hd|fhd|sd|hevc):\s*', '', n).strip()
+    n = re.sub(r'^(tr|az|hd|fhd|sd|hevc|fhd|4k):\s*', '', n).strip()
     
     if any(b in n for b in ["bein sports", "s sport", "exxen", "tivibu", "smart spor"]):
         return "BLOCKED", None
 
     for key, data in MASTER_CHANNELS.items():
-        for alias in data["aliases"]:
-            clean_alias = re.sub(r'^(tr|az):\s*', '', alias).strip()
-            if clean_alias == n or f" {clean_alias} " in f" {n} " or n.startswith(f"{clean_alias} ") or n.endswith(f" {clean_alias}"):
-                return key, data
-            elif len(clean_alias) <= 4 and clean_alias in n.split():
+        for exact in data["exact_matches"]:
+            if exact == n or f" {exact} " in f" {n} " or n.startswith(f"{exact} ") or n.endswith(f" {exact}"):
                 return key, data
                 
     return None, None
@@ -294,27 +291,24 @@ def process_channel(entry):
     if master_key == "BLOCKED":
         return None
         
+    # 1. Əgər master kanaldırsa, öz qrupuna yazılır
     if master_key and channel_info:
         if not is_stream_valid(stream_url):
             return None
         tvg_id = channel_info.get("tvg_id", "")
         return (master_key, channel_info["group"], channel_info["name"], tvg_id, stream_url)
     
-    l_name = channel_name.lower()
+    # 2. Master olmayan digər işlək kanallar itmir, "unsorted" qovluğuna düşür
     if not is_stream_valid(stream_url):
         return None
 
-    if any(k in l_name for k in ["az", "azerbaijan", "baku", "baki", "kapaz", "space", "xezer", "azstar"]):
-        group_title = "Azerbaycan"
-    elif any(k in l_name for k in ["haber", "trt haber", "tgrt", "halk", "ntv", "cnn", "habertürk"]):
-        group_title = "Xeber"
-    elif any(k in l_name for k in ["spor", "idman", "cbc sport", "tv8.5"]):
-        group_title = "Idman"
-    elif any(k in l_name for k in ["tr", "türkiye", "turkey", "trt", "kanal", "show", "star", "atv", "now", "tv4", "teve", "cine5", "360", "tivi6"]):
-        group_title = "Turkiye - Esas"
-    else:
-        group_title = "Turkiye - Esas"
+    group_match = re.search(r'group-title="([^"]+)"', extinf)
+    group_title = group_match.group(1) if group_match else "unsorted"
     
+    # Əgər qrup adı boşdursa və ya şübhəlidirsə birbaşa unsorted edirik
+    if not group_title or group_title.lower() in ["diger kanallar", "other"]:
+        group_title = "unsorted"
+
     clean_name = re.sub(r'^(tr|az):\s*', '', channel_name, flags=re.IGNORECASE).strip()
     return (channel_name.lower(), group_title, clean_name, "", stream_url)
 
@@ -359,7 +353,7 @@ def main():
         f.writelines(final_playlist)
     
     count = len(added_keys)
-    print(f"Yenilənmə tamamlandı! Cəmi {count} kanal təmiz qruplara ayrılaraq yazıldı.")
+    print(f"Yenilənmə tamamlandı! Cəmi {count} işlək kanal (qruplar və unsorted) yazıldı.")
 
 if __name__ == "__main__":
     main()
