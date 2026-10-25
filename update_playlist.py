@@ -118,7 +118,7 @@ MASTER_CHANNELS = {
         "name": "ATV",
         "group": "Turkiye - Esas",
         "tvg_id": "ATV.tr",
-        "exact_matches": ["atv", "atv türkiye", "atv turkiye", "atv hd", "tr: atv", "a2 tv"]
+        "exact_matches": ["atv türkiye", "atv turkiye", "tr: atv", "a2 tv"]
     },
     "tv8": {
         "name": "TV8",
@@ -214,7 +214,6 @@ MASTER_CHANNELS = {
 
 def load_sources():
     sources = []
-    # sources.txt faylına toxunulmur, olduğu kimi oxunur
     if os.path.exists("sources.txt"):
         with open("sources.txt", "r", encoding="utf-8") as f:
             for line in f:
@@ -222,7 +221,6 @@ def load_sources():
                 if line and not line.startswith("#") and line not in sources:
                     sources.append(line)
                     
-    # Əgər sources.txt boşdursa və ya yoxdursa standart ehtiyat siyahı
     if not sources:
         sources = [
             "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/az.m3u",
@@ -245,6 +243,33 @@ def match_master_channel(channel_name):
                 
     return None, None
 
+def normalize_group_name(group_title):
+    if not group_title:
+        return "Digər Kanallar"
+    
+    g_lower = group_title.lower().strip()
+    
+    # Azərbaycan qruplarının birləşdirilməsi
+    if any(k in g_lower for k in ["azerbaycan", "azerbaijan", "az"]):
+        return "Azerbaycan"
+    
+    # Türkiyə qruplarının birləşdirilməsi
+    if any(k in g_lower for k in ["turkiye", "turkey", "tr"]):
+        return "Turkiye - Esas"
+        
+    # Xəbər qruplarının birləşdirilməsi
+    if any(k in g_lower for k in ["xeber", "haber", "news"]):
+        return "Xeber"
+        
+    # İdman qruplarının birləşdirilməsi
+    if any(k in g_lower for k in ["idman", "sport", "futbol"]):
+        return "Idman"
+
+    if g_lower in ["diger kanallar", "other", "unsorted", ""]:
+        return "Digər Kanallar"
+        
+    return group_title
+
 def fetch_source_content(source_url):
     try:
         req = urllib.request.Request(source_url, headers={'User-Agent': 'VLC/3.0.18'})
@@ -262,17 +287,21 @@ def process_channel(entry):
     if master_key == "BLOCKED":
         return None
         
-    # 1. Əgər master kanaldırsa, öz təyin olunmuş qrupuna yazılır
+    # 1. Əgər master kanaldırsa, birbaşa təyin olunmuş qrupuna yazılır
     if master_key and channel_info:
         tvg_id = channel_info.get("tvg_id", "")
         return (master_key, channel_info["group"], channel_info["name"], tvg_id, stream_url)
     
-    # 2. Master olmayan digər kanallar mənbədə hansı qrupdadırsa o şəkildə qalır
+    # 2. AĞILLI TANIMA: Adında yerli sözlər keçənlər avtomatik "Azerbaycan" qrupuna
+    n_lower = channel_name.lower()
+    if any(k in n_lower for k in ["azərbaycan", "azerbaijan", "baku", "naxçıvan", "naxcivan", "az tv", "aztv", "kanal 35", "ayaz tv"]):
+        clean_name = re.sub(r'^(tr|az):\s*', '', channel_name, flags=re.IGNORECASE).strip()
+        return (channel_name.lower() + "_" + stream_url, "Azerbaycan", clean_name, "", stream_url)
+
+    # 3. Mənbədən gələn qrupun adını normallaşdırırıq ki, "Azerbaycan" və "Azerbaijan" kimi ikili qruplar yaranmasın
     group_match = re.search(r'group-title="([^"]+)"', extinf)
-    group_title = group_match.group(1) if group_match else "Digər Kanallar"
-    
-    if not group_title or group_title.lower() in ["diger kanallar", "other", "unsorted"]:
-        group_title = "Digər Kanallar"
+    raw_group = group_match.group(1) if group_match else "Digər Kanallar"
+    group_title = normalize_group_name(raw_group)
 
     return (channel_name.lower() + "_" + stream_url, group_title, channel_name, "", stream_url)
 
