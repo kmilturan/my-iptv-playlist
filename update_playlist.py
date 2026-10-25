@@ -266,10 +266,8 @@ def match_master_channel(channel_name):
     for key, data in MASTER_CHANNELS.items():
         for alias in data["aliases"]:
             clean_alias = re.sub(r'^(tr|az):\s*', '', alias).strip()
-            # Dəqiq uyğunlaşdırma: ya tam bərabər olmalıdır, ya da söz kimi daxil olmalıdır (tərksiz qarışmamaq üçün)
             if clean_alias == n or f" {clean_alias} " in f" {n} " or n.startswith(f"{clean_alias} ") or n.endswith(f" {clean_alias}"):
                 return key, data
-            # Xüsusi qısa unikal adlar üçün
             elif len(clean_alias) <= 4 and clean_alias in n.split():
                 return key, data
                 
@@ -360,4 +358,8 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.writelines(final_playlist)
     
-    print(f"Yenilənmə tamamlandı! Cəmi {len(
+    count = len(added_keys)
+    print(f"Yenilənmə tamamlandı! Cəmi {count} kanal təmiz qruplara ayrılaraq yazıldı.")
+
+if __name__ == "__main__":
+    main()
