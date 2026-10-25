@@ -1,139 +1,39 @@
 #EXTM3U
+#EXTINF:-1 tvg-group="General" group-title="General",Alvin Channel TV (1080p)
+https://cdn10-alvinchannel.yayin.com.tr/alvinchannel/alvinchannel/playlist.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",APA Tv (1080p)
+http://stream.apa.tv/apastream/index.m3u8
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Ayaz TV (1080p)
+https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Aznews TV (720p)
+https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
+https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
 #EXTINF:-1 tvg-id="AzTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",AzTV
 https://str.yodacdn.net/azertv/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",ATV Azərbaycan
-https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8
-#EXTINF:-1 tvg-id="MedeniyyetTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Mədəniyyət TV
-https://str.yodacdn.net/medeniyyettele/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",GunAz TV
-https://tv.gunaz.tv/hls/live.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Ayaz TV
-https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",KN Music TV
-https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="BakuTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Baku TV
 https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",İctimai TV
+#EXTINF:-1 tvg-id="CBCSport.az" tvg-group="Idman" group-title="Idman",CBC Sport
+https://mn-nl.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8
+#EXTINF:-1 tvg-group="General" group-title="General",EL TV (360p)
+http://85.132.53.162:1935/live/eltv/playlist.m3u8
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",GunAz TV
+https://tv.gunaz.tv/hls/live.m3u8
+#EXTINF:-1 tvg-id="ITV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",İTV HD
 https://live.itv.az/itv.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kanal 35
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kanal 35 (720p)
 https://str2.yodacdn.net/kanal35/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Naxçıvan TV
-https://str2.yodacdn.net/ntv/video.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kəpəz TV
-http://85.132.78.122:8050/hls/stream/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Vilayət TV
-https://nl.livekadeh.com/hls2/vilayet.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kanal S
+#EXTINF:-1 tvg-group="General" group-title="General",Kanal S
 https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
-#EXTINF:-1 tvg-id="TRT1.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 1
-https://tv-trt1.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TRTHaber.tr" tvg-group="Xeber" group-title="Xeber",TRT Haber
-https://tv-trthaber.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Çocuk
-https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D
-https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
-#EXTINF:-1 tvg-id="ShowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Show TV
-https://ciner.daioncdn.net/showtv/showtv.m3u8?app=showtv_web
-#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
-https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
-#EXTINF:-1 tvg-id="TV8.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV8
-https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
-#EXTINF:-1 tvg-id="NowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",NOW TV
-https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 tvg-id="Haberturk.tr" tvg-group="Xeber" group-title="Xeber",Habertürk
-https://tv.ensonhaber.com/haberturk/haberturk.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Türk
-https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Müzik
-https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ATV Türkiyə
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
-#EXTINF:-1 tvg-id="AHaber.tr" tvg-group="Xeber" group-title="Xeber",A Haber
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",A Spor
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",A2TV
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",24 TV
-https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",NTV
-https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Avaz
-https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Kurdî
-https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber Global
-https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Halk TV
-https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Tgrt Haber
-https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ekoturk
-https://cdn.ekoturk.net/hls/master.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Diyar TV
-https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Dost TV
-https://dost.stream.emsal.im/tv/live.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",HTSpor TV
-https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Tele 1
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TJK TV
-https://tjktv-live.tjk.org/tjktv.m3u8
-#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Meltem TV
-https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",TNT
-http://stream.mcquack.net/135/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",STS
-http://tshift-1.telecoma.tv/sts/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Mir
-http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mirtv_2500/playlist.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",360°
-https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/CkxfR1xNUAJwTgtXTBZTAJli/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",360° News
-https://live-vgtrksmotrim.cdnvideo.ru/vgtrksmotrim/smotrim-live-03-srt.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Channel 5
-http://31.148.5.241/kanal_5/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Che!
-http://flussonic.linkintel.ru/che/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Friday!
-http://stream.mcquack.net/181/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",İzvestiya
-http://igi-hls.cdnvideo.ru/igi/igi_tcode/playlist.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Mir 24
-http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mir24_2500/playlist.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",OTR
-http://flussonic.linkintel.ru/otr/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",T24
-http://178.134.1.158:8081/t24/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Zvezda
-https://tvzvezda.bonus-tv.ru/cdn/tvzvezda/playlist.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Moskva 24
-https://stream.smotrim.ru/hls/givc8/playlist.m3u8?entity=channel&id=798&sign=37881ef2e289f062ceff0dca6c24dc58
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Dom kino
-http://stream.mcquack.net/236/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",Domashniy
-http://stream.mcquack.net/227/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",TNT4
-http://flussonic.linkintel.ru/tnt4/index.m3u8
-#EXTINF:-1 tvg-group="Russia" group-title="Russia",TV-3
-http://flussonic.linkintel.ru/tv-3/index.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",Belarus-5 HD
-http://178.124.179.122:8080/BT5/index.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",Futbol TV
-http://stream3.cinerama.uz/1010/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",Sportivnyy
-https://live-3.otcnet.ru/sportivny/index.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",Match! Ultra
-http://31.148.5.241/kanal_3/index.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",viju+ Sport
-http://stream.mcquack.net/333/index.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",Match! Boets
-http://stream.mcquack.net/112/index.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",MMA-TV
-https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",Astrahan.Ru Sport
-https://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",FB TV
-http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kapaz TV
+http://85.132.78.122:8050/hls/stream/index.m3u8
+#EXTINF:-1 tvg-group="Music" group-title="Music",KN Music TV
+https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="MedeniyyetTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Mədəniyyət TV
+https://str.yodacdn.net/medeniyyettele/index.m3u8
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Naxcivan TV (720p)
+https://str2.yodacdn.net/ntv/video.m3u8
+#EXTINF:-1 tvg-group="General" group-title="General",Vilayet TV
+https://nl.livekadeh.com/hls2/vilayet.m3u8
+#EXTINF:-1 tvg-id="KhazarTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Xəzər TV
+https://www.xezerxeber.az/stream/index.m3u8
