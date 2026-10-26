@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - 'update_playlist.py'
+      - 'iptv_validator.py'
       - 'sources.txt'
 
 permissions:
@@ -29,9 +30,18 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
+        cache: 'pip'
 
-    - name: Skripti işə sal
+    - name: FFmpeg-i quraşdır (Validator üçün mütləqdir)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg
+
+    - name: 1. Ana IPTV skriptini işə sal
       run: python update_playlist.py
+
+    - name: 2. Validator skripti ilə playlist.m3u içindəki qırıq linkləri təmizlə
+      run: python iptv_validator.py
 
     - name: Dəyişiklikləri yoxla və göndər
       run: |
@@ -40,6 +50,5 @@ jobs:
         git status
         git add playlist.m3u
         if [ -f "sources.txt" ]; then git add sources.txt; fi
-        git commit -m "Auto update playlist and sources [skip ci]" || echo "No changes to commit"
+        git commit -m "Auto update and validate playlist [skip ci]" || echo "No changes to commit"
         git push origin main --force
-
