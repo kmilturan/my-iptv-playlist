@@ -1,555 +1,345 @@
 #EXTM3U
-#EXTINF:-1 tvg-group="General" group-title="General",Alvin Channel TV (1080p)
-https://cdn10-alvinchannel.yayin.com.tr/alvinchannel/alvinchannel/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",APA Tv (1080p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",APA Tv (1080p) (1920x1080)
 http://stream.apa.tv/apastream/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Ayaz TV (1080p)
-https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Aznews TV (720p)
-https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
-#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV (1920x1080)
 https://live.livestreamtv.ca/azstar/ngrp:azstar/playlist.m3u8
-#EXTINF:-1 tvg-id="AzTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",AzTV
-https://str.yodacdn.net/azertv/index.m3u8
-#EXTINF:-1 tvg-id="BakuTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Baku TV
+#EXTINF:-1 tvg-id="BakuTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Baku TV (1920x1080)
 https://rtmp.baku.tv/hls/bakutv.m3u8
-#EXTINF:-1 tvg-id="CBCSport.az" tvg-group="Idman" group-title="Idman",CBC Sport
-https://mn-nl.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",EL TV (360p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",EL TV (360p) (640x360)
 http://85.132.53.162:1935/live/eltv/playlist.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",GunAz TV
-https://tv.gunaz.tv/hls/live.m3u8
-#EXTINF:-1 tvg-id="ITV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",İTV HD
-https://live.itv.az/itv.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kanal 35 (720p)
-https://str2.yodacdn.net/kanal35/index.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal S
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal S (1920x1080)
 https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kapaz TV
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Kapaz TV (960x540)
 http://85.132.78.122:8050/hls/stream/index.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",KN Music TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",KN Music TV (1920x1080)
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="MedeniyyetTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Mədəniyyət TV
-https://str.yodacdn.net/medeniyyettele/index.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Naxcivan TV (720p)
-https://str2.yodacdn.net/ntv/video.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Vilayet TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Vilayet TV (1280x720)
 https://nl.livekadeh.com/hls2/vilayet.m3u8
-#EXTINF:-1 tvg-id="KhazarTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Xəzər TV
-https://www.xezerxeber.az/stream/index.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Alvin Channel TV (360p) [Not 24/7]
-https://cdn10-alvinchannel.yayin.com.tr/alvinchannel/alvinchannel/playlist.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Ayaz TV (720p)
-https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Aznews TV (720p) [Not 24/7]
-https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",EL TV
-https://live.eltv.az/live/eltv/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",24 TV (720p)
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV (1920x1080)
+https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",24 TV (720p) (1920x1080)
 https://tv.ensonhaber.com/tv24/tv24.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",360 (720p)
-https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
-#EXTINF:-1 tvg-group="Entertainment" group-title="Entertainment",4U TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",4U TV (720p) (1280x720)
 https://hls.4utv.live/hls/stream.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",A2TV (1080p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Afroturk TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Afroturk TV (1080p) (1920x1080)
 https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="AHaber.tr" tvg-group="Xeber" group-title="Xeber",A Haber
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Aksu TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Aksu TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Alanya Posta TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Alanya Posta TV (1080p) (1920x1080)
 https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Almahriah TV (576p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Almahriah TV (576p) (1024x576)
 https://starmenajo.com/hls/almahriah/index.m3u8
-#EXTINF:-1 tvg-group="Religious" group-title="Religious",Al-Rafidain TV (720p)
-https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Altas TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Altas TV (720p) (1280x720)
 https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Religious" group-title="Religious",Al-Zahra TV Turkic (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Al-Zahra TV Turkic (720p) (1280x720)
 https://live.al-zahratv.com/live/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Anadolu Net TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Anadolu Net TV (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Aras TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Aras TV (720p) (1080x720)
 http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",A Spor (1080p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",AS TV (1080p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",AS TV (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",ATV (360p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV (360p) (640x360)
 http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",ATV Alanya (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV Alanya (720p) (1920x1080)
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",ATV Avrupa (576p)
-https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Benguturk TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Benguturk TV (720p) (1280x720)
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
-#EXTINF:-1 tvg-id="BeyazTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Beyaz TV
-https://mn-nl.mncdn.com/blutv_beyaztv2/live.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Bir TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Bir TV (720p) (1280x720)
 https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Business" group-title="Business",Bloomberg HT (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Bloomberg HT (1080p) (1920x1080)
 https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Bric ve Satranc TV (480p)
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Bric ve Satranc TV (480p) (854x480)
 http://139.162.182.79/live/test/index.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",BRTV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",BRTV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Bursa TV (720p)
-https://win1.yayin.com.tr/bursatv/bursatv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Cay TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cay TV (720p) (1280x720)
 https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Cekmekoy TV (1080p)
-https://cdn-cekmekoybeltv.yayin.com.tr/cekmekoybeltv/cekmekoybeltv_1080p/playlist.m3u8
-#EXTINF:-1 tvg-group="Education" group-title="Education",Ciftci TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Ciftci TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-#EXTINF:-1 tvg-group="Business" group-title="Business",CNBC-e (1080p)
-https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Deniz Postasi TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Deniz Postasi TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",DHA (720p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",DHA (720p) (1280x720)
 https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
-#EXTINF:-1 tvg-group="Animation" group-title="Animation",Disney Jr. (1080p)
-https://saran-live.ercdn.net/disneyjunior/index.m3u8
-#EXTINF:-1 tvg-group="Religious" group-title="Religious",Diyanet TV (1080p)
-https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Religious" group-title="Religious",Diyar TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Diyar TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
-#EXTINF:-1 tvg-group="Religious" group-title="Religious",Dost TV (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Dost TV (576p) (720x576)
 https://dost.stream.emsal.im/tv/live.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Dream Turk (720p)
-https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
-#EXTINF:-1 tvg-group="Entertainment" group-title="Entertainment",Edessa TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Edessa TV (1080p) (1920x1080)
 https://canli.edessatv.com/hls/stream.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Ekoturk (720p)
-https://cdn.ekoturk.net/hls/master.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Elsharq TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Elsharq TV (720p) (1280x720)
 https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",ERTV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ERTV (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Erzurum Web TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Erzurum Web TV (720p) (1280x720)
 https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",ES TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ES TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",ETV Kayseri (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ETV Kayseri (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",ETV Manisa (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ETV Manisa (1080p) (1920x1080)
 https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D
-https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",FB TV (720p)
+#EXTINF:-1 tvg-group="Idman" group-title="Idman",FB TV (720p) (1280x720)
 http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Finans Turk TV (720p)
-https://yayin30.haber100.com/live/finansturk/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Flash Haber TV (1080p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Lifestyle" group-title="Lifestyle",Fortuna TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Fortuna TV (1080p) (1920x1080)
 https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",FX
-https://saran-live.ercdn.net/fx/index.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",GEM 24B
-https://ca-rt.onetv.app/gem24b/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Bollywood
-https://ca-rt.onetv.app/gembollywood/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Classic" group-title="Classic",GEM Classic
-https://ca-rt.onetv.app/gemclassic/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Comedy" group-title="Comedy",GEM Comedy
-https://ca-rt.onetv.app/gemcomedy/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Drama
-https://ca-rt.onetv.app/gemdrama/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Drama +
-https://ca-rt.onetv.app/gemdramaplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Entertainment" group-title="Entertainment",GEM Entertainment
-https://ca-rt.onetv.app/gementertainment/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Film
-https://ca-rt.onetv.app/gemfilm/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",GEM Fit
-https://ca-rt.onetv.app/gemfit/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Cooking" group-title="Cooking",GEM Food
-https://ca-rt.onetv.app/gemfood/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Kids" group-title="Kids",GEM Junior
-https://ca-rt.onetv.app/gemjunior/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Kids" group-title="Kids",GEM Kids
-https://ca-rt.onetv.app/gemkids/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Lifestyle" group-title="Lifestyle",GEM Life
-https://ca-rt.onetv.app/gemlife/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Music" group-title="Music",GEM Mifa
-https://ca-rt.onetv.app/gemmifa/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Music" group-title="Music",GEM Mifa +
-https://ca-rt.onetv.app/gemmifaplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Documentary" group-title="Documentary",GEM Nature
-https://ca-rt.onetv.app/gemnature/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Onyx
-https://ca-rt.onetv.app/gemonyx/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Pixel
-https://ca-rt.onetv.app/gempixel/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Entertainment" group-title="Entertainment",GEM River
-https://ca-rt.onetv.app/gemriver/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Entertainment" group-title="Entertainment",GEM River +
-https://ca-rt.onetv.app/gemriverplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Rubix
-https://ca-rt.onetv.app/gemrubix/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM Rubix +
-https://ca-rt.onetv.app/gemrubixplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Series" group-title="Series",GEM Series +
-https://ca-rt.onetv.app/gemseriesplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",GEM Sport
-https://steep-wildflower-284d.nhhwkiszzzvcuojxdo.workers.dev/?url=https://gg.hls2.xyz/live/IR+-+GEM+Sport/chunks.m3u8
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM TV
-https://ca-rt.onetv.app/gem/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",GEM TV +
-https://ca-rt.onetv.app/gemtvplus/index-0.m3u8?token=onetv202
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",Grand Cinema
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Grand Cinema (1280x720)
 https://gcinemahls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Guneydogu TV (720p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Guneydogu TV (720p) (1280x720)
 https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Documentary" group-title="Documentary",GZT (1080p)
-https://gzttv-live.lg.mncdn.com/gzttv/gzttv/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber61 TV (720p)
-https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber Global
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber Global (1280x720)
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
-#EXTINF:-1 tvg-id="Haberturk.tr" tvg-group="Xeber" group-title="Xeber",Habertürk
+#EXTINF:-1 tvg-id="Haberturk.tr" tvg-group="Xeber" group-title="Xeber",Habertürk (1920x1080)
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Halk TV
-https://halktv-live.daioncdn.net/halktv/halktv.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",HTSpor TV (1080p)
-https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
-#EXTINF:-1 tvg-group="General" group-title="General",Hunat TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Hunat TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Icel TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Icel TV (1080p) (1920x1080)
 https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Ilke TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Ilke TV (1080p) (1920x1080)
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 12 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 12 (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 15 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 15 (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 23 (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 23 (1080p) (852x480)
 https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 26 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 26 (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 3 (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 3 (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 32 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 32 (720p) (1280x720)
 https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 33 (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 33 (1080p) (1920x1080)
 https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 34 (720p)
-https://vdo.digitalbox.xyz:3266/live/kanal34tvlive.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal 58 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kanal 58 (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8
-#EXTINF:-1 tvg-id="Kanal7.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 7
-https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal Firat (720p)
-https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal Hayat (1080p)
-https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kanal V (720p)
-https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kay TV (720p)
+#EXTINF:-1 tvg-id="Kanal7.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal 7 (1920x1080)
+https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8
+#EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D (640x360)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01602-themahqfrance-vivekanald-samsungspain/playlist.m3u8
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kay TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kent Turk (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kent Turk (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Kocaeli TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kocaeli TV (1080p) (1920x1080)
 https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Konya Olay TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Konya Olay TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Kral Pop TV (720p)
-https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
-#EXTINF:-1 tvg-group="Religious" group-title="Religious",Lalegul TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Lalegul TV (1080p) (1280x720)
 https://lbl.netmedya.net/hls/lalegultv.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Life TV (1080p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Life TV (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Line TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Line TV (720p) (1280x720)
 https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Culture" group-title="Culture",Luys TV (1080p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",MaviKaradeniz TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",MaviKaradeniz TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Med Muzik (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Med Muzik (1080p) (1920x1080)
 http://54.36.110.140/live3/live3.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Mekameleen TV (1080p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Mekameleen TV (1080p) (718x404)
 https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Meltem TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Meltem TV (1080p) (1920x1080)
 https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Mercan TV (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Mercan TV (576p) (720x576)
 https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
-#EXTINF:-1 tvg-group="Kids" group-title="Kids",Minika Cocuk (720p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
-#EXTINF:-1 tvg-group="Kids" group-title="Kids",Minika Go (720p)
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
-#EXTINF:-1 tvg-group="Movies" group-title="Movies",MovieSmart Turk (576p)
-http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174
-#EXTINF:-1 tvg-group="General" group-title="General",MTurk TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",MTurk TV (720p) (1280x720)
 https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Documentary" group-title="Documentary",National Geographic (1080p)
-https://saran-live.ercdn.net/natgeohd/index.m3u8
-#EXTINF:-1 tvg-group="Documentary" group-title="Documentary",National Geographic Wild (1080p)
-https://saran-live.ercdn.net/natgeowild/index.m3u8
-#EXTINF:-1 tvg-group="Culture" group-title="Culture",Natural TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Natural TV (1080p) (1920x1080)
 https://edge1.socialsmart.tv/naturaltv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Entertainment" group-title="Entertainment",NOW (720p)
-https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",NTV
-https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
-#EXTINF:-1 tvg-group="Music" group-title="Music",Number 1 Ask (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Number 1 Ask (720p) (1280x720)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Number 1 Damar (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Number 1 Damar (720p) (1280x720)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Number 1 Dance (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Number 1 Dance (720p) (1280x720)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Number 1 TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Number 1 TV (720p) (1280x720)
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",OlayTurk TV (1080p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",OlayTurk TV (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",On4 TV (1080p)
-https://edge1.socialsmart.tv/on4/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Power Dance (1080p)
-https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",Power Love (1080p)
-https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",PowerTurk Akustik (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PowerTurk Akustik (1080p) (1920x1080)
 https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",PowerTurk Slow (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PowerTurk Slow (1080p) (1920x1080)
 https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",PowerTurk Taptaze (1080p)
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",PowerTurk Taptaze (1080p) (1920x1080)
 https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",PowerTurk TV (1080p)
-https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Power TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Power TV (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Qaf TV (1080p)
-https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Semerkand TV (1080p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Religious" group-title="Religious",Sercem TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Sercem TV (1080p) (1920x1080)
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Show Turk (1080p)
-https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Sun RTV (720p)
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV (1280x720)
+https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Sun RTV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TBMM TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TBMM TV (720p) (1280x720)
 https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Tele 1 (1080p)
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Tempo TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Tempo TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",TGRT Belgesel (576p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Tgrt Haber
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TGRT Haber (720p) (1280x720)
 https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Tivi 6 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Tivi 6 (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",TJK TV (1080p)
-https://tjktv-live.tjk.org/tjktv.m3u8
-#EXTINF:-1 tvg-group="Idman" group-title="Idman",TJK TV 2 (1080p)
-https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Ton TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Ton TV (1080p) (1920x1080)
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
-#EXTINF:-1 tvg-id="TRT1.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 1
+#EXTINF:-1 tvg-id="TRT1.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 1 (640x360)
 https://tv-trt1.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TRT 2 (1440p)
-https://tv-trt2.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TRT 3 (720p)
-https://tv-trt3.live.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TRT Arabi (1440p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TRT Arabi (1440p) (640x360)
 https://tv-trtarabi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TRT Avaz (1440p)
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",TRT Avaz (1440p) (1280x720)
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Documentary" group-title="Documentary",TRT Belgesel (720p)
-https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Kids" group-title="Kids",TRT Cocuk (1440p)
+#EXTINF:-1 tvg-group="Usaq ve Senedli" group-title="Usaq ve Senedli",TRT Cocuk (1440p) (1280x720)
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Kids" group-title="Kids",TRT Diyanet Cocuk (1440p)
-https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Education" group-title="Education",TRT EBA (720p)
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT EBA (720p) (1280x720)
 https://tv-e-okul01.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Education" group-title="Education",TRT EBA Ilkokul (720p)
-https://tv-e-okul00.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Education" group-title="Education",TRT EBA Lise (720p)
-https://tv-e-okul02.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",TRT Genc (1440p)
-https://tv-trtgenc.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TRTHaber.tr" tvg-group="Xeber" group-title="Xeber",TRT Haber
+#EXTINF:-1 tvg-id="TRTHaber.tr" tvg-group="Xeber" group-title="Xeber",TRT Haber (0x0)
 https://tv-trthaber.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TRT Kurdi (1440p)
-https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Music" group-title="Music",TRT Muzik (1440p)
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Muzik (1440p) (640x360)
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="TRTSpor.tr" tvg-group="Idman" group-title="Idman",TRT Spor
-https://corestream.siteyaptim.live/trt-spor/index.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TRT Turk (1440p)
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT Turk (1440p) (640x360)
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TRT World (1440p)
-https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TurkHaber TV (1080p)
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TurkHaber TV (1080p) (1920x1080)
 https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Turksat Tanitim (1080p)
-http://176.65.153.26:6004/play/a02s/index.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TV 1 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TV 1 (720p) (1280x720)
 https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TV 264 (1080p)
-https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TV 4 (720p)
-https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TV 41 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TV 41 (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TV 42 (480p)
-https://canli.tv42.com.tr/memfs/d936e417-c4bd-4d42-89a2-02f289892d1d.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TV 52 (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TV 52 (720p) (1280x720)
 https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="TV8.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV8
-https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TV Den (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TV Den (576p) (832x468)
 http://canli.tvden.com.tr/hls/live.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",TVNET (1080p)
-https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Ulke TV
-http://217.174.229.138:8000/play/a0el
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Urfa Natik TV (1080p)
-https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8
-#EXTINF:-1 tvg-group="General" group-title="General",Van 65 TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Van 65 TV (720p) (1280x720)
 https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Vav TV (1080p)
-https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8
-#EXTINF:-1 tvg-group="Undefined" group-title="Undefined",Zarok TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Zarok TV (1080p) (1920x1080)
 https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
-#EXTINF:-1 tvg-group="Ulusal" group-title="Ulusal",TR: ATV HD
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
-#EXTINF:-1 tvg-id="ShowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Show TV
+#EXTINF:-1 tvg-id="TRT1.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 1 (1280x720)
+https://trt.daioncdn.net/trt-1/master.m3u8?app=web
+#EXTINF:-1 tvg-id="TRT1.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TRT 1 (854x480)
+https://tv-trt1.medya.trt.com.tr/master_480.m3u8
+#EXTINF:-1 tvg-id="ShowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Show TV (1920x1080)
 http://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?app=showtv_web
-#EXTINF:-1 tvg-id="NowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",NOW TV
-http://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 tvg-group="Ulusal" group-title="Ulusal",TR: TRT Turk HD
+#EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D (1920x1080)
+https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web
+#EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D (426x240)
+http://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TR: TRT Turk HD (640x360)
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Ulusal" group-title="Ulusal",Meltem TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Meltem TV (1920x1080)
 http://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
-#EXTINF:-1 tvg-group="Ulusal" group-title="Ulusal",TR: TV 4 HD
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TR: TV 4 HD (1280x720)
 http://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8
-#EXTINF:-1 tvg-id="ATV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ATV
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
-#EXTINF:-1 tvg-id="Teve2.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Teve2
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TR: Tgrt Haber HD (1280x720)
+https://canli.tgrthaber.com/tgrt.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",NTV (1920x1080)
+http://dygvideo.dygdigital.com/live/hls/ntv4puhu?m3u8
+#EXTINF:-1 tvg-id="Teve2.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Teve2 (426x240)
 http://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8
-#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Ciftci TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Ciftci TV (1280x720)
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
-#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Tivi 6
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Tivi 6 (1280x720)
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
-#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Cine 1 TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cine 1 TV (1920x1080)
 http://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
-#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",Cine+
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cine+ (1280x720)
 http://cineplus-yesilcam.supersatadmin.workers.dev/cineplusyesilcam.m3u8
-#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",SDM TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",SDM TV (1024x576)
 https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-group="Eglence" group-title="Eglence",BEGEN TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",BEGEN TV (1920x1080)
 https://ip44.radyotelekomtv.com:3958/stream/play.m3u8
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",TR: ATV HD
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8?hash=9bef109437d020f5a54ac85baf81c9a9
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",TR: TLC HD
-https://yayin2.canlitv.fun/live/tlc.stream/playlist.m3u8?hash=9bef109437d020f5a54ac85baf81c9a9
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",TR: Dmax HD
-https://yayin2.canlitv.fun/live/dmax.stream/playlist.m3u8?hash=9bef109437d020f5a54ac85baf81c9a9
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",Cine1 HD
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cine1 HD (1920x1080)
 https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3.m3u8
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",TR: Tivi6 HD
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TR: Tivi6 HD (1280x720)
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",TR: 360 HD
-https://turkmedya-live.ercdn.net/tv360/tv360.m3u8?hash=9bef109437d020f5a54ac85baf81c9a9
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",TR: Cine5
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TR: Cine5 (1280x720)
 https://host.onlineradyotv.net:8081/cine5tv/index.m3u8
-#EXTINF:-1 tvg-group="Turk" group-title="Turk",TR: Tele1 HD
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",kanal-65
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",kanal-65 (1280x720)
 https://v2.catcast.tv/content/47437/index.m3u8?token=939a6e8ec109e59319bb722f61904889
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",now-music
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",now-music (1280x546)
 https://v2.catcast.tv/content/48694/index.m3u8?token=1e6ecf0f3a54c845154128401fd64f1b
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",rihatmusic
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",rihatmusic (1280x720)
 https://v2.catcast.tv/content/48076/index.m3u8?token=d5d4897eef510aeaafa8bdd857252839
-#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",turkuzplay1
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",turkuzplay1 (1920x1080)
 https://v2.catcast.tv/content/48591/index.m3u8?token=c18e0b67b8f12dcaf92e5fbcc7069ac7
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",kino-1
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",kino-1 (768x432)
 https://kino-1.catcast.tv/content/38617/index.m3u8?token=692279ecdf0b9ed1e68108b7ce28dead
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Strax-TV
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Strax-TV
 https://s.catcast.tv/content/34816/index.m3u8?token=b101946232c590e951e543aa0ca110b2
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Fenix SSSR
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Fenix SSSR
 https://v2.catcast.tv/content/40102/index.m3u8?token=f5bcad99344ac01fd4bc5ca95475e298
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Detektiv-TV
-https://cityeden.catcast.tv/content/41327/index.m3u8?token=332338253b545d8abd8b5c2db667ab6a
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Action-TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Action-TV (720x304)
 https://v2.catcast.tv/content/36517/index.m3u8?token=13a05ba4786fe7beaa251c655744cdc2
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Komedi-az-TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Komedi-az-TV (640x360)
 https://v2.catcast.tv/content/50370/index.m3u8?token=2f45827c386eaef81e99e68889b5ef05
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",PlayerCinema-TV
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PlayerCinema-TV (640x360)
 https://v2.catcast.tv/content/50372/index.m3u8?token=ff1740d380fdfd9da955d04e0238f2ae
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",PlayerFilmAzerbaycan-TV
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",PlayerFilmAzerbaycan-TV (640x268)
 https://v2.catcast.tv/content/50472/index.m3u8?token=032e456b1efaeda13d0a1a52c4f250d8
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",Azeri-Retro filmler
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Azeri-Retro filmler (854x480)
 https://v2.catcast.tv/content/50852/index.m3u8?token=a2d8fa26a757b6821cb58f4655757a5b
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",playercinema-hind_filmleri-2
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",playercinema-hind_filmleri-2 (1920x1080)
 https://v2.catcast.tv/content/50892/index.m3u8?token=1eaed9069551499b343557d36349c972
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",playercinema-hind_filmleri-5
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",playercinema-hind_filmleri-5 (1920x1080)
 https://v2.catcast.tv/content/50895/index.m3u8?token=dfa9735dfb0deb5aca3699ad0470adb8
-#EXTINF:-1 tvg-group="Catcast-Film-tv" group-title="Catcast-Film-tv",playercinema-premium-5
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",playercinema-premium-5 (856x480)
 https://v2.catcast.tv/content/50961/index.m3u8?token=23c92a9cb06b7e0689da2b16be66ed58
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Cinema
+#EXTINF:-1 tvg-id="NowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",NOW TV (1920x1080)
+http://stream.mcquack.net/182/index.m3u8
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cinema (720x576)
 http://flussonic.linkintel.ru/cinema/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Domkino
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Domkino (720x576)
 http://stream.mcquack.net/236/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Dom kino Premium HD (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Dom kino Premium HD (1080p) (1920x1080)
 http://stream.mcquack.net/108/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Evrokino HD (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Evrokino HD (1080p) (1920x1080)
 http://stream.mcquack.net/385/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Indiyskoye Kino (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Indiyskoye Kino (576p) (720x576)
 http://stream.mcquack.net/104/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kino TV SD (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kino TV SD (576p) (1920x1080)
 http://stream.mcquack.net/221/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",KinoHit (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",KinoHit (576p) (1920x1080)
 http://stream.mcquack.net/126/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinokomedija (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kinokomedija (576p) (1920x1080)
 http://stream.mcquack.net/265/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinomix (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kinomix (576p)
 http://stream.mcquack.net/133/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinopokaz (576p)
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Kinopokaz (576p) (1920x1080)
 http://stream.mcquack.net/64/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinopremyera (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kinopremyera (1080p) (1920x1080)
 http://5.188.159.128:8070/KINOPREMIERA/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinosemja (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kinosemja (576p) (1920x1080)
 http://stream.mcquack.net/170/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinouzhas (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kinouzhas (576p) (1920x1080)
 http://stream.mcquack.net/278/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Kinosvidanie (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Kinosvidanie (576p) (1920x1080)
 http://stream.mcquack.net/171/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Muzhskoe kino (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Muzhskoe kino (576p) (1920x1080)
 http://stream.mcquack.net/107/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Ostrosyuzhetnoye HD (1080p)
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Ostrosyuzhetnoye HD (1080p) (1920x1080)
 http://stream.mcquack.net/214/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Premialnoe HD (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Premialnoe HD (1080p) (1920x1080)
 http://stream.mcquack.net/421/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju TV1000 (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju TV1000 (576p) (1920x1080)
 http://stream.mcquack.net/110/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju TV1000 action (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju TV1000 action (576p) (1920x1080)
 http://stream.mcquack.net/100/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Comedy HD (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju+ Comedy HD (1080p) (1920x1080)
 http://stream.mcquack.net/201/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Megahit HD (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju+ Megahit HD (1080p) (1920x1080)
 http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Premiere HD (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju+ Premiere HD (1080p) (1920x1080)
 http://stream.mcquack.net/202/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju+ Planet HD (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju+ Planet HD (1080p) (1920x1080)
 http://stream.mcquack.net/240/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Nauka (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Nauka (576p) (1920x1080)
 http://stream.mcquack.net/125/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Discovery Channel (1080p)
+#EXTINF:-1 tvg-group="Usaq ve Senedli" group-title="Usaq ve Senedli",Discovery Channel (1080p) (1920x1080)
 http://stream.mcquack.net/177/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Investigation Discovery (1080p)
+#EXTINF:-1 tvg-group="Usaq ve Senedli" group-title="Usaq ve Senedli",Investigation Discovery (1080p) (1920x1080)
 http://stream.mcquack.net/205/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",National Geographic (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",National Geographic (576p) (1920x1080)
 http://stream.mcquack.net/116/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju Explore (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju Explore (576p)
 http://stream.mcquack.net/239/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju History (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju History (576p) (1920x1080)
 http://stream.mcquack.net/101/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",viju Nature (576p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",viju Nature (576p) (720x576)
 http://46.53.200.153:7777/play/a01k/index.m3u8
-#EXTINF:-1 tvg-group="Rus" group-title="Rus",Travel Channel (1080p)
+#EXTINF:-1 tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Travel Channel (1080p) (1920x1080)
 http://stream.mcquack.net/231/index.m3u8
