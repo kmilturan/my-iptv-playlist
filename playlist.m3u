@@ -157,6 +157,8 @@ http://139.162.182.79/live/test/index.m3u8
 https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Bursa TV (720p)
 https://win1.yayin.com.tr/bursatv/bursatv/playlist.m3u8
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cartoon Network
+http://176.65.153.40:6002/play/a013/index.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cay TV (720p)
 https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Cekmekoy TV (1080p)
