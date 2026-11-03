@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
-https://live.livestreamtv.ca/azstar/ngrp:azstar/playlist.m3u8
+http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AzTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",AzTV
 https://str.yodacdn.net/azertv/index.m3u8
 #EXTINF:-1 tvg-id="BakuTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Baku TV
@@ -112,7 +112,7 @@ https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",EL TV
 https://live.eltv.az/live/eltv/playlist.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",24 TV (720p)
-https://tv.ensonhaber.com/tv24/tv24.m3u8
+https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",360 (720p)
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",4U TV (720p)
@@ -133,7 +133,7 @@ https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8
 https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Al-Zahra TV Turkic (720p)
 https://live.al-zahratv.com/live/playlist.m3u8
-#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Anadolu Net TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Anadolu Net TV (720p)
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Aras TV (720p)
 http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
@@ -150,7 +150,7 @@ https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Bir TV (720p)
 https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Bloomberg HT (1080p)
-https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
+https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Bric ve Satranc TV (480p)
 http://139.162.182.79/live/test/index.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",BRTV (720p)
@@ -429,8 +429,6 @@ https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TRT Turk (1440p)
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TRT World (1440p)
-https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TurkHaber TV (1080p)
 https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Turksat Tanitim (1080p)
@@ -531,6 +529,8 @@ https://v2.catcast.tv/content/36517/index.m3u8?token=0749829a908688b44fadc6d344f
 https://v2.catcast.tv/content/50370/index.m3u8?token=a193f8616ccceca0cc06388523627981
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PlayerCinema-TV
 https://v2.catcast.tv/content/50372/index.m3u8?token=a6f94f2db2574cc65cb34c5f58d1c2e5
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PlayerFilmAzerbaycan-TV
+https://v2.catcast.tv/content/50472/index.m3u8?token=a473198b6c4eab3c8baf6c99245a0844
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Azeri-Retro filmler
 https://v2.catcast.tv/content/50852/index.m3u8?token=8488fc34be2305b9d57937cd2c5da30c
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",playercinema-hind_filmleri-2
