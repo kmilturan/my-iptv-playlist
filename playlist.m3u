@@ -62,15 +62,15 @@ http://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
 #EXTINF:-1 tvg-id="BeyazTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Beyaz TV
 https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8
 #EXTINF:-1 tvg-id="ATV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ATV
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8?hash=178ec9dac95d8b51ee6f99dc08a714a9
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8?hash=3d9932077340386b407c64632f6e0251
 #EXTINF:-1 tvg-id="ShowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Show TV
-https://yayin2.canlitv.fun/live/showtv.stream/playlist.m3u8?hash=178ec9dac95d8b51ee6f99dc08a714a9
+https://yayin2.canlitv.fun/live/showtv.stream/playlist.m3u8?hash=3d9932077340386b407c64632f6e0251
 #EXTINF:-1 tvg-id="KanalD.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Kanal D
-https://yayin2.canlitv.fun/live/kanald.stream/playlist.m3u8?hash=178ec9dac95d8b51ee6f99dc08a714a9
+https://yayin2.canlitv.fun/live/kanald.stream/playlist.m3u8?hash=3d9932077340386b407c64632f6e0251
 #EXTINF:-1 tvg-id="TV8.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",TV8
-https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=178ec9dac95d8b51ee6f99dc08a714a9
+https://yayin2.canlitv.fun/live/tv-8.stream/playlist.m3u8?hash=3d9932077340386b407c64632f6e0251
 #EXTINF:-1 tvg-id="BeyazTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Beyaz TV
-https://yayin2.canlitv.fun/live/beyaztv.stream/playlist.m3u8?hash=178ec9dac95d8b51ee6f99dc08a714a9
+https://yayin2.canlitv.fun/live/beyaztv.stream/playlist.m3u8?hash=3d9932077340386b407c64632f6e0251
 #EXTINF:-1 tvg-id="KhazarTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Xəzər TV
 https://xezer.tvstream.az/hls/stream/main_stream.m3u8
 #EXTINF:-1 tvg-id="NowTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",NOW TV
@@ -110,7 +110,7 @@ https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",EL TV
 https://live.eltv.az/live/eltv/playlist.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",24 TV (720p)
-https://tv.ensonhaber.com/tv24/tv24.m3u8
+https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",360 (720p)
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",4U TV (720p)
@@ -141,7 +141,7 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV (360p)
 http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8
-#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV Alanya (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV Alanya (1080p)
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Benguturk TV (720p)
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
@@ -370,9 +370,9 @@ https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PowerTurk Taptaze (1080p)
 https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PowerTurk TV (1080p)
-https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
+https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Power TV (1080p)
-https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
+https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Qaf TV (1080p)
 https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Semerkand TV (1080p)
@@ -498,7 +498,7 @@ https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/chunks.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TR: Cine5
 https://host.onlineradyotv.net:8081/cine5tv/index.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TR: Teve2 HD
-https://yayin2.canlitv.fun/live/teve2.stream/playlist.m3u8?hash=178ec9dac95d8b51ee6f99dc08a714a9
+https://yayin2.canlitv.fun/live/teve2.stream/playlist.m3u8?hash=3d9932077340386b407c64632f6e0251
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TR: Tele1 HD
 https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",kanal-65
