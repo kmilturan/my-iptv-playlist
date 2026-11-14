@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
-https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
+http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AzTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",AzTV
 https://str.yodacdn.net/azertv/index.m3u8
 #EXTINF:-1 tvg-id="BakuTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Baku TV
@@ -11,6 +11,8 @@ https://mn-nl.mncdn.com/cbcsports_live/cbcsports/playlist.m3u8
 https://live.itv.az/itv.m3u8
 #EXTINF:-1 tvg-id="KhazarTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Xəzər TV
 https://www.xezerxeber.az/stream/index.m3u8
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
+https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
 #EXTINF:-1 tvg-id="AHaber.tr" tvg-group="Xeber" group-title="Xeber",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
 #EXTINF:-1 tvg-id="ATVAvrupa.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",ATV Avrupa
@@ -121,7 +123,7 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
 https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Aksu TV (720p)
 https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8
-#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Alanya Posta TV (240p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Alanya Posta TV (1080p)
 https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Almahriah TV (576p)
 https://starmenajo.com/hls/almahriah/index.m3u8
@@ -133,7 +135,7 @@ https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8
 https://live.al-zahratv.com/live/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Anadolu Net TV (1080p)
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
-#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Aras TV (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Aras TV (576p)
 http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
 #EXTINF:-1 tvg-group="Idman" group-title="Idman",A Spor (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
@@ -141,7 +143,7 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV (360p)
 http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8
-#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV Alanya (720p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",ATV Alanya (1080p)
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Benguturk TV (720p)
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
@@ -380,7 +382,7 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d91
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Sercem TV (1080p)
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Sozcu TV (1080p)
-https://filbox-to-m3u8.onrender.com/stream/szchd.m3u8
+https://raw.githubusercontent.com/yaskar661-lgtm/stream/refs/heads/main/filbox/szchd.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Sun RTV (720p)
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TBMM TV (720p)
