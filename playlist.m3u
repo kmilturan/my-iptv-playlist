@@ -10,6 +10,8 @@ https://live.itv.az/itv.m3u8
 #EXTINF:-1 tvg-id="KhazarTV.az" tvg-group="Azerbaycan" group-title="Azerbaycan",Xəzər TV
 https://xezer.tvstream.az/hls/stream/main_stream.m3u8
 #EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
+https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-group="Turkiye - Esas" group-title="Turkiye - Esas",Star TV
 http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AHaber.tr" tvg-group="Xeber" group-title="Xeber",A Haber
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
@@ -79,7 +81,7 @@ http://stream.mcquack.net/182/index.m3u8
 http://stream.apa.tv/apastream/index.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Ayaz TV
 https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/720p/720p.m3u8
-#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Azad TV (1080p)
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Azad TV
 https://lives.atv.az:5443/ATV_TV_STREAM/streams/atvcanli.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",EL TV (360p)
 http://85.132.53.162:1935/live/eltv/playlist.m3u8
@@ -95,16 +97,16 @@ https://nl.livekadeh.com/hls2/vilayet.m3u8
 https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",GunAz TV
 https://tv.gunaz.tv/hls/live.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",APA Tv
-http://stream.apa.tv/apastream/index.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",ARB 24
+https://operativmm.az/tvs/arb24/stream/index.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Aznews TV (720p) [Not 24/7]
 https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
-#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",EL TV (260p)
-http://85.132.53.162:1935/live/eltv/playlist.m3u8
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",EL TV [Not 24/7]
+https://live.eltv.az/live/eltv/playlist.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Kapaz TV [Geo-blocked]
 http://85.132.78.122:8050/hls/stream/index.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",24 TV (720p)
-https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
+https://tv.ensonhaber.com/tv24/tv24.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",360 (720p)
 https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",4U TV (720p)
@@ -260,7 +262,7 @@ https://gzttv-live.lg.mncdn.com/gzttv/gzttv/playlist.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber Global (720p)
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Haber61 TV (720p)
-https://win8.yayin.com.tr/haber61tv/smil:haber61tv.smil/playlist.m3u8
+https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",Halk TV (1080p)
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
 #EXTINF:-1 tvg-group="Idman" group-title="Idman",HTSpor TV (1080p)
@@ -368,7 +370,7 @@ https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PowerTurk Taptaze (1080p)
 https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PowerTurk TV (1080p)
-https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
+https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Qaf TV (1080p)
 https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Semerkand TV (1080p)
@@ -427,8 +429,8 @@ https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TRT Turk (1440p)
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TRT World (1440p)
-https://tv-trtworld.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TRT World (1080p)
+https://cdn.pishow.tv/ott/live/266/master.m3u8
 #EXTINF:-1 tvg-group="Xeber" group-title="Xeber",TurkHaber TV (1080p)
 https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Turksat Tanitim (1080p)
@@ -500,37 +502,37 @@ https://yayin2.canlitv.fun/live/teve2.stream/playlist.m3u8?hash=793f943c7f90674d
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TR: Tele1 HD
 https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",kanal-65
-https://v2.catcast.tv/content/47437/index.m3u8?token=1c8ea967b1f40fa2e4ed6af0b9db66f9
+https://v2.catcast.tv/content/47437/index.m3u8?token=2e7cb014fa4f8adc37b80e7b016e539b
 #EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",now-music
-https://v2.catcast.tv/content/48694/index.m3u8?token=35e62d07f1575d1f0b157edcbe31a467
+https://v2.catcast.tv/content/48694/index.m3u8?token=4982509197eec94fcfbb26d37d50b73c
 #EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",rihatmusic
-https://v2.catcast.tv/content/48076/index.m3u8?token=c01bf291a70ae29e77e8c95f354dba40
+https://v2.catcast.tv/content/48076/index.m3u8?token=7790fe198059fe45e24ca427b0b093fb
 #EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",turkuzplay1
-https://v2.catcast.tv/content/48591/index.m3u8?token=774f630221d833d0200f3e2f305b904a
+https://v2.catcast.tv/content/48591/index.m3u8?token=f463f58dde0ea13393180632951dd924
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",kino-1
-https://kino-1.catcast.tv/content/38617/index.m3u8?token=08565b66bd36adac9e3272010bdeed62
+https://kino-1.catcast.tv/content/38617/index.m3u8?token=1eb6d46856b71e4a3e9b1f9dc73afa1e
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Strax-TV
-https://s.catcast.tv/content/34816/index.m3u8?token=4cee05e370db4a80f7a197a1de4dd70f
+https://s.catcast.tv/content/34816/index.m3u8?token=3ad3c97afce9e1658c6f84bb08489867
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Fenix SSSR
-https://v2.catcast.tv/content/40102/index.m3u8?token=cd0431cd5197fbed32e057bfdf034866
+https://v2.catcast.tv/content/40102/index.m3u8?token=acf6a1c23ec80b2ecdee9d896f1dfb26
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Detektiv-TV
-https://cityeden.catcast.tv/content/41327/index.m3u8?token=c4fb47ef39f27f944e39d4dd2065555a
+https://cityeden.catcast.tv/content/41327/index.m3u8?token=362703cbe69ae31f81972af7bd756e1e
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Action-TV
-https://v2.catcast.tv/content/36517/index.m3u8?token=4135f96fb0beff96c5a5253046ca294d
+https://v2.catcast.tv/content/36517/index.m3u8?token=a1acc113e5f75b4aee3e03792bdce70f
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Komedi-az-TV
-https://v2.catcast.tv/content/50370/index.m3u8?token=8a055a4dd8ae9e445c41f35a44d01ab5
+https://v2.catcast.tv/content/50370/index.m3u8?token=f82d1d7dcb4ba2eee0f472a488c5f025
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PlayerCinema-TV
-https://v2.catcast.tv/content/50372/index.m3u8?token=726bf3b4194fc33e79852571626a52e3
+https://v2.catcast.tv/content/50372/index.m3u8?token=0c82991917aaf554d331ea3f060e86fe
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",PlayerFilmAzerbaycan-TV
-https://v2.catcast.tv/content/50472/index.m3u8?token=1d47bc05787ebfb5d2397221f758a876
+https://v2.catcast.tv/content/50472/index.m3u8?token=18d03494e9923a0608c6d30b9b742988
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Azeri-Retro filmler
-https://v2.catcast.tv/content/50852/index.m3u8?token=f7130f5d31a3bd56cbae351977ea03f4
+https://v2.catcast.tv/content/50852/index.m3u8?token=afc558b15e016551ff1f01d29b0468df
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",playercinema-hind_filmleri-2
-https://v2.catcast.tv/content/50892/index.m3u8?token=f6139fcb15722dbf0b7cbab44d335409
+https://v2.catcast.tv/content/50892/index.m3u8?token=acbc3dd06581ae8685531d5bc8eb5524
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",playercinema-hind_filmleri-5
-https://v2.catcast.tv/content/50895/index.m3u8?token=4b436567e2bc0526483d017b8cb7ece1
+https://v2.catcast.tv/content/50895/index.m3u8?token=eef48fb915a459a2cc17d7ecb078ad1d
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",playercinema-premium-5
-https://v2.catcast.tv/content/50961/index.m3u8?token=4cc448b51e132518263b034a0330b3dd
+https://v2.catcast.tv/content/50961/index.m3u8?token=a1619472e88508b36ca6c817cda4dd9d
 #EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Ayaz TV (720p)
 https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8
 #EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",Medeniyyet TV (1080p)
