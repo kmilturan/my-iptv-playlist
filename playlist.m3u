@@ -491,6 +491,22 @@ https://host.onlineradyotv.net:8081/cine5tv/index.m3u8
 https://yayin2.canlitv.fun/live/teve2.stream/playlist.m3u8?hash=793f943c7f90674dd16bc87ad3a3d50c
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",TR: Tele1 HD
 https://tele1-live.ercdn.net/tele1/tele1.m3u8
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",kanal-65
+https://v2.catcast.tv/content/47437/index.m3u8?token=71196f4bcc234fc65ae26919dcbf49cd
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",now-music
+https://v2.catcast.tv/content/48694/index.m3u8?token=f66df7ce021c3f5f6a741d9bfc664adb
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",rihatmusic
+https://v2.catcast.tv/content/48076/index.m3u8?token=66e2eaf05f4aa2baa4c30e731d807db9
+#EXTINF:-1 tvg-group="Azerbaycan" group-title="Azerbaycan",turkuzplay1
+https://v2.catcast.tv/content/48591/index.m3u8?token=40d8f313c4246c25f12d76fb9a12102d
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",kino-1
+https://kino-1.catcast.tv/content/38617/index.m3u8?token=a0f37b22bd29c0143671a59a5920dcee
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Strax-TV
+https://s.catcast.tv/content/34816/index.m3u8?token=624446eb9427cc5061e2405c9ab69e2b
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Fenix SSSR
+https://v2.catcast.tv/content/40102/index.m3u8?token=2f360749097f0a0e70c03570c48ed10f
+#EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Detektiv-TV
+https://cityeden.catcast.tv/content/41327/index.m3u8?token=e04fab582eff5d5f22e2046f7b403895
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Action-TV
 https://v2.catcast.tv/content/36517/index.m3u8?token=3eff66dbc9efb72838b25487fc012a0b
 #EXTINF:-1 tvg-group="Digər Kanallar" group-title="Digər Kanallar",Komedi-az-TV
